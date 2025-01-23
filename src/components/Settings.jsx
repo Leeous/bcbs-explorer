@@ -1,3 +1,5 @@
+import Navigation from "./Navigation";
+
 function Settings() {
     return (
         <>
@@ -7,6 +9,7 @@ function Settings() {
             </details>
 
             <button className="button-normal">Reset all</button>
+            <Navigation />
         </>
     );
 }

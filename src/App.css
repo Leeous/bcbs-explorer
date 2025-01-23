@@ -1,5 +1,12 @@
+:root {
+  --primary-color: #57a9f2;
+  --secondary-color: #0f5897;
+  --third-color: #115fa3;
+  --fourth-color: ;
+}
+
 body {
-	background-color: #57a9f2;
+	background-color: var(--primary-color);
 	color: white;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	text-align: center;
@@ -18,43 +25,36 @@ a {
 	color: white;
 }
 
-#navigation ul {
+#navigation {
 	display: flex;
 	list-style: none;
 	justify-content: center;
 	position: fixed;
 	width: 100%;
 	padding-left: 0;
-	bottom: -10px;
+	bottom: 0;
 	right: 0;
 	left: 0;
 	list-style: none;
 }
 
-#navigation li {
+.nav-button-normal {
 	width: 100%;
-}
-
-#navigation li a {
 	display: inline-block;
-	background-color: #0f5897;
+	background-color: var(--secondary-color);
 	font-weight: bold;
 	width: 100%;
 	height: 100%;
-	padding: 5px 0;
+	padding: 10px 0;
 	text-decoration: none;
 }
 
-#navigation li a.active-tab {
-	background-color: #0f5897;
+.nav-button-normal.active {
+	background-color: var(--primary-color);
 }
 
-#navigation li a:hover {
-	background-color: #2779c2;
-}
-
-#settings {
-	display: none;
+.nav-button-normal:hover {
+	background-color: var(--primary-color);
 }
 
 .button-normal {

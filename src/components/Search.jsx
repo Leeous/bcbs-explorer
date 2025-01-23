@@ -1,4 +1,6 @@
 import BCBSDB from '../assets/bcbs_db.json';
+import Navigation from './Navigation';
+import '../App.css';
 // By default, we will want to search by prefix
 let searchType = "prefix";
 
@@ -135,6 +137,7 @@ function Search() {
                 {/* <input type="submit" value="Go" onClick={searchDB()} onSubmit={() => searchDB()} hidden /> */}
             </form>
             <a className="report-issue" href="https://cryptpad.fr/form/#/2/form/view/8MvvJD28sitW-FTNOJLY7YpELtdP-h58HhRq+2u0l5c/" target="_blank">Report</a>
+            <Navigation />
         </>
     );
 }

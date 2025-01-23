@@ -1,42 +1,19 @@
-import Cookies from 'universal-cookie';
-import Disclaimer from './components/Disclaimer'
-import Navigation from './components/Navigation'
+import Navigation from './components/Navigation';
 import Settings from './components/Settings';
 import Search from './components/Search';
-import './App.css'
+import { Routes, Router } from 'react-router';
+import { Route } from 'react-router';
+import { BrowserRouter } from 'react-router';
 
-const cookies = new Cookies();
-
-console.log(window.location.hash, cookies.get("disclaimerAccepted"))
-
-const showDisclaimer = () => {
-	// Check if user has acknowledged disclaimer
-	if (!cookies.get("disclaimerAccepted")) {
-		return(<Disclaimer />);
-	}
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route exact path='search' element={ <Search /> } />
+        <Route exact path='settings' element={ <Settings /> } />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-const showSearch = () => {
-	if (window.location.hash == "#search" || window.location.hash === "" && cookies.get("disclaimerAccepted") == true) {
-		window.location.hash = "search";
-		return(<><Search /> <Navigation /></>)
-	}
-}
-
-const showSettings = () => {
-	if (window.location.hash == "#settings") {
-		return(<><Settings /> <Navigation /></>)
-	}
-}
-
-export default() => {
-	return(
-		<>
-			{showDisclaimer()}
-			{showSearch()}
-			{showSettings()}
-		</>
-	);
-}
-
-// export default App
+export default App;

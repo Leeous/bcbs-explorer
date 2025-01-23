@@ -1,3 +1,5 @@
+import { NavLink } from 'react-router';
+import { Link } from 'react-router';
 import Cookies from 'universal-cookie';
 const cookies = new Cookies();
 
@@ -22,7 +24,7 @@ function Disclaimer() {
                 <br/>
                 <br/>
                 <h5 style={{margin: "5px 0"}}>External Links</h5>
-                Through this extension, you may be able to link to other websites which are not under the control of Leeous' Creations. I have no control over the nature, content, and availability of those sites. The inclusion of any links does not necessarily imply a recommendation or endorse the views expressed within them.
+                Through this extension, you may be able to link to other websites which are not under the control of Leeous&apos; Creations. I have no control over the nature, content, and availability of those sites. The inclusion of any links does not necessarily imply a recommendation or endorse the views expressed within them.
                 <br/>
                 <br/>
                 <h5 style={{margin: "5px 0"}}>Changes to This Disclaimer</h5>
@@ -32,7 +34,11 @@ function Disclaimer() {
                 <h5 style={{margin: "5px 0"}}>Contact Us</h5>
                 If you have any questions about this disclaimer, please contact me at <span><a href="mailto:contact@leeous.com">contact@leeous.com</a></span>
             </div>
-            <button className="button-normal" style={{margin: "20px 0"}} onClick={() => {cookies.set("disclaimerAccepted", true); window.location.hash = "search"; window.location.reload()}}>I understand and agree to the terms above</button>
+
+            {/* TODO: Change to <Link> */}
+            <NavLink className={"button-normal"} to={"/search"}>
+              I understand and agree to the terms above
+            </NavLink>
         </>
     )
 }
