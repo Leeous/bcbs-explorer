@@ -1,8 +1,9 @@
 :root {
-  --primary-color: #57a9f2;
-  --secondary-color: #0f5897;
-  --third-color: #115fa3;
-  /* --fourth-color: ; */
+  --primary-color: #0F7BDC;
+  --secondary-color: #3293EA;
+  --third-color: #57A9F2;
+  --fourth-color: #7FBEF7;
+  --fifth-color: #B0D8FB;
 }
 
 body {
@@ -66,8 +67,8 @@ a {
 }
 
 #searchText {
-	border: solid 3px #185386;
-	background-color: #5ba0dd;
+	border: solid 3px var(--third-color);
+	background-color: var(--secondary-color);
 	width: 250px;
 	padding: 5px;
 	font-size: 1.2em;
@@ -89,8 +90,8 @@ a {
 }
 
 #noteText {
-	border: solid 3px #185386;
-	background-color: #5ba0dd;
+	border: solid 3px var(--third-color);
+	background-color: var(--secondary-color);
 	width: 250px;
 	padding: 5px;
   margin-bottom: 100px;
@@ -135,7 +136,8 @@ a {
 }
 
 .settings-cat summary {
-	background-color: #316ca0;
+	background-color: var(--secondary-color);
+  user-select: none;
 	padding: 10px;
 	cursor: pointer;
 }
