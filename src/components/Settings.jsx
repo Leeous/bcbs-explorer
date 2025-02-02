@@ -9,6 +9,8 @@ function Settings() {
             </details>
 
             <button className="button-normal">Reset all</button>
+            <button className="button-normal">Reset notes</button>
+            <button className="button-normal">Reset settings</button>
             <Navigation />
         </>
     );

@@ -39,8 +39,6 @@ function Disclaimer() {
                 <h5 style={{margin: "5px 0"}}>Contact Us</h5>
                 If you have any questions about this disclaimer, please contact me at <span><a href="mailto:contact@leeous.com">contact@leeous.com</a></span>
             </div>
-
-            {/* TODO: Change to <Link> */}
             <NavLink className={"button-normal"} to={"/search"} onClick={cookies.set("disclaimerAccepted", true)}>
               I understand and agree to the terms above
             </NavLink>
