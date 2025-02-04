@@ -1,19 +1,39 @@
-import { NavLink } from 'react-router';
-import '../App.css'
+import { NavLink } from "react-router";
+import "../App.css";
+import BCBSIcon from '../assets/BCBSPEicon.png'
+import SettingsIcon from '../images/cog.png';
+import BackIcon from '../images/back-button.png';
 
-function Navigation() {
-    return(
-        <nav id="navigation">
-                {/* <li><a onClick={() => {window.location.hash = "search"; window.location.reload()}} href="#search">Search<br/>&#x1F50E;</a></li> */}
-                <NavLink className={"nav-button-normal"} to={"/"}>
-                  Search 🔎
-                </NavLink>
-                <NavLink className={"nav-button-normal"} to={"/settings"}>
-                  Settings 🛠️
-                </NavLink>
-                {/* <li><a onClick={() => {window.location.hash = "settings"; window.location.reload()}} href="#settings">Settings<br/>&#9874;</a></li> */}
-        </nav>
-    )
+const toggleSettings = () => {
+  if (window.location.pathname == "/search" || window.location.pathname == "/") {
+    return (
+      <NavLink to="/settings">
+        <img src={SettingsIcon} className="icon" />
+        <span>Settings</span>
+      </NavLink>
+    );
+  } else {
+    return (
+      <NavLink to="/search">
+        <img src={BackIcon} className="icon" />
+        <span>Back</span>
+      </NavLink>
+    );
+  }
 }
 
-export default Navigation
+function Navigation() {
+	return (
+			<header className="navigation">
+        <nav>
+            {toggleSettings()}
+            <div>
+              <h1>BCBS Explorer</h1>
+              <img src={BCBSIcon} className="icon" />
+            </div>
+        </nav>
+			</header>
+	);
+}
+
+export default Navigation;
