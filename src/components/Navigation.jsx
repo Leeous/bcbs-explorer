@@ -1,9 +1,10 @@
 import { NavLink } from "react-router";
 import "../App.css";
 import BCBSIcon from '../assets/BCBSPEicon.png'
-import SettingsIcon from '../images/cog.png';
-import BackIcon from '../images/back-button.png';
+import SettingsIcon from '../assets/cog.png';
+import BackIcon from '../assets/back-button.png';
 
+// Toggle path
 const toggleSettings = () => {
   if (window.location.pathname == "/search" || window.location.pathname == "/") {
     return (

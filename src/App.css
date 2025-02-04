@@ -35,7 +35,7 @@ a {
 
 .navigation {
   background-color: var(--secondary-color);
-  border-bottom: 3px solid white;
+  border-bottom: 1px solid white;
 }
 
 .navigation nav {
@@ -87,23 +87,24 @@ a {
 	color: white;
 }
 
-#searchText::placeholder {
-	color: rgb(255, 255, 255);
-	opacity: .8;
-  font-size: 1rem;
-	text-transform: none;
-	font-weight: 500;
-}
-
 #searchText {
 	border: solid 5px var(--third-color);
 	background-color: var(--secondary-color);
+  margin-top: 50%;
 	padding: 5px;
 	font-size: 1.2em;
 	font-weight: bold;
 	text-transform: uppercase;
 	text-align: center;
 	color: white;
+}
+
+#searchText::placeholder {
+	color: rgb(255, 255, 255);
+	opacity: .8;
+  font-size: 1rem;
+	text-transform: none;
+	font-weight: 500;
 }
 
 #searchText:focus {

@@ -17,17 +17,13 @@ const findCarrierByPrefix = (data, prefix) => {
 
 const Search = () => {
   const [searchValue, setSearchValue] = useState('');
+  const [searchType, setSearchType] = useState("prefix");
   const [results, setResults] = useState([]);
   const [maxLength, setMaxLength] = useState(3);
 
   const handleSearchTypeChange = () => {
-    if (maxLength === 3) {
-      setSearchValue("");
-      setMaxLength(100);
-    } else {
-      setSearchValue("");
-      setMaxLength(3);
-    }
+    searchType === "prefix" ? (setSearchType("carrier"), setMaxLength(100), setSearchValue("")) : (setSearchType("carrier"), setMaxLength(3), setSearchValue(""));
+    console.log(searchType);
   }
   
   // Search Logic \\
@@ -35,7 +31,10 @@ const Search = () => {
     if (value && value.length == maxLength /*|| value*/) {
       let carrierMatch = findCarrierByPrefix(BCBSDB, value);
       if (typeof carrierMatch !== "undefined") {
+        console.log([carrierMatch])
         setResults([carrierMatch]);
+      } else {
+        setResults([{planName: "Prefix not found"}])
       }
     } else {
       setResults([]);
