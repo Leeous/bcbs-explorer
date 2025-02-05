@@ -74,6 +74,10 @@ a {
   -moz-user-drag: none;
 }
 
+.notes {
+  display: flex;
+  justify-content: center;
+}
 
 #noteText {
 	border: solid 3px var(--third-color);
@@ -90,7 +94,6 @@ a {
 #searchText {
 	border: solid 5px var(--third-color);
 	background-color: var(--secondary-color);
-  margin-top: 50%;
 	padding: 5px;
 	font-size: 1.2em;
 	font-weight: bold;
@@ -122,7 +125,7 @@ a {
 }
 
 .search > div {
-  width: 100%
+  width: 100%;
 }
 
 .search-type {
