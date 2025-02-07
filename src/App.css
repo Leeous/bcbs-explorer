@@ -1,15 +1,19 @@
 :root {
-  --primary-color: #57a9f2;
-  --secondary-color: #0f5897;
-  --third-color: #115fa3;
-  --fourth-color: ;
+  --primary-color: #0F7BDC;
+  --secondary-color: #3293EA;
+  --third-color: #57A9F2;
+  --fourth-color: #7FBEF7;
+  --fifth-color: #B0D8FB;
+}
+
+body, html {
+  height: 100%;
 }
 
 body {
 	background-color: var(--primary-color);
 	color: white;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	text-align: center;
 	min-width: 500px;
 	min-height: 350px;
 	margin: 0;
@@ -17,62 +21,83 @@ body {
 	font-size: 1em;
 }
 
-form {
-	text-align: center;
-}
-
 a {
-	color: white;
-}
-
-#navigation {
-	display: flex;
-	list-style: none;
-	justify-content: center;
-	position: fixed;
-	width: 100%;
-	padding-left: 0;
-	bottom: 0;
-	right: 0;
-	left: 0;
-	list-style: none;
-}
-
-.nav-button-normal {
-	width: 100%;
-	display: inline-block;
-	background-color: var(--secondary-color);
-	font-weight: bold;
-	width: 100%;
-	height: 100%;
-	padding: 10px 0;
-	text-decoration: none;
-}
-
-.nav-button-normal.active {
-	background-color: var(--primary-color);
-}
-
-.nav-button-normal:hover {
-	background-color: var(--primary-color);
+  color: white;
 }
 
 .button-normal {
-	border: solid 3px #185386;
-	background-color: #3888cf;
+	border: solid 3px var(--secondary-color);
+	background-color: var(--third-color);
 	color: white;
 	padding: 5px 10px;
 	cursor: pointer;
 }
 
-#searchText {
-	border: solid 3px #185386;
-	background-color: #5ba0dd;
+.navigation {
+  background-color: var(--secondary-color);
+  border-bottom: 1px solid white;
+}
+
+.navigation nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  position: relative;
+}
+
+.navigation nav a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+}
+
+.navigation nav div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navigation nav div h1 {
+  margin-right: 10px;
+}
+
+.navigation nav span {
+  margin-left: 10px;
+}
+
+.icon {
+  width: 32px;
+  user-select: none;
+  -moz-user-drag: none;
+}
+
+.notes {
+  display: flex;
+  justify-content: center;
+}
+
+#noteText {
+	border: solid 3px var(--third-color);
+	background-color: var(--secondary-color);
 	width: 250px;
+	padding: 5px;
+  margin-bottom: 100px;
+  letter-spacing: 0px;
+	font-size: 1.2em;
+	margin-top: 5em;
+	color: white;
+  field-sizing: content;
+}
+
+#searchText {
+	border: solid 5px var(--third-color);
+	background-color: var(--secondary-color);
 	padding: 5px;
 	font-size: 1.2em;
 	font-weight: bold;
-	margin-top: 5em;
 	text-transform: uppercase;
 	text-align: center;
 	color: white;
@@ -81,29 +106,60 @@ a {
 #searchText::placeholder {
 	color: rgb(255, 255, 255);
 	opacity: .8;
+  font-size: 1rem;
 	text-transform: none;
 	font-weight: 500;
 }
 
-.searchType {
-	display: flex;
-	justify-content: space-evenly;
+#searchText:focus {
+  outline: 1px solid white;
+  outline-offset: -.5px;
 }
 
-.searchType input[type="button"] {
-	display: inline-block;
-	width: 100%;
+.search {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.search > div {
+  width: 100%;
+}
+
+.search-type {
+	width: 50%;
 	padding: 5px;
 	border: none;
 	background-color: #0f5897;
 	color: white;
 	cursor: pointer;
+  border-left: 1px solid #0f5897;
+  border-bottom: 1px solid #0f5897;
+  border-right: 1px solid #0f5897;
 }
 
-.searchType input[type="button"].active {
-	background-color: #57a9f2;
-	font-weight: bold;
-	cursor: default;
+.search-type:focus {
+  outline: 1px solid white;
+  outline-offset: -1px;
+}
+
+.search-type.active {
+	background-color: var(--third-color);
+  font-weight: bold;
+  cursor: default;
+  text-decoration: underline;
+  border-left: 1px solid var(--third-color);
+  border-bottom: 1px solid var(--third-color);
+  border-right: 1px solid var(--third-color);
+}
+
+.search-results {
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 .report-issue {
@@ -120,7 +176,12 @@ a {
 }
 
 .settings-cat summary {
-	background-color: #316ca0;
-	padding: 10px;
+	background-color: var(--primary-color);
+  user-select: none;
+	padding: 15px;
 	cursor: pointer;
+}
+
+.settings-cat summary::marker {
+  list-style-type: "V";
 }

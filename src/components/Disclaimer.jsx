@@ -1,14 +1,19 @@
 import { NavLink } from 'react-router';
-import { Link } from 'react-router';
 import Cookies from 'universal-cookie';
+import '../App.css';
+
 const cookies = new Cookies();
+
+const setDisclaimerAccepted = () => {
+  cookies.set("disclaimerAccepted", true)
+}
 
 function Disclaimer() {
     return(
         <>
-            <h2>DISCLAIMER</h2>
+            <h2 style={{textAlign: "center"}}>DISCLAIMER</h2>
             <div style={{textAlign: "left", padding: "10px 30px", overflow: "visible"}}>
-                This browser extension, BCBS Prefix Explorer, is designed to provide users with information about Blue Cross Blue Shield (BCBS) carriers. The information provided by this extension is for general informational purposes only and is not intended to be a substitute for official documentation.
+                This browser extension, BCBS Explorer, is designed to provide users with information about Blue Cross Blue Shield (BCBS) carriers. The information provided by this extension is for general informational purposes only and is not intended to be a substitute for official documentation.
                 <br/>
                 <br/>
                 <h5 style={{margin: "5px 0"}}>Accuracy of Information</h5>
@@ -31,14 +36,18 @@ function Disclaimer() {
                 I may update this disclaimer from time to time. I will notify you of any changes by posting the new disclaimer on this page. You are advised to review this disclaimer periodically for any changes. Changes to this disclaimer are effective when they are posted on this page.
                 <br/>
                 <br/>
+                <h5 style={{margin: "5px 0"}}>Notes fields</h5>
+                Notes are not currently encrypted - please do not store PHI in this field as it will not be properly secured.
+                <br/>
+                <br/>
                 <h5 style={{margin: "5px 0"}}>Contact Us</h5>
-                If you have any questions about this disclaimer, please contact me at <span><a href="mailto:contact@leeous.com">contact@leeous.com</a></span>
+                If you have any questions about this disclaimer, contact me at <span><a href="mailto:contact@leeous.com">contact@leeous.com</a>.</span>
             </div>
-
-            {/* TODO: Change to <Link> */}
-            <NavLink className={"button-normal"} to={"/search"}>
-              I understand and agree to the terms above
-            </NavLink>
+            <center style={{margin: "50px"}}>
+              <NavLink className={"button-normal"} style={{textDecoration: "none"}} to={"/search"} onClick={() => setDisclaimerAccepted()}>
+                I understand and agree to the terms above
+              </NavLink>
+            </center>
         </>
     )
 }
