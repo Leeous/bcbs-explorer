@@ -8,6 +8,10 @@ function Settings() {
                 <summary>Appearance</summary>
                 
             </details>
+            <details className="settings-cat">
+                <summary>Saved Notes</summary>
+                
+            </details>
 
             <button className="button-normal">Reset all</button>
             <button className="button-normal">Reset notes</button>

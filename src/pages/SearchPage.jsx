@@ -104,11 +104,11 @@ const Search = () => {
             carrierName={carrier.planName}
             carrierPrefix={searchValue.toUpperCase()}
             carrierPhoneNumbers={carrier.phone_numbers}
-          // carrierPortalURL={item.url}
+            carrierURLs={carrier.URLs}
           />
         ))}
       </div>
-      <Note carrier={currentCarrier} />
+      {results.length !== 0 ? <Note carrierKey={currentCarrier} /> : null }
     </>
   );
 }

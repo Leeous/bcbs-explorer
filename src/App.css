@@ -89,6 +89,7 @@ a {
 	font-size: 1.2em;
 	margin-top: 5em;
 	color: white;
+  field-sizing: content;
 }
 
 #searchText {
@@ -175,8 +176,12 @@ a {
 }
 
 .settings-cat summary {
-	background-color: var(--secondary-color);
+	background-color: var(--primary-color);
   user-select: none;
-	padding: 10px;
+	padding: 15px;
 	cursor: pointer;
+}
+
+.settings-cat summary::marker {
+  list-style-type: "V";
 }

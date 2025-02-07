@@ -1,24 +1,28 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-const Note = ({carrier}) => {
-  const [note, setNote] = useState("");
-  if (carrier !== "") {
-    const handleNote = (event) => {
-      console.log(sessionStorage.getItem(carrier));
-      // If no key for carrier, make one
-      if (sessionStorage.getItem(carrier) === null) {
-        console.log("create key")
-      } else {
-        setNote(sessionStorage.getItem(carrier))
-      }
-    }
+const Note = ({ carrierKey }) => {
+	const [note, setNote] = useState("");
 
-    return (
-      <div className="notes">
-        <textarea id="noteText" onChange={handleNote} value={note}></textarea>
-      </div>
-    )
-  }
-}
+	useEffect(() => {
+		// Retrieve the saved note from localStorage
+		const savedNote = localStorage.getItem(carrierKey);
+		if (savedNote) {
+			setNote(savedNote);
+		}
+	}, [carrierKey]);
+
+	const handleNote = (event) => {
+		const newNote = event.target.value;
+		setNote(newNote);
+		// Save the new note to localStorage
+		localStorage.setItem(carrierKey, newNote);
+	};
+
+	return (
+		<div className="notes">
+			<textarea id="noteText" onChange={handleNote} value={note}></textarea>
+		</div>
+	);
+};
 
 export default Note;
