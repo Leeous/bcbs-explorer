@@ -113,7 +113,7 @@ a {
 
 #searchText:focus {
   outline: 1px solid white;
-  outline-offset: -.5px;
+  outline-offset: -1px;
 }
 
 .search {
@@ -159,7 +159,14 @@ a {
 .search-results {
   display: flex;
   justify-content: center;
-  text-align: center;
+}
+
+.carrier-card {
+  list-style: none;
+}
+
+.carrier-card h4 {
+  margin-bottom: .5rem;
 }
 
 .report-issue {

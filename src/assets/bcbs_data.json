@@ -343,11 +343,11 @@
 				"z2k"
 			],
 			"URLs": {
-				"general": "https://www.bcbsal.org/web/index.html?frm=assocleadgen",
-				"individuals_and_families": "https://www.bcbsal.org/web/index.html",
-				"employer": "https://employers.bcbsal.org/portal/web/al1/home",
-				"careers": "https://www.bcbsal.jobs/?_ga=2.221240664.179378000.1575481102-1699435799.1575481102",
-				"medicare": "https://n2m.bcbsalmedicare.com/blue-advantage#comparePlans/?utm_source=bcbsa&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=bcbs_al&utm_state=al"
+				"General": "https://www.bcbsal.org/web/index.html?frm=assocleadgen",
+				"Individuals and Families": "https://www.bcbsal.org/web/index.html",
+				"Employer": "https://Employers.bcbsal.org/portal/web/al1/home",
+				"Careers": "https://www.bcbsal.jobs/?_ga=2.221240664.179378000.1575481102-1699435799.1575481102",
+				"Medicare": "https://n2m.bcbsalMedicare.com/blue-advantage#comparePlans/?utm_source=bcbsa&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=bcbs_al&utm_state=al"
 			}
 		},
 		"Blue Cross Blue Shield of Michigan": {
@@ -1293,11 +1293,11 @@
 				"zrr"
 			],
 			"URLs": {
-				"general": "https://www.bcbsm.com/",
-				"individuals_and_families": "https://www.bcbsm.com/index/plans/michigan-health-insurance.html",
-				"employer": "https://www.bcbsm.com/employers.html",
-				"careers": "https://www.bcbsm.com/index/about-us/careers.html",
-				"medicare": "http://www.bcbsm.com/medicare/?utm_source=bcbsa&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=bcbs_mi&utm_state=mi"
+				"General": "https://www.bcbsm.com/",
+				"Individuals and Families": "https://www.bcbsm.com/index/plans/michigan-health-insurance.html",
+				"Employer": "https://www.bcbsm.com/Employers.html",
+				"Careers": "https://www.bcbsm.com/index/about-us/Careers.html",
+				"Medicare": "http://www.bcbsm.com/Medicare/?utm_source=bcbsa&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=bcbs_mi&utm_state=mi"
 			}
 		},
 		"Blue Cross and Blue Shield of Illinois": {
@@ -2715,12 +2715,12 @@
 				"z5a"
 			],
 			"URLs": {
-				"general": "http://www.bcbsil.com/",
-				"individuals_and_families": "https://www.bcbsil.com/retail",
-				"employer": "https://www.bcbsil.com/employer/",
-				"careers": "https://www.bcbsil.com/company-info/careers",
+				"General": "http://www.bcbsil.com/",
+				"Individuals and Families": "https://www.bcbsil.com/retail",
+				"Employer": "https://www.bcbsil.com/Employer/",
+				"Careers": "https://www.bcbsil.com/company-info/Careers",
 				"live_fearless": "http://www.bcbsil.com/",
-				"medicare": "https://www.bcbsil.com/medicare?wt.mc_id=ilemadig125394&utm_plan=hcsc_il&utm_state=il",
+				"Medicare": "https://www.bcbsil.com/Medicare?wt.mc_id=ilemadig125394&utm_plan=hcsc_il&utm_state=il",
 				"contact_us": "https://www.bcbsil.com/provider/contact-us"
 			}
 		},
@@ -3021,11 +3021,11 @@
 				"xjz"
 			],
 			"URLs": {
-				"general": "https://www.floridablue.com/",
-				"individuals_and_families": "https://www.floridablue.com/Individualsandfamilies",
-				"employer": "https://www.floridablue.com/employer",
-				"careers": "https://careers.floridablue.com/?_ga=2.76555221.1188325576.157565581-142812288.157565581",
-				"medicare": "https://www.floridablue.com/medicare/?utm_source=bcbsa&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=bcbs_fl&utm_state=fl"
+				"General": "https://www.floridablue.com/",
+				"Individuals and Families": "https://www.floridablue.com/Individualsandfamilies",
+				"Employer": "https://www.floridablue.com/Employer",
+				"Careers": "https://Careers.floridablue.com/?_ga=2.76555221.1188325576.157565581-142812288.157565581",
+				"Medicare": "https://www.floridablue.com/Medicare/?utm_source=bcbsa&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=bcbs_fl&utm_state=fl"
 			}
 		},
 		"Anthem Blue Cross and Blue Shield Nevada": {
@@ -3148,11 +3148,11 @@
 				"z2u"
 			],
 			"URLs": {
-				"general": "https://www.anthem.com/individual-and-family/health-insurance/nevada/",
-				"individuals_and_families": "https://www.anthem.com/individual-and-family/nevada/",
-				"employer": "https://www.anthem.com/employer/",
-				"careers": "https://careers.antheminc.com/",
-				"medicare": "https://choose.anthem.com/medicare/abcbs/all/ma/ntm/index.html?cam_rid=U35O&cmp=SEM-PMCA-MEDICARE-U35O-BCBSA&utm_plan=anthem_nv&utm_state=nv"
+				"General": "https://www.anthem.com/individual-and-family/health-insurance/nevada/",
+				"Individuals and Families": "https://www.anthem.com/individual-and-family/nevada/",
+				"Employer": "https://www.anthem.com/Employer/",
+				"Careers": "https://Careers.antheminc.com/",
+				"Medicare": "https://choose.anthem.com/Medicare/abcbs/all/ma/ntm/index.html?cam_rid=U35O&cmp=SEM-PMCA-Medicare-U35O-BCBSA&utm_plan=anthem_nv&utm_state=nv"
 			}
 		},
 		"CareFirst BlueCross BlueShield": {
@@ -4171,12 +4171,12 @@
 				"zou"
 			],
 			"URLs": {
-				"general": "https://individual.carefirst.com/individuals-families/home.page",
-				"individuals_and_families": "https://individual.carefirst.com/individuals-families/plans-coverage/medical/medical-plans.page",
-				"employer": "https://employer.carefirst.com/employer/home.page",
-				"careers": "https://carefirstcareers.ttcportals.com/?_ga=2.17813973.12616138.157565492-1759218599.157565492",
+				"General": "https://individual.carefirst.com/individuals-families/home.page",
+				"Individuals and Families": "https://individual.carefirst.com/individuals-families/plans-coverage/medical/medical-plans.page",
+				"Employer": "https://Employer.carefirst.com/Employer/home.page",
+				"Careers": "https://carefirstCareers.ttcportals.com/?_ga=2.17813973.12616138.157565492-1759218599.157565492",
 				"live_fearless": "http://www.carefirst.com/livefearless/",
-				"medicare": "https://www.carefirst.com/medicare-options/?utm_source=BCBSA&utm_medium=Digital&utm_campaign=Benefit_of_Blue&utm_plan=carefirst_md&utm_state=md"
+				"Medicare": "https://www.carefirst.com/Medicare-options/?utm_source=BCBSA&utm_medium=Digital&utm_campaign=Benefit_of_Blue&utm_plan=carefirst_md&utm_state=md"
 			}
 		},
 		"Blue Cross Blue Shield of Georgia": {
@@ -5010,12 +5010,12 @@
 				"z8l"
 			],
 			"URLs": {
-				"general": "https://www.anthem.com/individual-and-family/health-insurance/georgia/",
-				"individuals_and_families": "https://www.anthem.com/individual-and-family/georgia/",
-				"employer": "https://www.anthem.com/employer/",
-				"careers": "http://careers.antheminc.com/",
+				"General": "https://www.anthem.com/individual-and-family/health-insurance/georgia/",
+				"Individuals and Families": "https://www.anthem.com/individual-and-family/georgia/",
+				"Employer": "https://www.anthem.com/Employer/",
+				"Careers": "http://Careers.antheminc.com/",
 				"live_fearless": "https://www.bcbsga.com/individual-and-family/georgia-health-insurance/",
-				"medicare": "https://choose.anthem.com/medicare/abcbs/all/ma/ntm/index.html?cam_rid=u35y&cmp=sem-medsup-abcbs-ga&utm_plan=anthem_ga&utm_state=ga"
+				"Medicare": "https://choose.anthem.com/Medicare/abcbs/all/ma/ntm/index.html?cam_rid=u35y&cmp=sem-medsup-abcbs-ga&utm_plan=anthem_ga&utm_state=ga"
 			}
 		},
 		"Blue Shield of California": {
@@ -5511,13 +5511,13 @@
 				"zzi"
 			],
 			"URLs": {
-				"general": "https://www.blueshieldca.com/bsca/bsc/wcm/connect/sites/sites_content_en/ifp_exploration/home?marketcode=21WS1&utm_source=BCBSA&utm_medium=web&utm_campaign=221",
-				"careers": "https://blueshieldcaplans.com/",
+				"General": "https://www.blueshieldca.com/bsca/bsc/wcm/connect/sites/sites_content_en/ifp_exploration/home?marketcode=21WS1&utm_source=BCBSA&utm_medium=web&utm_campaign=221",
+				"Careers": "https://blueshieldcaplans.com/",
 				"live_fearless": "https://blueshieldcaplans.com/",
-				"spanish_medicare": "https://www.blueshieldca.com/bsca/bsc/wcm/connect/sites/sites_content_es/medicare/home?utm_source=D19GEDBCBS&utm_medium=Referral&utm_campaign=Blended%2-%2Age%2In%222%2-%2ALL%2TIERS%2-%2Referral%2-%2O65%5BBCBS%2Association%2*Digital_GWCBSCAL_D19GEDBCBS&PH=561",
-				"individuals_and_families": "https://blueshieldcaplans.com/",
-				"employer": "https://blueshieldcaplans.com/",
-				"medicare": "https://www.blueshieldca.com/medicare?utm_source=D19GEDBCBS&utm_medium=Referral&utm_campaign=Blended%2-%2Age%2In%222%2-%2ALL%2TIERS%2-%2Referral%2-%2O65%5BBCBS%2Association%2*Digital_GWCBSCAL_D19GEDBCBS&PH=561&utm_plan=bs_ca&utm_state=ca"
+				"spanish_Medicare": "https://www.blueshieldca.com/bsca/bsc/wcm/connect/sites/sites_content_es/Medicare/home?utm_source=D19GEDBCBS&utm_medium=Referral&utm_campaign=Blended%2-%2Age%2In%222%2-%2ALL%2TIERS%2-%2Referral%2-%2O65%5BBCBS%2Association%2*Digital_GWCBSCAL_D19GEDBCBS&PH=561",
+				"Individuals and Families": "https://blueshieldcaplans.com/",
+				"Employer": "https://blueshieldcaplans.com/",
+				"Medicare": "https://www.blueshieldca.com/Medicare?utm_source=D19GEDBCBS&utm_medium=Referral&utm_campaign=Blended%2-%2Age%2In%222%2-%2ALL%2TIERS%2-%2Referral%2-%2O65%5BBCBS%2Association%2*Digital_GWCBSCAL_D19GEDBCBS&PH=561&utm_plan=bs_ca&utm_state=ca"
 			}
 		},
 		"Anthem Blue Cross and Blue Shield Indiana": {
@@ -6239,11 +6239,11 @@
 				"z8f"
 			],
 			"URLs": {
-				"general": "https://www.anthem.com/individual-and-family/health-insurance/indiana/",
-				"individuals_and_families": "https://www.anthem.com/individual-and-family/indiana/",
-				"employer": "https://www.anthem.com/employer/",
-				"careers": "https://careers.antheminc.com/",
-				"medicare": "https://choose.anthem.com/medicare/abcbs/all/ma/ntm/index.html?cam_rid=U35P&cmp=SEM-PMCA-MEDICARE-U35P-BCBSA&utm_plan=anthem_in&utm_state=in"
+				"General": "https://www.anthem.com/individual-and-family/health-insurance/indiana/",
+				"Individuals and Families": "https://www.anthem.com/individual-and-family/indiana/",
+				"Employer": "https://www.anthem.com/Employer/",
+				"Careers": "https://Careers.antheminc.com/",
+				"Medicare": "https://choose.anthem.com/Medicare/abcbs/all/ma/ntm/index.html?cam_rid=U35P&cmp=SEM-PMCA-Medicare-U35P-BCBSA&utm_plan=anthem_in&utm_state=in"
 			}
 		},
 		"Anthem Blue Cross and Blue Shield": {
@@ -6735,11 +6735,11 @@
 				"z8n"
 			],
 			"URLs": {
-				"general": "https://www.empireblue.com/",
-				"individuals_and_families": "https://www.empireblue.com/individual-and-family/",
-				"employer": "https://www.empireblue.com/employer/",
-				"careers": "http://careers.antheminc.com/",
-				"medicare": "https://choose.empireblue.com/medicare/ebcbs/ny/ma/ntm/index.html?cam_rid=u55w&cmp=sem-medsup-ebcbs-ny&utm_plan=empire_bcbs_ny&utm_state=ny"
+				"General": "https://www.empireblue.com/",
+				"Individuals and Families": "https://www.empireblue.com/individual-and-family/",
+				"Employer": "https://www.empireblue.com/Employer/",
+				"Careers": "http://Careers.antheminc.com/",
+				"Medicare": "https://choose.empireblue.com/Medicare/ebcbs/ny/ma/ntm/index.html?cam_rid=u55w&cmp=sem-medsup-ebcbs-ny&utm_plan=empire_bcbs_ny&utm_state=ny"
 			}
 		},
 		"Blue Cross and Blue Shield of Minnesota": {
@@ -7177,11 +7177,11 @@
 				"z2f"
 			],
 			"URLs": {
-				"general": "https://www.bluecrossmn.com/?utm_source=bcbsa&utm_medium=leadGenPilot&utm_campaign=leadGenPilot",
-				"individuals_and_families": "https://www.bluecrossmn.com/shop-plans/individual-family-health-plans",
-				"employer": "https://www.bluecrossmn.com/resources-employers",
-				"careers": "http://careers.bluecrossmn.com/",
-				"medicare": "https://www.bluecrossmn.com/shop-plans/medicare-plans?utm_source=bcbs.com&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=bcbs_mn&utm_state=mn"
+				"General": "https://www.bluecrossmn.com/?utm_source=bcbsa&utm_medium=leadGenPilot&utm_campaign=leadGenPilot",
+				"Individuals and Families": "https://www.bluecrossmn.com/shop-plans/individual-family-health-plans",
+				"Employer": "https://www.bluecrossmn.com/resources-Employers",
+				"Careers": "http://Careers.bluecrossmn.com/",
+				"Medicare": "https://www.bluecrossmn.com/shop-plans/Medicare-plans?utm_source=bcbs.com&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=bcbs_mn&utm_state=mn"
 			}
 		},
 		"Anthem Blue Cross and Blue Shield Kentucky": {
@@ -7500,11 +7500,11 @@
 				"zvz"
 			],
 			"URLs": {
-				"general": "https://www.anthem.com/individual-and-family/health-insurance/kentucky/",
-				"individuals_and_families": "https://www.anthem.com/individual-and-family/kentucky/",
-				"employer": "https://www.anthem.com/employer/",
-				"careers": "https://careers.antheminc.com/",
-				"medicare": "https://choose.anthem.com/medicare/abcbs/all/ma/ntm/index.html?cam_rid=U35Q&cmp=SEM-PMCA-MEDICARE-U35Q-BCBSA&utm_plan=anthem_ky&utm_state=ky"
+				"General": "https://www.anthem.com/individual-and-family/health-insurance/kentucky/",
+				"Individuals and Families": "https://www.anthem.com/individual-and-family/kentucky/",
+				"Employer": "https://www.anthem.com/Employer/",
+				"Careers": "https://Careers.antheminc.com/",
+				"Medicare": "https://choose.anthem.com/Medicare/abcbs/all/ma/ntm/index.html?cam_rid=U35Q&cmp=SEM-PMCA-Medicare-U35Q-BCBSA&utm_plan=anthem_ky&utm_state=ky"
 			}
 		},
 		"Highmark BlueCross BlueShield of Western New York": {
@@ -7771,13 +7771,13 @@
 				"zxt"
 			],
 			"URLs": {
-				"general": "https://www.bcbswny.com/",
-				"careers": "https://www.bcbswny.com/",
+				"General": "https://www.bcbswny.com/",
+				"Careers": "https://www.bcbswny.com/",
 				"live_fearless": "https://www.bcbswny.com/",
-				"spanish_medicare": "https://www.bcbswny.com/",
-				"individuals_and_families": "https://www.bcbswny.com/",
-				"employer": "https://www.bcbswny.com/",
-				"medicare": "https://www.bcbswny.com/",
+				"spanish_Medicare": "https://www.bcbswny.com/",
+				"Individuals and Families": "https://www.bcbswny.com/",
+				"Employer": "https://www.bcbswny.com/",
+				"Medicare": "https://www.bcbswny.com/",
 				"smarter_better_healthcare": "https://www.bcbswny.com/"
 			}
 		},
@@ -8993,11 +8993,11 @@
 				"z9s"
 			],
 			"URLs": {
-				"general": "https://www.anthem.com/ca/individual-and-family/health-insurance/california/",
-				"individuals_and_families": "https://www.anthem.com/ca/individual-and-family/",
-				"employer": "https://www.anthem.com/ca/employer/",
-				"careers": "http://careers.antheminc.com/",
-				"medicare": "https://choose.anthem.com/medicare/abc/ca/ma/ntm/index.html?cam_rid=U35A&cmp=SEM-PMCA-MEDICARE-U35A-BCBSA&utm_plan=anthem_ca&utm_state=ca",
+				"General": "https://www.anthem.com/ca/individual-and-family/health-insurance/california/",
+				"Individuals and Families": "https://www.anthem.com/ca/individual-and-family/",
+				"Employer": "https://www.anthem.com/ca/Employer/",
+				"Careers": "http://Careers.antheminc.com/",
+				"Medicare": "https://choose.anthem.com/Medicare/abc/ca/ma/ntm/index.html?cam_rid=U35A&cmp=SEM-PMCA-Medicare-U35A-BCBSA&utm_plan=anthem_ca&utm_state=ca",
 				"live_fearless": "https://www.empireblue.com/"
 			}
 		},
@@ -9568,11 +9568,11 @@
 				"z6u"
 			],
 			"URLs": {
-				"general": "https://www.anthem.com/individual-and-family/health-insurance/virginia/",
-				"individuals_and_families": "https://www.anthem.com/individual-and-family/virginia/",
-				"employer": "https://www.anthem.com/employer/",
-				"careers": "https://careers.antheminc.com/",
-				"medicare": "https://choose.anthem.com/medicare/ahk/va/ma/ntm/index.html?cam_rid=U55X&cmp=SEM-PMCA-MEDICARE-U55X-BCBSA&utm_plan=anthem_va&utm_state=va"
+				"General": "https://www.anthem.com/individual-and-family/health-insurance/virginia/",
+				"Individuals and Families": "https://www.anthem.com/individual-and-family/virginia/",
+				"Employer": "https://www.anthem.com/Employer/",
+				"Careers": "https://Careers.antheminc.com/",
+				"Medicare": "https://choose.anthem.com/Medicare/ahk/va/ma/ntm/index.html?cam_rid=U55X&cmp=SEM-PMCA-Medicare-U55X-BCBSA&utm_plan=anthem_va&utm_state=va"
 			}
 		},
 		"Blue Cross and Blue Shield of South Carolina": {
@@ -9813,13 +9813,13 @@
 				"zom"
 			],
 			"URLs": {
-				"general": "https://www.southcarolinablues.com/web/public/brands/sc/",
-				"individuals_and_families": "https://www.southcarolinablues.com/web/public/brands/sc/shop/individual-and-family-plans",
-				"employer": "https://www.southcarolinablues.com/links/constituent/employers",
-				"careers": "https://www.southcarolinablues.com/web/public/brands/sc/about-us/careers/",
+				"General": "https://www.southcarolinablues.com/web/public/brands/sc/",
+				"Individuals and Families": "https://www.southcarolinablues.com/web/public/brands/sc/shop/individual-and-family-plans",
+				"Employer": "https://www.southcarolinablues.com/links/constituent/Employers",
+				"Careers": "https://www.southcarolinablues.com/web/public/brands/sc/about-us/Careers/",
 				"live_fearless": "http://www.LiveFearlessSC.com",
-				"medicare": "https://www.southcarolinablues.com/web/public/brands/sc/shop/medicare-options/?utm_source=bcbsa&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=bcbs_sc&utm_state=sc",
-				"spanish_medicare": "https://www.southcarolinablues.com",
+				"Medicare": "https://www.southcarolinablues.com/web/public/brands/sc/shop/Medicare-options/?utm_source=bcbsa&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=bcbs_sc&utm_state=sc",
+				"spanish_Medicare": "https://www.southcarolinablues.com",
 				"smarter_better_healthcare": "https://www.southcarolinablues.com"
 			}
 		},
@@ -10003,22 +10003,22 @@
 				"znh"
 			],
 			"URLs": {
-				"general": "https://www.bcidaho.com/",
-				"individuals_and_families": "https://shoppers.bcidaho.com/individual-and-family/overview.page",
-				"employer": "https://shoppers.bcidaho.com/explore-plans/employer-health-insurance-overview.page",
-				"careers": "https://bcidaho.wd5.myworkdayjobs.com/BCI",
-				"medicare": "https://bcidaho.com/yourmedicare/?utm_source=bcbsa&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=bc_id&utm_state=id"
+				"General": "https://www.bcidaho.com/",
+				"Individuals and Families": "https://shoppers.bcidaho.com/individual-and-family/overview.page",
+				"Employer": "https://shoppers.bcidaho.com/explore-plans/Employer-health-insurance-overview.page",
+				"Careers": "https://bcidaho.wd5.myworkdayjobs.com/BCI",
+				"Medicare": "https://bcidaho.com/yourMedicare/?utm_source=bcbsa&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=bc_id&utm_state=id"
 			}
 		},
 		"Florida Explore My Plan": {
 			"prefixes": ["abf", "awg", "azg", "pkb", "tfn", "tgm"],
 			"URLs": {
-				"general": "https://fl.exploremyplan.com/",
-				"individuals_and_families": "https://fl.exploremyplan.com/",
-				"employer": "https://fl.exploremyplan.com/",
-				"careers": "https://fl.exploremyplan.com/",
+				"General": "https://fl.exploremyplan.com/",
+				"Individuals and Families": "https://fl.exploremyplan.com/",
+				"Employer": "https://fl.exploremyplan.com/",
+				"Careers": "https://fl.exploremyplan.com/",
 				"live_fearless": "https://fl.exploremyplan.com/",
-				"medicare": "https://fl.exploremyplan.com/"
+				"Medicare": "https://fl.exploremyplan.com/"
 			}
 		},
 		"Blue Cross and Blue Shield of North Carolina": {
@@ -10243,13 +10243,13 @@
 				"z2e"
 			],
 			"URLs": {
-				"general": "https://www.bluecrossnc.com/",
-				"careers": "https://careers.bluecrossnc.com/global/en",
+				"General": "https://www.bluecrossnc.com/",
+				"Careers": "https://Careers.bluecrossnc.com/global/en",
 				"live_fearless": "http://www.LiveFearlessNC.com",
-				"individuals_and_families": "https://www.bluecrossnc.com/members/member-booklets-forms-documents",
-				"employer": "https://www.bluecrossnc.com/employer-services",
-				"medicare": "https://medicare.bluecrossnc.com/medicare/?utm_source=bcbsa&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=bcbs_nc&utm_state=nc",
-				"smarter_better_healthcare": "https://www.bluecrossnc.com/employer-solutions"
+				"Individuals and Families": "https://www.bluecrossnc.com/members/member-booklets-forms-documents",
+				"Employer": "https://www.bluecrossnc.com/Employer-services",
+				"Medicare": "https://Medicare.bluecrossnc.com/Medicare/?utm_source=bcbsa&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=bcbs_nc&utm_state=nc",
+				"smarter_better_healthcare": "https://www.bluecrossnc.com/Employer-solutions"
 			}
 		},
 		"Wellmark Blue Cross and Blue Shield South Dakota": {
@@ -10395,11 +10395,11 @@
 				"z3h"
 			],
 			"URLs": {
-				"general": "https://www.wellmark.com/",
-				"individuals_and_families": "https://www.wellmark.com/i-buy-my-own/shop-plans/compare-south-dakota",
-				"employer": "https://www.wellmark.com/employer",
-				"careers": "https://www.wellmark.com/about/careers",
-				"medicare": "https://wellmark.com/marketing/medicare?utm_source=bcbs.com&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=wellmark_sd&utm_state=sd"
+				"General": "https://www.wellmark.com/",
+				"Individuals and Families": "https://www.wellmark.com/i-buy-my-own/shop-plans/compare-south-dakota",
+				"Employer": "https://www.wellmark.com/Employer",
+				"Careers": "https://www.wellmark.com/about/Careers",
+				"Medicare": "https://wellmark.com/marketing/Medicare?utm_source=bcbs.com&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=wellmark_sd&utm_state=sd"
 			}
 		},
 		"Anthem Blue Cross and Blue Shield Connecticut": {
@@ -10677,11 +10677,11 @@
 				"z9t"
 			],
 			"URLs": {
-				"general": "https://www.anthem.com/individual-and-family/health-insurance/connecticut/",
-				"individuals_and_families": "https://www.anthem.com/individual-and-family/connecticut/",
-				"employer": "https://www.anthem.com/employer/",
-				"careers": "https://careers.antheminc.com/",
-				"medicare": "https://choose.anthem.com/medicare/abcbs/all/ma/ntm/index.html?cam_rid=U35W&cmp=SEM-PMCA-MEDICARE-U35W-BCBSA&utm_plan=anthem_ct&utm_state=ct"
+				"General": "https://www.anthem.com/individual-and-family/health-insurance/connecticut/",
+				"Individuals and Families": "https://www.anthem.com/individual-and-family/connecticut/",
+				"Employer": "https://www.anthem.com/Employer/",
+				"Careers": "https://Careers.antheminc.com/",
+				"Medicare": "https://choose.anthem.com/Medicare/abcbs/all/ma/ntm/index.html?cam_rid=U35W&cmp=SEM-PMCA-Medicare-U35W-BCBSA&utm_plan=anthem_ct&utm_state=ct"
 			}
 		},
 		"BlueCross BlueShield of Tennessee": {
@@ -10958,11 +10958,11 @@
 				"zzj"
 			],
 			"URLs": {
-				"general": "http://www.bcbst.com/get-insurance/index.page?",
-				"individuals_and_families": "https://www.bcbst.com/our-plans/individual-family-plans/?nav=header&cm_sp=nav-_-callout_button-_-Individual_&_Family_Plans%2title=",
-				"employer": "https://www.bcbst.com/our-plans/employer-group-plans/?nav=header&cm_sp=nav-_-callout_button-_-Employer_&_Group_Plans",
-				"careers": "https://www.bcbst.com/about/careers/?nav=footer",
-				"medicare": "https://www.bcbst-medicare.com/?cm_mmc=bcbsa-_-landing_page-_-medicare_national-_-zipcode_search&utm_plan=bcbs_tn&utm_state=tn"
+				"General": "http://www.bcbst.com/get-insurance/index.page?",
+				"Individuals and Families": "https://www.bcbst.com/our-plans/individual-family-plans/?nav=header&cm_sp=nav-_-callout_button-_-Individual_&_Family_Plans%2title=",
+				"Employer": "https://www.bcbst.com/our-plans/Employer-group-plans/?nav=header&cm_sp=nav-_-callout_button-_-Employer_&_Group_Plans",
+				"Careers": "https://www.bcbst.com/about/Careers/?nav=footer",
+				"Medicare": "https://www.bcbst-Medicare.com/?cm_mmc=bcbsa-_-landing_page-_-Medicare_national-_-zipcode_search&utm_plan=bcbs_tn&utm_state=tn"
 			}
 		},
 		"Anthem Blue Cross and Blue Shield Colorado": {
@@ -11209,11 +11209,11 @@
 				"z6b"
 			],
 			"URLs": {
-				"general": "https://www.anthem.com/individual-and-family/health-insurance/colorado/",
-				"individuals_and_families": "https://www.anthem.com/individual-and-family/colorado/",
-				"employer": "https://www.anthem.com/employer/",
-				"careers": "https://careers.antheminc.com/",
-				"medicare": "https://choose.anthem.com/medicare/abcbs/all/ma/ntm/index.html?cam_rid=U35M&cmp=SEM-PMCA-MEDICARE-U35M-BCBSA&utm_plan=anthem_co&utm_state=co"
+				"General": "https://www.anthem.com/individual-and-family/health-insurance/colorado/",
+				"Individuals and Families": "https://www.anthem.com/individual-and-family/colorado/",
+				"Employer": "https://www.anthem.com/Employer/",
+				"Careers": "https://Careers.antheminc.com/",
+				"Medicare": "https://choose.anthem.com/Medicare/abcbs/all/ma/ntm/index.html?cam_rid=U35M&cmp=SEM-PMCA-Medicare-U35M-BCBSA&utm_plan=anthem_co&utm_state=co"
 			}
 		},
 		"Highmark Blue Cross Blue Shield": {
@@ -11731,12 +11731,12 @@
 				"z2l"
 			],
 			"URLs": {
-				"general": "https://www.highmarkbcbs.com/home/",
-				"individuals_and_families": "https://www.discoverhighmark.com/",
-				"employer": "https://www.highmarkemployer.com/",
-				"careers": "https://careers.highmarkhealth.org/",
+				"General": "https://www.highmarkbcbs.com/home/",
+				"Individuals and Families": "https://www.discoverhighmark.com/",
+				"Employer": "https://www.highmarkEmployer.com/",
+				"Careers": "https://Careers.highmarkhealth.org/",
 				"live_fearless": "https://www.highmarkbcbs.com",
-				"spanish_medicare": "https://www.highmarkbcbs.com",
+				"spanish_Medicare": "https://www.highmarkbcbs.com",
 				"smarter_better_healthcare": "https://www.highmarkbcbs.com"
 			}
 		},
@@ -12154,11 +12154,11 @@
 				"z8r"
 			],
 			"URLs": {
-				"general": "https://www.premera.com/wa/visitor/",
-				"individuals_and_families": "https://www.premera.com/ak/visitor/shop-for-plans/individual-and-family-plans/health-plans/",
-				"employer": "https://www.premera.com/ak/employer/",
-				"careers": "https://www.premera.com/ak/visitor/careers/",
-				"medicare": "https://www.premera.com/medicare/?utm_source=bcbsa&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=premera_ak&utm_state=ak"
+				"General": "https://www.premera.com/wa/visitor/",
+				"Individuals and Families": "https://www.premera.com/ak/visitor/shop-for-plans/individual-and-family-plans/health-plans/",
+				"Employer": "https://www.premera.com/ak/Employer/",
+				"Careers": "https://www.premera.com/ak/visitor/Careers/",
+				"Medicare": "https://www.premera.com/Medicare/?utm_source=bcbsa&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=premera_ak&utm_state=ak"
 			}
 		},
 		"Anthem Blue Cross and Blue Shield New Hampshire": {
@@ -12272,11 +12272,11 @@
 				"z9a"
 			],
 			"URLs": {
-				"general": "https://www.anthem.com/individual-and-family/health-insurance/new-hampshire/",
-				"individuals_and_families": "https://www.anthem.com/individual-and-family/new-hampshire/",
-				"employer": "https://www.anthem.com/employer/",
-				"careers": "https://careers.antheminc.com/",
-				"medicare": "https://choose.anthem.com/medicare/abcbs/all/ma/ntm/index.html?cam_rid=U36C&cmp=SEM-PMCA-MEDICARE-U36C-BCBSA&utm_plan=anthem_nh&utm_state=nh"
+				"General": "https://www.anthem.com/individual-and-family/health-insurance/new-hampshire/",
+				"Individuals and Families": "https://www.anthem.com/individual-and-family/new-hampshire/",
+				"Employer": "https://www.anthem.com/Employer/",
+				"Careers": "https://Careers.antheminc.com/",
+				"Medicare": "https://choose.anthem.com/Medicare/abcbs/all/ma/ntm/index.html?cam_rid=U36C&cmp=SEM-PMCA-Medicare-U36C-BCBSA&utm_plan=anthem_nh&utm_state=nh"
 			}
 		},
 		"Blue Cross and Blue Shield of Texas": {
@@ -13008,12 +13008,12 @@
 				"z6t"
 			],
 			"URLs": {
-				"general": "https://www.bcbstx.com/",
-				"individuals_and_families": "https://www.bcbstx.com/shop-plans-and-products/",
-				"employer": "https://www.bcbstx.com/employer",
-				"careers": "https://www.bcbstx.com/company-info/careers",
+				"General": "https://www.bcbstx.com/",
+				"Individuals and Families": "https://www.bcbstx.com/shop-plans-and-products/",
+				"Employer": "https://www.bcbstx.com/Employer",
+				"Careers": "https://www.bcbstx.com/company-info/Careers",
 				"live_fearless": "http://www.bcbstx.com/",
-				"medicare": "https://www.bcbstx.com/medicare?wt.mc_id=txemadig125398&utm_plan=hcsc_tx&utm_state=tx"
+				"Medicare": "https://www.bcbstx.com/Medicare?wt.mc_id=txemadig125398&utm_plan=hcsc_tx&utm_state=tx"
 			}
 		},
 		"Wellmark Blue Cross and Blue Shield Iowa": {
@@ -13607,11 +13607,11 @@
 				"zvm"
 			],
 			"URLs": {
-				"general": "https://www.wellmark.com/",
-				"individuals_and_families": "https://www.wellmark.com/i-buy-my-own/shop-plans",
-				"employer": "https://www.wellmark.com/employer",
-				"careers": "https://www.wellmark.com/about/careers",
-				"medicare": "https://wellmark.com/marketing/medicare?utm_source=bcbs.com&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=wellmark_ia&utm_state=ia"
+				"General": "https://www.wellmark.com/",
+				"Individuals and Families": "https://www.wellmark.com/i-buy-my-own/shop-plans",
+				"Employer": "https://www.wellmark.com/Employer",
+				"Careers": "https://www.wellmark.com/about/Careers",
+				"Medicare": "https://wellmark.com/marketing/Medicare?utm_source=bcbs.com&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=wellmark_ia&utm_state=ia"
 			}
 		},
 		"Anthem Blue Cross and Blue Shield Missouri": {
@@ -14000,11 +14000,11 @@
 				"z7m"
 			],
 			"URLs": {
-				"general": "https://www.anthem.com/individual-and-family/health-insurance/missouri/",
-				"individuals_and_families": "https://www.anthem.com/individual-and-family/missouri/",
-				"employer": "https://www.anthem.com/employer/",
-				"careers": "https://careers.antheminc.com/",
-				"medicare": "https://choose.anthem.com/medicare/abcbs/all/ma/ntm/index.html?cam_rid=U35R&cmp=SEM-PMCA-MEDICARE-U35R-BCBSA&utm_plan=anthem_mo&utm_state=mo"
+				"General": "https://www.anthem.com/individual-and-family/health-insurance/missouri/",
+				"Individuals and Families": "https://www.anthem.com/individual-and-family/missouri/",
+				"Employer": "https://www.anthem.com/Employer/",
+				"Careers": "https://Careers.antheminc.com/",
+				"Medicare": "https://choose.anthem.com/Medicare/abcbs/all/ma/ntm/index.html?cam_rid=U35R&cmp=SEM-PMCA-Medicare-U35R-BCBSA&utm_plan=anthem_mo&utm_state=mo"
 			}
 		},
 		"Anthem Blue Cross and Blue Shield Ohio": {
@@ -14817,11 +14817,11 @@
 				"z9h"
 			],
 			"URLs": {
-				"general": "https://www.anthem.com/individual-and-family/health-insurance/ohio",
-				"individuals_and_families": "https://www.anthem.com/individual-and-family/ohio/",
-				"employer": "https://www.anthem.com/employer/",
-				"careers": "https://careers.antheminc.com/",
-				"medicare": "https://choose.anthem.com/medicare/abcbs/all/ma/ntm/index.html?cam_rid=U35T&cmp=SEM-PMCA-MEDICARE-U35T-BCBSA&utm_plan=anthem_oh&utm_state=oh"
+				"General": "https://www.anthem.com/individual-and-family/health-insurance/ohio",
+				"Individuals and Families": "https://www.anthem.com/individual-and-family/ohio/",
+				"Employer": "https://www.anthem.com/Employer/",
+				"Careers": "https://Careers.antheminc.com/",
+				"Medicare": "https://choose.anthem.com/Medicare/abcbs/all/ma/ntm/index.html?cam_rid=U35T&cmp=SEM-PMCA-Medicare-U35T-BCBSA&utm_plan=anthem_oh&utm_state=oh"
 			}
 		},
 		"Blue Cross and Blue Shield of Nebraska": {
@@ -14937,12 +14937,12 @@
 				"y2m"
 			],
 			"URLs": {
-				"general": "https://www.nebraskablue.com/",
-				"individuals_and_families": "https://www.nebraskablue.com/en/Shop-Plans/Individual-and-Family-Plans",
-				"employer": "https://www.nebraskablue.com/en/Employers",
-				"careers": "https://www.nebraskablue.com/en/About-Us/Careers",
+				"General": "https://www.nebraskablue.com/",
+				"Individuals and Families": "https://www.nebraskablue.com/en/Shop-Plans/Individual-and-Family-Plans",
+				"Employer": "https://www.nebraskablue.com/en/Employers",
+				"Careers": "https://www.nebraskablue.com/en/About-Us/Careers",
 				"live_fearless": "https://www.nebraskablue.com/",
-				"medicare": "https://medicare.nebraskablue.com/?utm_source=bcbs.com&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=bcbs_ne&utm_state=ne"
+				"Medicare": "https://Medicare.nebraskablue.com/?utm_source=bcbs.com&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=bcbs_ne&utm_state=ne"
 			}
 		},
 		"Independence Blue Cross": {
@@ -15347,11 +15347,11 @@
 				"zob"
 			],
 			"URLs": {
-				"general": "https://www.ibx.com/index.jsp",
-				"individuals_and_families": "https://www.ibx.com/individuals/index.html",
-				"employer": "https://www.ibx.com/employers/index.html",
-				"careers": "https://www.ibx.com/careers/index.html",
-				"medicare": "https://www.ibxmedicare.com/benefit/?utm_source=d19gedbcbs&utm_medium=referral&utm_campaign=general%2219%2-%2bluecross%2blueshield%2digital%2campaign%2-%2referral%2-%2blended_gwcibxpa_d19gedbcbs&utm_plan=independence_bc&utm_state=pa"
+				"General": "https://www.ibx.com/index.jsp",
+				"Individuals and Families": "https://www.ibx.com/individuals/index.html",
+				"Employer": "https://www.ibx.com/Employers/index.html",
+				"Careers": "https://www.ibx.com/Careers/index.html",
+				"Medicare": "https://www.ibxMedicare.com/benefit/?utm_source=d19gedbcbs&utm_medium=referral&utm_campaign=General%2219%2-%2bluecross%2blueshield%2digital%2campaign%2-%2referral%2-%2blended_gwcibxpa_d19gedbcbs&utm_plan=independence_bc&utm_state=pa"
 			}
 		},
 		"Blue Cross and Blue Shield of Massachusetts": {
@@ -15845,11 +15845,11 @@
 				"zwj"
 			],
 			"URLs": {
-				"general": "https://home.bluecrossma.com/",
-				"individuals_and_families": "https://www.bluecrossma.com/get-blue-ma/",
-				"employer": "https://employer.bluecrossma.com/",
-				"careers": "https://careers.bluecrossma.com/",
-				"medicare": "https://medicare.bluecrossma.com/?cid=tv88&utm_plan=bcbs_ma&utm_state=ma"
+				"General": "https://home.bluecrossma.com/",
+				"Individuals and Families": "https://www.bluecrossma.com/get-blue-ma/",
+				"Employer": "https://Employer.bluecrossma.com/",
+				"Careers": "https://Careers.bluecrossma.com/",
+				"Medicare": "https://Medicare.bluecrossma.com/?cid=tv88&utm_plan=bcbs_ma&utm_state=ma"
 			}
 		},
 		"Premera Blue Cross": {
@@ -15930,11 +15930,11 @@
 				"z3w"
 			],
 			"URLs": {
-				"general": "https://www.premera.com/wa/visitor/",
-				"individuals_and_families": "https://www.premera.com/wa/visitor/shop-for-plans/individual-and-family-plans/health-plans/",
-				"employer": "https://www.premera.com/wa/employer/",
-				"careers": "https://www.premera.com/wa/visitor/careers/",
-				"medicare": "https://www.premera.com/medicare/?utm_source=bcbsa&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=premera_bc&utm_state=wa"
+				"General": "https://www.premera.com/wa/visitor/",
+				"Individuals and Families": "https://www.premera.com/wa/visitor/shop-for-plans/individual-and-family-plans/health-plans/",
+				"Employer": "https://www.premera.com/wa/Employer/",
+				"Careers": "https://www.premera.com/wa/visitor/Careers/",
+				"Medicare": "https://www.premera.com/Medicare/?utm_source=bcbsa&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=premera_bc&utm_state=wa"
 			}
 		},
 		"Regence BlueShield": {
@@ -16215,12 +16215,12 @@
 				"z9r"
 			],
 			"URLs": {
-				"general": "https://www.regence.com/home?ecid=r_mem_zz_bcbsa_web_lp_zz_prfx_zz_422",
-				"individuals_and_families": "https://www.regence.com/web/regence_individual/shop-individual",
-				"employer": "https://www.regence.com/web/regence_employer/plans",
-				"careers": "https://www.regence.com/member/about-us/careers",
+				"General": "https://www.regence.com/home?ecid=r_mem_zz_bcbsa_web_lp_zz_prfx_zz_422",
+				"Individuals and Families": "https://www.regence.com/web/regence_individual/shop-individual",
+				"Employer": "https://www.regence.com/web/regence_Employer/plans",
+				"Careers": "https://www.regence.com/member/about-us/Careers",
 				"live_fearless": "https://www.regence.com/web/regence_individual/live-fearless",
-				"medicare": "https://www.regence.com/web/regence_medicare?ecid=r_med_zz_bcbsa_web_lp_namc_bnb_zz_619&utm_plan=regence_bs_wa&utm_state=wa"
+				"Medicare": "https://www.regence.com/web/regence_Medicare?ecid=r_med_zz_bcbsa_web_lp_namc_bnb_zz_619&utm_plan=regence_bs_wa&utm_state=wa"
 			}
 		},
 		"Blue Cross and Blue Shield of Kansas City": {
@@ -16362,11 +16362,11 @@
 				"yjw"
 			],
 			"URLs": {
-				"general": "http://www.bluekc.com/",
-				"individuals_and_families": "https://www.bluekc.com/consumer/individual-family/",
-				"employer": "https://www.bluekc.com/consumer/employers/",
-				"careers": "https://www.bluekc.com/consumer/blue-kc/careers.html",
-				"medicare": "https://www.medicarebluekc.com/national?utm_source=bcbsa&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=bcbs_kc&utm_state=mo"
+				"General": "http://www.bluekc.com/",
+				"Individuals and Families": "https://www.bluekc.com/consumer/individual-family/",
+				"Employer": "https://www.bluekc.com/consumer/Employers/",
+				"Careers": "https://www.bluekc.com/consumer/blue-kc/Careers.html",
+				"Medicare": "https://www.Medicarebluekc.com/national?utm_source=bcbsa&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=bcbs_kc&utm_state=mo"
 			}
 		},
 		"Blue Cross & Blue Shield of Rhode Island": {
@@ -16517,12 +16517,12 @@
 				"z9k"
 			],
 			"URLs": {
-				"general": "https://www.bcbsri.com/",
-				"individuals_and_families": "https://www.bcbsri.com/individual/",
-				"employer": "https://www.bcbsri.com/employers/",
-				"careers": "https://www.bcbsri.com/careers",
+				"General": "https://www.bcbsri.com/",
+				"Individuals and Families": "https://www.bcbsri.com/individual/",
+				"Employer": "https://www.bcbsri.com/Employers/",
+				"Careers": "https://www.bcbsri.com/Careers",
 				"live_fearless": "https://www.bcbsri.com/",
-				"medicare": "https://www.bcbsri.com/medicare/?utm_source=bcbsa&utm_medium=referral&utm_campaign=benefitofblue&utm_content=zipcode&utm_plan=bcbs_ri&utm_state=ri"
+				"Medicare": "https://www.bcbsri.com/Medicare/?utm_source=bcbsa&utm_medium=referral&utm_campaign=benefitofblue&utm_content=zipcode&utm_plan=bcbs_ri&utm_state=ri"
 			}
 		},
 		"Anthem Blue Cross and Blue Shield Wisconsin": {
@@ -17020,11 +17020,11 @@
 				"z7z"
 			],
 			"URLs": {
-				"general": "https://www.anthem.com/individual-and-family/wisconsin/",
-				"individuals_and_families": "https://www.anthem.com/individual-and-family/wisconsin/",
-				"employer": "https://www.anthem.com/employer/",
-				"careers": "https://careers.antheminc.com/",
-				"medicare": "https://choose.anthem.com/medicare/abcbs/all/ma/ntm/index.html?cam_rid=U35V&cmp=SEM-PMCA-MEDICARE-U35V-BCBSA&utm_plan=anthem_wi&utm_state=wi"
+				"General": "https://www.anthem.com/individual-and-family/wisconsin/",
+				"Individuals and Families": "https://www.anthem.com/individual-and-family/wisconsin/",
+				"Employer": "https://www.anthem.com/Employer/",
+				"Careers": "https://Careers.antheminc.com/",
+				"Medicare": "https://choose.anthem.com/Medicare/abcbs/all/ma/ntm/index.html?cam_rid=U35V&cmp=SEM-PMCA-Medicare-U35V-BCBSA&utm_plan=anthem_wi&utm_state=wi"
 			}
 		},
 		"Arkansas Blue Cross and Blue Shield": {
@@ -17158,11 +17158,11 @@
 				"xcx"
 			],
 			"URLs": {
-				"general": "http://www.arkansasbluecross.com/looking-for-insurance",
-				"individuals_and_families": "http://www.arkansasbluecross.com/members/individual-and-family",
-				"employer": "http://www.arkansasbluecross.com/members/employer-coverage",
-				"careers": "https://arkbluecross.wd1.myworkdayjobs.com/ABCBS_External_Careers",
-				"medicare": "https://secure.arkansasbluecross.com/lookingforinsurance/medicareplans/shopping/default.aspx?utm_source=bcbsa&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=bcbs_ar&utm_state=ar"
+				"General": "http://www.arkansasbluecross.com/looking-for-insurance",
+				"Individuals and Families": "http://www.arkansasbluecross.com/members/individual-and-family",
+				"Employer": "http://www.arkansasbluecross.com/members/Employer-coverage",
+				"Careers": "https://arkbluecross.wd1.myworkdayjobs.com/ABCBS_External_Careers",
+				"Medicare": "https://secure.arkansasbluecross.com/lookingforinsurance/Medicareplans/shopping/default.aspx?utm_source=bcbsa&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=bcbs_ar&utm_state=ar"
 			}
 		},
 		"Blue Cross and Blue Shield of Louisiana": {
@@ -17275,12 +17275,12 @@
 				"zvb"
 			],
 			"URLs": {
-				"general": "https://www.bcbsla.com/",
-				"individuals_and_families": "https://bcbslaplan.com/oep?tfn=8335312077&utm_source=internet_web&utm_medium=link&utm_campaign=2025OEP&eventid=11234&crmid=CMP-06770-K8W7P6",
-				"employer": "https://employers.bcbsla.com/",
-				"careers": "https://www.bcbsla.com/careercenter",
+				"General": "https://www.bcbsla.com/",
+				"Individuals and Families": "https://bcbslaplan.com/oep?tfn=8335312077&utm_source=internet_web&utm_medium=link&utm_campaign=2025OEP&eventid=11234&crmid=CMP-06770-K8W7P6",
+				"Employer": "https://Employers.bcbsla.com/",
+				"Careers": "https://www.bcbsla.com/careercenter",
 				"live_fearless": "http://www.bcbsla.com/",
-				"medicare": "https://bcbslaplan.com/6m?tfn=8332637835&utm_source=internet_web&utm_medium=link&utm_campaign=2025SeniorSolutions&eventid=11421&CRMid=CMP-05256-F7X7M1"
+				"Medicare": "https://bcbslaplan.com/6m?tfn=8332637835&utm_source=internet_web&utm_medium=link&utm_campaign=2025SeniorSolutions&eventid=11421&CRMid=CMP-05256-F7X7M1"
 			}
 		},
 		"Regence BlueCross BlueShield": {
@@ -17537,12 +17537,12 @@
 				"z4v"
 			],
 			"URLs": {
-				"general": "https://www.regence.com/home?ecid=r_mem_zz_bcbsa_web_lp_zz_prfx_zz_422",
-				"individuals_and_families": "https://www.regence.com/web/regence_individual/shop-individual",
-				"employer": "https://www.regence.com/web/regence_employer/plans",
-				"careers": "https://www.regence.com/member/about-us/careers",
+				"General": "https://www.regence.com/home?ecid=r_mem_zz_bcbsa_web_lp_zz_prfx_zz_422",
+				"Individuals and Families": "https://www.regence.com/web/regence_individual/shop-individual",
+				"Employer": "https://www.regence.com/web/regence_Employer/plans",
+				"Careers": "https://www.regence.com/member/about-us/Careers",
 				"live_fearless": "https://www.regence.com/web/regence_individual/live-fearless",
-				"medicare": "https://www.regence.com/web/regence_medicare?ecid=r_med_zz_bcbsa_web_lp_namc_bnb_zz_619&utm_plan=regence_bcbs_or&utm_state=or"
+				"Medicare": "https://www.regence.com/web/regence_Medicare?ecid=r_med_zz_bcbsa_web_lp_namc_bnb_zz_619&utm_plan=regence_bcbs_or&utm_state=or"
 			}
 		},
 		"Excellus BlueCross BlueShield": {
@@ -17617,12 +17617,12 @@
 				"yns"
 			],
 			"URLs": {
-				"general": "https://www.excellusbcbs.com/",
-				"individuals_and_families": "https://www.excellusbcbs.com/plans/individual",
-				"employer": "https://employer.excellusbcbs.com/",
-				"careers": "https://careers.excellusbcbs.com/",
+				"General": "https://www.excellusbcbs.com/",
+				"Individuals and Families": "https://www.excellusbcbs.com/plans/individual",
+				"Employer": "https://Employer.excellusbcbs.com/",
+				"Careers": "https://Careers.excellusbcbs.com/",
 				"live_fearless": "https://www.excellusbcbs.com/",
-				"medicare": "https://www.excellusformedicare.com/?utm_source=bcbs_lp&utm_campaign=m_bcbsnat&utm_plan=excellus_bcbs&utm_state=ny"
+				"Medicare": "https://www.excellusforMedicare.com/?utm_source=bcbs_lp&utm_campaign=m_bcbsnat&utm_plan=excellus_bcbs&utm_state=ny"
 			}
 		},
 		"Credence": {
@@ -17660,13 +17660,13 @@
 				"vrp"
 			],
 			"URLs": {
-				"general": "https://www.credenceblue.com",
-				"careers": "https://www.credenceblue.com",
+				"General": "https://www.credenceblue.com",
+				"Careers": "https://www.credenceblue.com",
 				"live_fearless": "https://www.credenceblue.com",
-				"spanish_medicare": "https://www.credenceblue.com",
-				"individuals_and_families": "https://www.credenceblue.com",
-				"employer": "https://www.credenceblue.com",
-				"medicare": "https://www.credenceblue.com",
+				"spanish_Medicare": "https://www.credenceblue.com",
+				"Individuals and Families": "https://www.credenceblue.com",
+				"Employer": "https://www.credenceblue.com",
+				"Medicare": "https://www.credenceblue.com",
 				"smarter_better_healthcare": "https://www.credenceblue.com"
 			}
 		},
@@ -17746,12 +17746,12 @@
 				"ziu"
 			],
 			"URLs": {
-				"general": "https://www.bluecrossvt.org",
-				"individuals_and_families": "https://www.bluecrossvt.org/our-plans/individuals-and-families",
-				"employer": "https://www.bluecrossvt.org/our-plans/employers-and-groups",
-				"careers": "https://www.bluecrossvt.org/about/careers",
+				"General": "https://www.bluecrossvt.org",
+				"Individuals and Families": "https://www.bluecrossvt.org/our-plans/individuals-and-families",
+				"Employer": "https://www.bluecrossvt.org/our-plans/Employers-and-groups",
+				"Careers": "https://www.bluecrossvt.org/about/Careers",
 				"live_fearless": "https://www.bluecrossvt.org/our-plans/individuals-and-families",
-				"medicare": "https://www.bluecrossvt.org/our-plans/medicare"
+				"Medicare": "https://www.bluecrossvt.org/our-plans/Medicare"
 			}
 		},
 		"Capital BlueCross": {
@@ -17916,12 +17916,12 @@
 				"ywz"
 			],
 			"URLs": {
-				"general": "https://www.capbluecross.com/",
-				"individuals_and_families": "https://www.capbluecross.com/wps/portal/cap/home/shop/individual",
-				"employer": "https://www.capbluecross.com/wps/portal/cap/employer",
-				"careers": "https://www.capbluecross.com/wps/portal/cap/about/career/",
+				"General": "https://www.capbluecross.com/",
+				"Individuals and Families": "https://www.capbluecross.com/wps/portal/cap/home/shop/individual",
+				"Employer": "https://www.capbluecross.com/wps/portal/cap/Employer",
+				"Careers": "https://www.capbluecross.com/wps/portal/cap/about/career/",
 				"live_fearless": "https://www.capbluecross.com/",
-				"medicare": "https://www.capitalbluemedicare.com/?utm_source=bcbsa_Medicare&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=capital_bc&utm_state=pa"
+				"Medicare": "https://www.capitalblueMedicare.com/?utm_source=bcbsa_Medicare&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=capital_bc&utm_state=pa"
 			}
 		},
 		"Highmark Blue Shield": {
@@ -18091,11 +18091,11 @@
 				"zok"
 			],
 			"URLs": {
-				"general": "https://www.highmarkblueshield.com/home/",
-				"individuals_and_families": "https://www.discoverhighmark.com/?_ga=2.51624169.195977458.1576684698-93874423.15766847",
-				"employer": "https://www.highmarkemployer.com/",
-				"careers": "https://careers.highmarkhealth.org/",
-				"medicare": "https://medicare.highmark.com/?offercode=1234567&utm_source=bcbsa&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=highmark_bs_pa&utm_state=pa"
+				"General": "https://www.highmarkblueshield.com/home/",
+				"Individuals and Families": "https://www.discoverhighmark.com/?_ga=2.51624169.195977458.1576684698-93874423.15766847",
+				"Employer": "https://www.highmarkEmployer.com/",
+				"Careers": "https://Careers.highmarkhealth.org/",
+				"Medicare": "https://Medicare.highmark.com/?offercode=1234567&utm_source=bcbsa&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=highmark_bs_pa&utm_state=pa"
 			}
 		},
 		"Highmark BlueShield of Northeastern New York": {
@@ -18183,12 +18183,12 @@
 				"z8b"
 			],
 			"URLs": {
-				"general": "https://www.bsneny.com",
-				"individuals_and_families": "https://www.bsneny.com",
-				"employer": "https://www.bsneny.com",
-				"careers": "https://www.bsneny.com",
+				"General": "https://www.bsneny.com",
+				"Individuals and Families": "https://www.bsneny.com",
+				"Employer": "https://www.bsneny.com",
+				"Careers": "https://www.bsneny.com",
 				"live_fearless": "https://www.bsneny.com",
-				"medicare": "https://www.bsneny.com"
+				"Medicare": "https://www.bsneny.com"
 			}
 		},
 		"Highmark Blue Cross Blue Shield West Virginia": {
@@ -18254,11 +18254,11 @@
 				"zpw"
 			],
 			"URLs": {
-				"general": "https://www.highmarkbcbswv.com/home/",
-				"individuals_and_families": "https://www.discoverhighmark.com/?_ga=2.51624169.195977458.1576684698-93874423.1576684698",
-				"employer": "https://www.highmarkemployer.com/",
-				"careers": "https://careers.highmarkhealth.org/",
-				"medicare": "https://medicare.highmark.com/?offercode=1234567&utm_source=bcbsa&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=highmark_wv&utm_state=wv"
+				"General": "https://www.highmarkbcbswv.com/home/",
+				"Individuals and Families": "https://www.discoverhighmark.com/?_ga=2.51624169.195977458.1576684698-93874423.1576684698",
+				"Employer": "https://www.highmarkEmployer.com/",
+				"Careers": "https://Careers.highmarkhealth.org/",
+				"Medicare": "https://Medicare.highmark.com/?offercode=1234567&utm_source=bcbsa&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=highmark_wv&utm_state=wv"
 			}
 		},
 		"BlueCross BlueShield of Western New York": {
@@ -18304,12 +18304,12 @@
 				"yso"
 			],
 			"URLs": {
-				"general": "https://www.bcbswny.com",
-				"individuals_and_families": "https://www.bcbswny.com/content/wny/explore/individual-family.html",
-				"employer": "https://www.bcbswny.com/content/wny/employer.html",
-				"careers": "https://www.bcbswny.com/content/wny/careers.html",
+				"General": "https://www.bcbswny.com",
+				"Individuals and Families": "https://www.bcbswny.com/content/wny/explore/individual-family.html",
+				"Employer": "https://www.bcbswny.com/content/wny/Employer.html",
+				"Careers": "https://www.bcbswny.com/content/wny/Careers.html",
 				"live_fearless": "https://securews.bcbswny.com/content/WNYlivefearless.html",
-				"medicare": "https://www.bcbswny.com/content/wny/medicare/benefit-of-blue.html?utm_source=bcbsa&utm_medium=referral&utm_campaign=benefitofblue&&utm_plan=bcbs_wny&utm_state=ny"
+				"Medicare": "https://www.bcbswny.com/content/wny/Medicare/benefit-of-blue.html?utm_source=bcbsa&utm_medium=referral&utm_campaign=benefitofblue&&utm_plan=bcbs_wny&utm_state=ny"
 			}
 		},
 		"Minnesota Explore Myplan": {
@@ -18333,11 +18333,11 @@
 				"w8h"
 			],
 			"URLs": {
-				"general": "https://mn.exploremyplan.com/",
-				"individuals_and_families": "https://www.bcbsal.org/web/index.html",
-				"employer": "https://employers.bcbsal.org/portal/web/al1/home",
-				"careers": "https://www.bcbsal.jobs/?_ga=2.22124664.179378.157548112-1699435799.157548112",
-				"medicare": "https://n2m.bcbsalmedicare.com/blue-advantage#comparePlans/?utm_source=bcbsa&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=bcbs_al&utm_state=al"
+				"General": "https://mn.exploremyplan.com/",
+				"Individuals and Families": "https://www.bcbsal.org/web/index.html",
+				"Employer": "https://Employers.bcbsal.org/portal/web/al1/home",
+				"Careers": "https://www.bcbsal.jobs/?_ga=2.22124664.179378.157548112-1699435799.157548112",
+				"Medicare": "https://n2m.bcbsalMedicare.com/blue-advantage#comparePlans/?utm_source=bcbsa&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=bcbs_al&utm_state=al"
 			}
 		},
 		"Blue Cross and Blue Shield of New Mexico": {
@@ -18389,12 +18389,12 @@
 				"y3t"
 			],
 			"URLs": {
-				"general": "http://www.bcbsnm.com/",
-				"individuals_and_families": "https://www.bcbsnm.com/shop-plans-and-products/",
-				"employer": "https://www.bcbsnm.com/employer/index.html",
-				"careers": "https://www.bcbsnm.com/company-info/careers",
+				"General": "http://www.bcbsnm.com/",
+				"Individuals and Families": "https://www.bcbsnm.com/shop-plans-and-products/",
+				"Employer": "https://www.bcbsnm.com/Employer/index.html",
+				"Careers": "https://www.bcbsnm.com/company-info/Careers",
 				"live_fearless": "http://www.bcbsnm.com/",
-				"medicare": "https://www.bcbsnm.com/medicare?wt.mc_id=nmemadig125396&utm_plan=hcsc_nm&utm_state=nm"
+				"Medicare": "https://www.bcbsnm.com/Medicare?wt.mc_id=nmemadig125396&utm_plan=hcsc_nm&utm_state=nm"
 			}
 		},
 		"Blue Cross and Blue Shield of Kansas": {
@@ -18433,12 +18433,12 @@
 				"zml"
 			],
 			"URLs": {
-				"general": "http://www.bcbsks.com/",
-				"individuals_and_families": "https://www.bcbsks.com/HealthPlans/Under65/",
-				"employer": "https://www.bcbsks.com/HealthPlans/Groups51plus/",
-				"careers": "https://www.bcbsks.com/AboutUs/careers/",
+				"General": "http://www.bcbsks.com/",
+				"Individuals and Families": "https://www.bcbsks.com/HealthPlans/Under65/",
+				"Employer": "https://www.bcbsks.com/HealthPlans/Groups51plus/",
+				"Careers": "https://www.bcbsks.com/AboutUs/Careers/",
 				"live_fearless": "http://www.bcbsks.com/",
-				"medicare": "https://www.bcbsks.com/medicare/?utm_source=bcbsa&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=bcbs_ks&utm_state=ks"
+				"Medicare": "https://www.bcbsks.com/Medicare/?utm_source=bcbsa&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=bcbs_ks&utm_state=ks"
 			}
 		},
 		"Horizon Blue Cross  Blue Shield of New Jersey": {
@@ -18806,11 +18806,11 @@
 				"zjl"
 			],
 			"URLs": {
-				"general": "https://www.horizonblue.com/",
-				"individuals_and_families": "https://www.horizonblue.com/members",
-				"employer": "https://www.horizonblue.com/employers",
-				"careers": "https://www.horizonblue.com/careers",
-				"medicare": "https://medicare.horizonblue.com/?utm_source=bcbsa&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=horizon_nj&utm_state=nj"
+				"General": "https://www.horizonblue.com/",
+				"Individuals and Families": "https://www.horizonblue.com/members",
+				"Employer": "https://www.horizonblue.com/Employers",
+				"Careers": "https://www.horizonblue.com/Careers",
+				"Medicare": "https://Medicare.horizonblue.com/?utm_source=bcbsa&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=horizon_nj&utm_state=nj"
 			}
 		},
 		"Anthem Blue Cross and Blue Shield Maine": {
@@ -18893,11 +18893,11 @@
 				"z2w"
 			],
 			"URLs": {
-				"general": "https://www.anthem.com/individual-and-family/health-insurance/maine/",
-				"individuals_and_families": "https://www.anthem.com/individual-and-family/maine/",
-				"employer": "https://www.anthem.com/employer/",
-				"careers": "https://careers.antheminc.com/",
-				"medicare": "https://choose.anthem.com/medicare/amh/me/ma/ntm/index.html?cam_rid=U36B&cmp=SEM-PMCA-MEDICARE-U36B-BCBSA&utm_plan=anthem_me&utm_state=me"
+				"General": "https://www.anthem.com/individual-and-family/health-insurance/maine/",
+				"Individuals and Families": "https://www.anthem.com/individual-and-family/maine/",
+				"Employer": "https://www.anthem.com/Employer/",
+				"Careers": "https://Careers.antheminc.com/",
+				"Medicare": "https://choose.anthem.com/Medicare/amh/me/ma/ntm/index.html?cam_rid=U36B&cmp=SEM-PMCA-Medicare-U36B-BCBSA&utm_plan=anthem_me&utm_state=me"
 			}
 		},
 		"Highmark Blue Cross Blue Shield Delaware": {
@@ -18961,11 +18961,11 @@
 				"ymd"
 			],
 			"URLs": {
-				"general": "https://www.highmarkbcbsde.com/home/",
-				"individuals_and_families": "https://www.discoverhighmark.com/?_ga=2.19282198.155278271.1575488711-84398719.1575488711",
-				"employer": "https://www.highmarkemployer.com/",
-				"careers": "https://www.highmark.com/hmk2/about/careers.shtml",
-				"medicare": "https://medicare.highmark.com/?offercode=1234567&utm_source=bcbsa&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=highmark_de&utm_state=de"
+				"General": "https://www.highmarkbcbsde.com/home/",
+				"Individuals and Families": "https://www.discoverhighmark.com/?_ga=2.19282198.155278271.1575488711-84398719.1575488711",
+				"Employer": "https://www.highmarkEmployer.com/",
+				"Careers": "https://www.highmark.com/hmk2/about/Careers.shtml",
+				"Medicare": "https://Medicare.highmark.com/?offercode=1234567&utm_source=bcbsa&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=highmark_de&utm_state=de"
 			}
 		},
 		"Blue Cross & Blue Shield of Mississippi": {
@@ -18992,12 +18992,12 @@
 				"yax"
 			],
 			"URLs": {
-				"general": "https://www.bcbsms.com/",
-				"individuals_and_families": "https://www.bcbsms.com/find-coverage/beblue-blue-care",
-				"employer": "https://www.bcbsms.com/im-an-employer/",
-				"careers": "https://www.bcbsms.com/about-us/careers",
+				"General": "https://www.bcbsms.com/",
+				"Individuals and Families": "https://www.bcbsms.com/find-coverage/beblue-blue-care",
+				"Employer": "https://www.bcbsms.com/im-an-Employer/",
+				"Careers": "https://www.bcbsms.com/about-us/Careers",
 				"live_fearless": "https://www.bcbsms.com/",
-				"medicare": "https://www.bcbsms.com/find-coverage/beblue-blue65?utm_source=bcbsa&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=bcbs_ms&utm_state=ms"
+				"Medicare": "https://www.bcbsms.com/find-coverage/beblue-blue65?utm_source=bcbsa&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=bcbs_ms&utm_state=ms"
 			}
 		},
 		"Blue Cross and Blue Shield of Oklahoma": {
@@ -19073,12 +19073,12 @@
 				"y7u"
 			],
 			"URLs": {
-				"general": "https://www.bcbsok.com/",
-				"individuals_and_families": "https://www.bcbsok.com/shop-plans-and-products",
-				"employer": "https://www.bcbsok.com/employer",
-				"careers": "https://www.bcbsok.com/company-info/careers",
+				"General": "https://www.bcbsok.com/",
+				"Individuals and Families": "https://www.bcbsok.com/shop-plans-and-products",
+				"Employer": "https://www.bcbsok.com/Employer",
+				"Careers": "https://www.bcbsok.com/company-info/Careers",
 				"live_fearless": "https://www.bcbsok.com/",
-				"medicare": "https://www.bcbsok.com/medicare?wt.mc_id=okemadig125397&utm_plan=hcsc_ok&utm_state=ok"
+				"Medicare": "https://www.bcbsok.com/Medicare?wt.mc_id=okemadig125397&utm_plan=hcsc_ok&utm_state=ok"
 			}
 		},
 		"Blue Cross Blue Shield of North Dakota": {
@@ -19134,11 +19134,11 @@
 				"zzz"
 			],
 			"URLs": {
-				"general": "https://www.bcbsnd.com/",
-				"individuals_and_families": "https://www.bcbsnd.com/shop-for-insurance",
-				"employer": "https://www.bcbsnd.com/web/employers/shop-for-insurance",
-				"careers": "https://www.bcbsnd.com/jobs/",
-				"medicare": "https://www.medicarebcbsnd.com/?utm_source=bcbsa&utm_medium=referral&utm_campaign=benefitofblue_sep&utm_term=switcher&utm_content=association&utm_plan=bcbs_nd&utm_state=nd"
+				"General": "https://www.bcbsnd.com/",
+				"Individuals and Families": "https://www.bcbsnd.com/shop-for-insurance",
+				"Employer": "https://www.bcbsnd.com/web/Employers/shop-for-insurance",
+				"Careers": "https://www.bcbsnd.com/jobs/",
+				"Medicare": "https://www.Medicarebcbsnd.com/?utm_source=bcbsa&utm_medium=referral&utm_campaign=benefitofblue_sep&utm_term=switcher&utm_content=association&utm_plan=bcbs_nd&utm_state=nd"
 			}
 		},
 		"Blue Cross and Blue Shield of Montana": {
@@ -19176,12 +19176,12 @@
 				"y2t"
 			],
 			"URLs": {
-				"general": "https://www.bcbsmt.com/",
-				"individuals_and_families": "https://www.bcbsmt.com/shop-plans-and-products",
-				"employer": "https://www.bcbsmt.com/employer/",
-				"careers": "https://www.bcbsmt.com/company-info/careers",
+				"General": "https://www.bcbsmt.com/",
+				"Individuals and Families": "https://www.bcbsmt.com/shop-plans-and-products",
+				"Employer": "https://www.bcbsmt.com/Employer/",
+				"Careers": "https://www.bcbsmt.com/company-info/Careers",
 				"live_fearless": "https://hcscrccorp.peoplefluent.com/res_joblist.html",
-				"medicare": "https://www.bcbsmt.com/medicare?wt.mc_id=mtemadig125395&utm_plan=hcsc_mt&utm_state=mt"
+				"Medicare": "https://www.bcbsmt.com/Medicare?wt.mc_id=mtemadig125395&utm_plan=hcsc_mt&utm_state=mt"
 			}
 		},
 		"Regence BlueShield of Idaho": {
@@ -19267,12 +19267,12 @@
 				"zvy"
 			],
 			"URLs": {
-				"general": "https://www.regence.com/member/home",
-				"individuals_and_families": "https://www.regence.com/web/regence_individual/shop-individual",
-				"employer": "https://www.regence.com/employer/home",
-				"careers": "https://www.regence.com/member/about-us/careers",
+				"General": "https://www.regence.com/member/home",
+				"Individuals and Families": "https://www.regence.com/web/regence_individual/shop-individual",
+				"Employer": "https://www.regence.com/Employer/home",
+				"Careers": "https://www.regence.com/member/about-us/Careers",
 				"live_fearless": "https://www.regence.com/web/regence_individual/live-fearless",
-				"medicare": "https://www.regence.com/web/regence_medicare?ecid=r_med_zz_bcbsa_web_lp_namc_bnb_zz_619&utm_plan=regence_bs_id&utm_state=id"
+				"Medicare": "https://www.regence.com/web/regence_Medicare?ecid=r_med_zz_bcbsa_web_lp_namc_bnb_zz_619&utm_plan=regence_bs_id&utm_state=id"
 			}
 		},
 		"Blue Cross Blue Shield of Arizona": {
@@ -19393,22 +19393,22 @@
 				"z9p"
 			],
 			"URLs": {
-				"general": "https://www.azblue.com/individualsandfamilies",
-				"individuals_and_families": "https://www.azblue.com/individualsandfamilies",
-				"employer": "https://www.azblue.com/employersandorganizations",
-				"careers": "https://jobs.azblue.com/",
-				"medicare": "https://www.azblue.com/medicare?utm_source=bcbsa&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=bcbs_az&utm_state=az"
+				"General": "https://www.azblue.com/individualsandfamilies",
+				"Individuals and Families": "https://www.azblue.com/individualsandfamilies",
+				"Employer": "https://www.azblue.com/Employersandorganizations",
+				"Careers": "https://jobs.azblue.com/",
+				"Medicare": "https://www.azblue.com/Medicare?utm_source=bcbsa&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=bcbs_az&utm_state=az"
 			}
 		},
 		"Coupe Health": {
 			"prefixes": ["ckq", "mzf", "m9x", "m9y", "m9z", "z4c"],
 			"URLs": {
-				"general": "https://www.coupehealth.com/",
-				"careers": "https://www.coupehealth.com/",
+				"General": "https://www.coupehealth.com/",
+				"Careers": "https://www.coupehealth.com/",
 				"live_fearless": "https://www.coupehealth.com/",
-				"individuals_and_families": "https://www.coupehealth.com/",
-				"employer": "https://www.coupehealth.com/",
-				"medicare": "https://www.coupehealth.com/",
+				"Individuals and Families": "https://www.coupehealth.com/",
+				"Employer": "https://www.coupehealth.com/",
+				"Medicare": "https://www.coupehealth.com/",
 				"smarter_better_healthcare": "https://www.coupehealth.com/"
 			}
 		},
@@ -19434,12 +19434,12 @@
 				"zwy"
 			],
 			"URLs": {
-				"general": "https://www.bsneny.com/",
-				"individuals_and_families": "https://www.bsneny.com/content/neny/explore/individual-family.html",
-				"employer": "https://www.bsneny.com/content/neny/employer.html",
-				"careers": "https://www.bsneny.com/content/neny/careers.html",
-				"live_fearless": "https://www.bsneny.com/content/neny/careers.html",
-				"medicare": "https://www.bsneny.com/content/neny/medicare/benefit-of-blue.html?utm_source=bcbsa&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=bs_neny&utm_state=ny"
+				"General": "https://www.bsneny.com/",
+				"Individuals and Families": "https://www.bsneny.com/content/neny/explore/individual-family.html",
+				"Employer": "https://www.bsneny.com/content/neny/Employer.html",
+				"Careers": "https://www.bsneny.com/content/neny/Careers.html",
+				"live_fearless": "https://www.bsneny.com/content/neny/Careers.html",
+				"Medicare": "https://www.bsneny.com/content/neny/Medicare/benefit-of-blue.html?utm_source=bcbsa&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=bs_neny&utm_state=ny"
 			}
 		},
 		"Blue Cross and Blue Shield of Hawaii": {
@@ -19467,12 +19467,12 @@
 				"xlz"
 			],
 			"URLs": {
-				"general": "https://hmsa.com/",
-				"individuals_and_families": "https://hmsa.com/health-plans/",
-				"employer": "https://hmsa.com/health-plans/employers/",
-				"careers": "https://hmsa.com/careers/",
+				"General": "https://hmsa.com/",
+				"Individuals and Families": "https://hmsa.com/health-plans/",
+				"Employer": "https://hmsa.com/health-plans/Employers/",
+				"Careers": "https://hmsa.com/Careers/",
 				"live_fearless": "https://hmsa.com/",
-				"medicare": "https://hmsa.com/health-plans/medicare/?utm_source=bcbs&utm_medium=referral&utm_campaign=benefitofblue&utm_content=medicareawareness&utm_plan=bcbs_hi&utm_state=hi"
+				"Medicare": "https://hmsa.com/health-plans/Medicare/?utm_source=bcbs&utm_medium=referral&utm_campaign=benefitofblue&utm_content=Medicareawareness&utm_plan=bcbs_hi&utm_state=hi"
 			}
 		},
 		"Blue Cross Blue Shield of Wyoming": {
@@ -19489,24 +19489,24 @@
 				"zyw"
 			],
 			"URLs": {
-				"general": "https://www.bcbswy.com/",
-				"individuals_and_families": "https://www.yourwyoblue.com/home/",
-				"employer": "https://www.bcbswy.com/employers/",
-				"careers": "https://www.bcbswy.com/careers/",
+				"General": "https://www.bcbswy.com/",
+				"Individuals and Families": "https://www.yourwyoblue.com/home/",
+				"Employer": "https://www.bcbswy.com/Employers/",
+				"Careers": "https://www.bcbswy.com/Careers/",
 				"live_fearless": "https://www.bcbswy.com/",
-				"medicare": "https://medicare.yourwyoblue.com/home?utm_source=bcbsa&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=bcbs_wy&utm_state=wy"
+				"Medicare": "https://Medicare.yourwyoblue.com/home?utm_source=bcbsa&utm_medium=referral&utm_campaign=benefitofblue&utm_plan=bcbs_wy&utm_state=wy"
 			}
 		},
 		"Patrius": {
 			"prefixes": ["plx"],
 			"URLs": {
-				"general": "https://www.patriushealth.com",
-				"careers": "https://www.patriushealth.com",
+				"General": "https://www.patriushealth.com",
+				"Careers": "https://www.patriushealth.com",
 				"live_fearless": "https://www.patriushealth.com",
-				"spanish_medicare": "https://www.patriushealth.com",
-				"individuals_and_families": "https://www.patriushealth.com",
-				"employer": "https://www.patriushealth.com",
-				"medicare": "https://www.patriushealth.com",
+				"spanish_Medicare": "https://www.patriushealth.com",
+				"Individuals and Families": "https://www.patriushealth.com",
+				"Employer": "https://www.patriushealth.com",
+				"Medicare": "https://www.patriushealth.com",
 				"smarter_better_healthcare": "https://www.patriushealth.com"
 			}
 		},
@@ -19538,24 +19538,24 @@
 				"q5n"
 			],
 			"URLs": {
-				"general": "https://www.geobluetravelinsurance.com/",
-				"careers": "https://www.geo-blue.com/",
-				"individuals_and_families": "https://www.geo-blue.com/brokers.cfm",
-				"employer": "https://www.geo-blue.com/",
+				"General": "https://www.geobluetravelinsurance.com/",
+				"Careers": "https://www.geo-blue.com/",
+				"Individuals and Families": "https://www.geo-blue.com/brokers.cfm",
+				"Employer": "https://www.geo-blue.com/",
 				"contact_us": "https://www.geo-blue.com/",
-				"medicare": "https://www.geo-blue.com/",
+				"Medicare": "https://www.geo-blue.com/",
 				"smarter_better_healthcare": "https://www.geo-blue.com/"
 			}
 		},
 		"BlueCross BlueShield of Puerto Rico": {
 			"prefixes": ["zua", "zuh", "zuk", "zum", "zur", "zus"],
 			"URLs": {
-				"general": "https://salud.grupotriples.com/",
-				"individuals_and_families": "https://salud.grupotriples.com/planes-medicos/planes-triple-s-directo/",
-				"employer": "https://salud.grupotriples.com/planes-medicos/patronos/",
-				"careers": "http://empleos.grupotriples.com/?lang=es",
+				"General": "https://salud.grupotriples.com/",
+				"Individuals and Families": "https://salud.grupotriples.com/planes-medicos/planes-triple-s-directo/",
+				"Employer": "https://salud.grupotriples.com/planes-medicos/patronos/",
+				"Careers": "http://empleos.grupotriples.com/?lang=es",
 				"live_fearless": "https://www.ssspr.com/",
-				"medicare": "https://advantage.grupotriples.com/en/?utm_source=bcbsa&utm_medium=referral&utm_term&utm_content&utm_campaign=benefitofblue&utm_plan=bcbs_pr&utm_state=pr"
+				"Medicare": "https://advantage.grupotriples.com/en/?utm_source=bcbsa&utm_medium=referral&utm_term&utm_content&utm_campaign=benefitofblue&utm_plan=bcbs_pr&utm_state=pr"
 			}
 		}
 	}
