@@ -67,16 +67,7 @@ const Search = () => {
       <div className='search'>
         <section>
           <div>
-            <input
-              type="text"
-              id="searchText"
-              value={searchValue}
-              onChange={handleSearchTextChange}
-              maxLength={maxLength}
-              ref={searchTextBox}
-              placeholder={maxLength === 100 ? 'Search by carrier...' : 'Search by prefix...'}
-            />
-            <div>
+          <div>
               <input
                 onClick={handleSearchTypeChange}
                 data-length={3}
@@ -94,6 +85,16 @@ const Search = () => {
                 value="Carrier"
               />
             </div>
+            <input
+              type="text"
+              id="searchText"
+              value={searchValue}
+              onChange={handleSearchTextChange}
+              maxLength={maxLength}
+              ref={searchTextBox}
+              placeholder={maxLength === 100 ? 'Search by carrier...' : 'Search by prefix...'}
+            />
+
           </div>
         </section>
       </div>

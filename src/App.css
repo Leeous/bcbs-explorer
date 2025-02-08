@@ -79,15 +79,13 @@ a {
   justify-content: center;
 }
 
-#noteText {
+.noteText {
 	border: solid 3px var(--third-color);
 	background-color: var(--secondary-color);
 	width: 250px;
 	padding: 5px;
-  margin-bottom: 100px;
   letter-spacing: 0px;
 	font-size: 1.2em;
-	margin-top: 5em;
 	color: white;
   field-sizing: content;
 }
@@ -123,6 +121,7 @@ a {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 3rem;
 }
 
 .search > div {
