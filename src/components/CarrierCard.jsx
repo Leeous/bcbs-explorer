@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types';
-import { useState } from 'react';
 
 const CarrierCard = ({ carrierName, carrierPrefix, carrierPhoneNumbers, carrierURLs, carrierPayerID }) => {
-  console.log(carrierURLs)
   // TODO: Change this to a table to accomdate uncommon data
   return (
     <section className='carrier-card'>

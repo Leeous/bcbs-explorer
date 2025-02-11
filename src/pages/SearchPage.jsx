@@ -77,17 +77,18 @@ const Search = () => {
                 value="Prefix"
               />
               <input
-                onClick={handleSearchTypeChange}
+                // onClick={handleSearchTypeChange}
                 data-length={100}
                 type="button"
                 className={maxLength === 100 ? 'active search-type' : 'search-type'}
                 disabled={maxLength === 100 ? true : false}
-                value="Carrier"
+                value="Carrier (WIP)"
+                style={{cursor: "not-allowed"}}
               />
             </div>
             <input
               type="text"
-              id="searchText"
+              className="searchText"
               value={searchValue}
               onChange={handleSearchTextChange}
               maxLength={maxLength}
@@ -108,8 +109,8 @@ const Search = () => {
             carrierURLs={carrier.URLs}
           />
         ))}
+        {results.length !== 0 ? <Note carrierKey={currentCarrier} /> : null } 
       </div>
-      {results.length !== 0 ? <Note carrierKey={currentCarrier} /> : null }
     </>
   );
 }

@@ -74,9 +74,9 @@ a {
   -moz-user-drag: none;
 }
 
-.notes {
-  display: flex;
-  justify-content: center;
+
+.notes h4 {
+  margin-bottom: .5rem;
 }
 
 .noteText {
@@ -90,7 +90,7 @@ a {
   field-sizing: content;
 }
 
-#searchText {
+.searchText {
 	border: solid 5px var(--third-color);
 	background-color: var(--secondary-color);
 	padding: 5px;
@@ -101,8 +101,7 @@ a {
 	color: white;
 }
 
-#searchText::placeholder {
-	color: rgb(255, 255, 255);
+.searchText::placeholder {
 	opacity: .8;
   font-size: 1rem;
 	text-transform: none;
@@ -140,11 +139,6 @@ a {
   border-right: 1px solid #0f5897;
 }
 
-.search-type:focus {
-  outline: 1px solid white;
-  outline-offset: -1px;
-}
-
 .search-type.active {
 	background-color: var(--third-color);
   font-weight: bold;
@@ -157,7 +151,8 @@ a {
 
 .search-results {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .carrier-card {

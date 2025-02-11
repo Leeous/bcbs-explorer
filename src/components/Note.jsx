@@ -19,11 +19,12 @@ const Note = ({ carrierKey }) => {
 	};
 
 	return (
-    
-		<div className="notes">
-      {carrierKey != "" ? <textarea className="noteText" onChange={handleNote} value={note}></textarea> : ""}
-			
-		</div>
+    <>
+      <div className="notes">
+        <h4>Notes</h4>
+        {carrierKey != "" ? <textarea className="noteText" onChange={handleNote} value={note}></textarea> : ""}
+      </div>
+    </>
 	);
 };
 

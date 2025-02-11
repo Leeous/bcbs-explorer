@@ -1,6 +1,11 @@
 import Navigation from "../components/Navigation";
 
-console.log(localStorage)
+function clearNoteStorage() {
+  // Clear storage
+  localStorage.clear();
+  // Reload page
+  window.location.reload();
+}
 
 function Settings() {
     return (
@@ -15,15 +20,15 @@ function Settings() {
                 <div>
                   {Object.keys(localStorage).map(key => (
                     <>
-                      <h4 key={key}>{key}</h4>
-                      <textarea className="noteText">{localStorage[key]}</textarea>
+                      <h4 key={localStorage[key]}>{key}</h4>
+                      <p key={key} style={{fontSize: ".9rem"}} className="noteText">{localStorage[key]}</p>
                     </>
                   ))}
             </div>
             </details>
 
             <button className="button-normal">Reset all</button>
-            <button className="button-normal">Reset notes</button>
+            <button className="button-normal" onClick={() => clearNoteStorage()}>Reset notes</button>
             <button className="button-normal">Reset settings</button>
         </>
     );
