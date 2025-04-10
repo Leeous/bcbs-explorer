@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 const CarrierCard = ({ carrierName, carrierPrefix, carrierPhoneNumbers, carrierURLs, carrierPayerID }) => {
-  // TODO: Change this to a table to accomdate uncommon data
+  // TODO: Change this to a table to accommodate uncommon data
   return (
     <section className='carrier-card'>
       <h3>{carrierName}</h3>

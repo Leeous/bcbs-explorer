@@ -6,22 +6,23 @@ import Note from "../components/Note"
 import "../App.css";
 import Navigation from '../components/Navigation';
 
+// TODO: need to rewrite to be a single function
 const findCarrierByPrefix = (data, prefix) => {
   const carriers = Object.keys(data).map(key => ({
     planName: key,
     ...data[key]
   }));
 
-  return carriers.find(carrier => carrier.prefixes.includes(prefix));
+  return carriers.find(carrier => carrier.prefixes.includes(prefix.toLowerCase()));
 };
 
-const findCarrierByName = (data, planName) => {
+const findCarrierByName = (data, value) => {
   const carriers = Object.keys(data).map(key => ({
     planName: key,
     ...data[key]
   }));
 
-  return carriers.find(carrier => carrier.planName.includes(planName));
+  return carriers.filter(carrier => (carrier.planName.toLowerCase().includes(value.toLowerCase())));
 };
 
 
@@ -53,9 +54,7 @@ const Search = () => {
       setResults([]);
     } else if (value && searchType === "carrier") {
       let carrierMatch = findCarrierByName(BCBSDB, value);
-      console.log(carrierMatch);
-      // setCurrentCarrier(carrierMatch["planName"]);
-      // setResults([carrierMatch]);
+      setResults(carrierMatch);
     }
   }, [maxLength, searchType]);
 
@@ -105,14 +104,9 @@ const Search = () => {
         </section>
       </div>
       <div className='search-results'>
-        {results.map((carrier) => (
-          <CarrierCard
-            key={carrier}
-            carrierName={carrier.planName}
-            carrierPhoneNumbers={carrier.phone_numbers}
-            carrierURLs={carrier.URLs}
-          />
-        ))}
+        {/* FIXME: Obviously, there is a better way to do this, might rework in the future */}
+        {searchType == "prefix" ? results.map((carrier) => ( <CarrierCard key={carrier} carrierName={carrier.planName} carrierPhoneNumbers={carrier.phone_numbers} carrierURLs={carrier.URLs} />)) : null }
+        {searchType == "carrier" ? results.map((carrier) => <li key={carrier.planName}>{carrier.planName}</li>) : null }
         {results.length !== 0 ? <Note carrierKey={currentCarrier} /> : null } 
       </div>
     </>
