@@ -47,9 +47,15 @@ const Search = () => {
       } else {
         setResults([{ planName: "Prefix not found" }]);
       }
-    } else {
+    } else if (value.length < 3 && searchType === "prefix") {
+      // Empty results if value length is < 3 characters long
       setCurrentCarrier("");
       setResults([]);
+    } else if (value && searchType === "carrier") {
+      let carrierMatch = findCarrierByName(BCBSDB, value);
+      console.log(carrierMatch);
+      // setCurrentCarrier(carrierMatch["planName"]);
+      // setResults([carrierMatch]);
     }
   }, [maxLength, searchType]);
 
@@ -77,18 +83,17 @@ const Search = () => {
                 value="Prefix"
               />
               <input
-                // onClick={handleSearchTypeChange}
+                onClick={handleSearchTypeChange}
                 data-length={100}
                 type="button"
                 className={maxLength === 100 ? 'active search-type' : 'search-type'}
                 disabled={maxLength === 100 ? true : false}
-                value="Carrier (WIP)"
-                style={{cursor: "not-allowed"}}
+                value="Carrier"
               />
             </div>
             <input
               type="text"
-              className="searchText"
+              className={maxLength === 100 ? 'searchText carrier' : 'searchText prefix'}
               value={searchValue}
               onChange={handleSearchTextChange}
               maxLength={maxLength}
@@ -104,7 +109,6 @@ const Search = () => {
           <CarrierCard
             key={carrier}
             carrierName={carrier.planName}
-            carrierPrefix={searchValue.toUpperCase()}
             carrierPhoneNumbers={carrier.phone_numbers}
             carrierURLs={carrier.URLs}
           />

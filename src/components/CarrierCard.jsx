@@ -4,7 +4,7 @@ const CarrierCard = ({ carrierName, carrierPrefix, carrierPhoneNumbers, carrierU
   // TODO: Change this to a table to accomdate uncommon data
   return (
     <section className='carrier-card'>
-      <h3>{carrierName} - <span style={{fontWeight: 300, fontStyle: "italic"}}>{carrierPrefix}</span></h3>
+      <h3>{carrierName}</h3>
       {carrierPhoneNumbers && 
       <div>
         <h4>Phone numbers</h4>

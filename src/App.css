@@ -95,11 +95,19 @@ a {
 	background-color: var(--secondary-color);
 	padding: 5px;
 	font-size: 1.2em;
-	font-weight: bold;
-	text-transform: uppercase;
 	text-align: center;
 	color: white;
 }
+
+.searchText.prefix {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.searchText.carrier {
+
+}
+
 
 .searchText::placeholder {
 	opacity: .8;
