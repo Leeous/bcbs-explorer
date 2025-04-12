@@ -44,7 +44,7 @@ const Search = () => {
       } else {
         setResults([{ planName: "Prefix not found" }]);
       }
-    } else if (value.length < 3 && searchType === "prefix") {
+    } else if (value.length < 3 && searchType === "prefix" || value.length == 0 && searchType === "carrier") {
       // Empty results if value length is < 3 characters long
       setCurrentCarrier("");
       setResults([]);
@@ -103,8 +103,10 @@ const Search = () => {
       <div className={maxLength === 100 ? 'search-results carrier' : 'search-results prefix'}>
         {/* FIXME: Obviously, there is a better way to do this, might rework in the future */}
         {searchType == "prefix" ? results.map((carrier) => ( <CarrierCard key={carrier} carrierName={carrier.planName} carrierPhoneNumbers={carrier.phone_numbers} carrierURLs={carrier.URLs} />)) : null }
-        {searchType == "carrier" ? results.map((carrier) => <li className='carrier' key={carrier.planName}>{carrier.planName}</li>) : null }
-        {results.length !== 0 ? <Note carrierKey={currentCarrier} /> : null } 
+        <ul className='carrierSearch'>
+        {searchType == "carrier" ? results.map((carrier) => <li className='carrier' key={carrier.planName}>{carrier.planName}</li>) : null } 
+        </ul>
+        {results.length !== 0 && searchType == "prefix" ? <Note carrierKey={currentCarrier} /> : null } 
       </div>
     </>
   );

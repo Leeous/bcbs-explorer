@@ -157,6 +157,13 @@ a {
   border-right: 1px solid var(--third-color);
 }
 
+.carrierSearch {
+  list-style: none;
+  padding-left: 0;
+  max-height: 50vh;
+  overflow-y: scroll;
+}
+
 .search-results.prefix {
   display: flex;
   align-items: center;
