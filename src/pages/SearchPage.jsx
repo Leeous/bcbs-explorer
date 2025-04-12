@@ -7,24 +7,20 @@ import "../App.css";
 import Navigation from '../components/Navigation';
 
 // TODO: need to rewrite to be a single function
-const findCarrierByPrefix = (data, prefix) => {
+
+const findCarrier = (data, value, searchType) => {
   const carriers = Object.keys(data).map(key => ({
     planName: key,
     ...data[key]
   }));
 
-  return carriers.find(carrier => carrier.prefixes.includes(prefix.toLowerCase()));
+
+  if (searchType == "prefix") {
+    return carriers.find(carrier => carrier.prefixes.includes(value.toLowerCase()));
+  } else {
+    return carriers.filter(carrier => (carrier.planName.toLowerCase().includes(value.toLowerCase())));
+  }
 };
-
-const findCarrierByName = (data, value) => {
-  const carriers = Object.keys(data).map(key => ({
-    planName: key,
-    ...data[key]
-  }));
-
-  return carriers.filter(carrier => (carrier.planName.toLowerCase().includes(value.toLowerCase())));
-};
-
 
 const Search = () => {
   const [searchValue, setSearchValue] = useState('');
@@ -41,7 +37,7 @@ const Search = () => {
   // Search Logic \\
   const handleSearch = useCallback((value) => {
     if (value && value.length == maxLength && searchType === "prefix") {
-      let carrierMatch = findCarrierByPrefix(BCBSDB, value);
+      let carrierMatch = findCarrier(BCBSDB, value, searchType);
       if (typeof carrierMatch !== "undefined") {
         setCurrentCarrier(carrierMatch["planName"]);
         setResults([carrierMatch]);
@@ -53,7 +49,8 @@ const Search = () => {
       setCurrentCarrier("");
       setResults([]);
     } else if (value && searchType === "carrier") {
-      let carrierMatch = findCarrierByName(BCBSDB, value);
+
+      let carrierMatch = findCarrier(BCBSDB, value, searchType);
       setResults(carrierMatch);
     }
   }, [maxLength, searchType]);
@@ -103,10 +100,10 @@ const Search = () => {
           </div>
         </section>
       </div>
-      <div className='search-results'>
+      <div className={maxLength === 100 ? 'search-results carrier' : 'search-results prefix'}>
         {/* FIXME: Obviously, there is a better way to do this, might rework in the future */}
         {searchType == "prefix" ? results.map((carrier) => ( <CarrierCard key={carrier} carrierName={carrier.planName} carrierPhoneNumbers={carrier.phone_numbers} carrierURLs={carrier.URLs} />)) : null }
-        {searchType == "carrier" ? results.map((carrier) => <li key={carrier.planName}>{carrier.planName}</li>) : null }
+        {searchType == "carrier" ? results.map((carrier) => <li className='carrier' key={carrier.planName}>{carrier.planName}</li>) : null }
         {results.length !== 0 ? <Note carrierKey={currentCarrier} /> : null } 
       </div>
     </>

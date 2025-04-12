@@ -157,10 +157,28 @@ a {
   border-right: 1px solid var(--third-color);
 }
 
-.search-results {
+.search-results.prefix {
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+.search-results.carrier {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  max-width: 50%;
+  margin: auto auto
+}
+
+.search-results .carrier {
+  padding: 5px 10px;
+  background-color: var(--third-color);
+  cursor: pointer;
+}
+
+.search-results .carrier:hover {
+  background-color: var(--secondary-color); 
 }
 
 .carrier-card {
