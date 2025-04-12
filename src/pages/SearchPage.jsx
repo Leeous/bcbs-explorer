@@ -25,6 +25,7 @@ const findCarrier = (data, value, searchType) => {
 const Search = () => {
   const [searchValue, setSearchValue] = useState('');
   const [currentCarrier, setCurrentCarrier] = useState('');
+  const [carrierClicked, setCarrierClicked] = useState(false);
   const [searchType, setSearchType] = useState("prefix");
   const [results, setResults] = useState([]);
   const [maxLength, setMaxLength] = useState(3);
@@ -59,8 +60,14 @@ const Search = () => {
     handleSearch(searchValue);
   }, [searchValue, handleSearch]);
 
+  const handleCarrierSelection = (event) => {
+    setSearchValue(event.target.innerText);
+    setCarrierClicked(true);
+  }
+
   const handleSearchTextChange = (event) => {
     setSearchValue(event.target.value);
+    setCarrierClicked(false);
   }
 
   return (
@@ -88,7 +95,7 @@ const Search = () => {
               />
             </div>
             <input
-              type="text"
+              type="search"
               className={maxLength === 100 ? 'searchText carrier' : 'searchText prefix'}
               value={searchValue}
               onChange={handleSearchTextChange}
@@ -102,9 +109,9 @@ const Search = () => {
       </div>
       <div className={maxLength === 100 ? 'search-results carrier' : 'search-results prefix'}>
         {/* FIXME: Obviously, there is a better way to do this, might rework in the future */}
-        {searchType == "prefix" ? results.map((carrier) => ( <CarrierCard key={carrier} carrierName={carrier.planName} carrierPhoneNumbers={carrier.phone_numbers} carrierURLs={carrier.URLs} />)) : null }
+        {results.length == 1 ? results.map((carrier) => ( <CarrierCard key={carrier} carrierName={carrier.planName} carrierPhoneNumbers={carrier.phone_numbers} carrierURLs={carrier.URLs} />)) : null }
         <ul className='carrierSearch'>
-        {searchType == "carrier" ? results.map((carrier) => <li className='carrier' key={carrier.planName}>{carrier.planName}</li>) : null } 
+        {searchType == "carrier" && !carrierClicked ? results.map((carrier) => <li className='carrier' onClick={handleCarrierSelection} key={carrier.planName}>{carrier.planName}</li>) : null } 
         </ul>
         {results.length !== 0 && searchType == "prefix" ? <Note carrierKey={currentCarrier} /> : null } 
       </div>

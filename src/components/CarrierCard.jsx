@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const CarrierCard = ({ carrierName, carrierPrefix, carrierPhoneNumbers, carrierURLs, carrierPayerID }) => {
+const CarrierCard = ({ carrierName, carrierPhoneNumbers, carrierURLs, carrierPayerID }) => {
   // TODO: Change this to a table to accommodate uncommon data
   return (
     <section className='carrier-card'>
@@ -22,7 +22,6 @@ const CarrierCard = ({ carrierName, carrierPrefix, carrierPhoneNumbers, carrierU
 
 CarrierCard.propTypes = {
   carrierName: PropTypes.string,
-  carrierPrefix: PropTypes.string,
   carrierPhoneNumbers: PropTypes.any,
   carrierNumberClaims: PropTypes.string,
   carrierURLs: PropTypes.any,
