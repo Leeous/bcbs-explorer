@@ -67,7 +67,13 @@ const Search = () => {
 
   const handleSearchTextChange = (event) => {
     setSearchValue(event.target.value);
-    setCarrierClicked(false);
+  }
+
+  const handleSearchClick = (event) => {
+    if (carrierClicked) {
+      setCarrierClicked(false);
+      setSearchValue("");
+    }
   }
 
   return (
@@ -99,6 +105,7 @@ const Search = () => {
               className={maxLength === 100 ? 'searchText carrier' : 'searchText prefix'}
               value={searchValue}
               onChange={handleSearchTextChange}
+              onClick={handleSearchClick}
               maxLength={maxLength}
               ref={searchTextBox}
               placeholder={maxLength === 100 ? 'Search by carrier...' : 'Search by prefix...'}
