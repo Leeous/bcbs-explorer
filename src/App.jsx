@@ -24,7 +24,8 @@ function App() {
         <Route path="/settings" element={ <SettingsPage /> } />
         <Route path="/disclaimer" element={ <Disclaimer /> } />
         <Route path="/404" element={ <NotFound404/>} />
-        <Route path="*" element={<Navigate replace to="/404" />} />
+        <Route path="/index.html" element={disclaimerAccepted()} />
+        <Route path="*" element={<Navigate replace to="/search" />} />
       </Routes>
     </BrowserRouter>
   );

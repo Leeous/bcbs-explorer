@@ -14,8 +14,8 @@ body {
 	background-color: var(--primary-color);
 	color: white;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	min-width: 500px;
-	min-height: 350px;
+	min-width: 750px;
+	min-height: 500px;
 	margin: 0;
 	padding: 0;
 	font-size: 1em;
@@ -82,7 +82,8 @@ a {
 .noteText {
 	border: solid 3px var(--third-color);
 	background-color: var(--secondary-color);
-	width: 250px;
+	width: 35vw;
+  margin-bottom: 5em;
 	padding: 5px;
   letter-spacing: 0px;
 	font-size: 1.2em;
@@ -113,6 +114,7 @@ a {
 	opacity: .8;
   font-size: 1rem;
 	text-transform: none;
+  color: white;
 	font-weight: 500;
 }
 
@@ -160,8 +162,8 @@ a {
 .carrierSearch {
   list-style: none;
   padding-left: 0;
-  max-height: 50vh;
-  overflow-y: scroll;
+  max-height: 45vh;
+  overflow-y: auto;
 }
 
 .search-results.prefix {
@@ -174,7 +176,7 @@ a {
   display: flex;
   flex-direction: column;
   list-style: none;
-  max-width: 50%;
+  max-width: 45%;
   margin: auto auto
 }
 
@@ -190,6 +192,10 @@ a {
 
 .carrier-card {
   list-style: none;
+  width: 50vw;
+}
+
+.carrier-card h3 {
 }
 
 .carrier-card h4 {
@@ -200,6 +206,7 @@ a {
   display: flex;
   font-family: monospace;
   margin-top: 3em;
+  font-size: .9em;
 }
 
 .report-issue a {

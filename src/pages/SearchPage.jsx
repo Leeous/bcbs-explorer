@@ -42,7 +42,6 @@ const Search = () => {
       if (typeof carrierMatch !== "undefined") {
         setCurrentCarrier(carrierMatch["planName"]);
         setResults([carrierMatch]);
-        console.log(carrierMatch)
       } else {
         setResults([{ planName: "Prefix not found" }]);
       }

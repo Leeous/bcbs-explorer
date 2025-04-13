@@ -18,7 +18,7 @@ const CarrierCard = ({ carrierName, carrierPhoneNumbers, carrierURLs, carrierPay
           <a target='_blank' href={carrierURLs[keyName]}>{keyName}</a>
         </li>
       ))}
-      <p className="report-issue"><a href={"https://docs.google.com/forms/d/e/1FAIpQLSeKcdJClLpMMFTVRQ6T7u2lJplLQigS-mHTy4w1b_tNCUutHg/viewform?usp=pp_url&entry.1691490468=" + carrierName} target='_blank'>Something's wrong.</a><img src={Warning} style={{width: "20px", marginLeft: "7.5px"}}/></p>
+      <p className="report-issue"><a href={"https://docs.google.com/forms/d/e/1FAIpQLSeKcdJClLpMMFTVRQ6T7u2lJplLQigS-mHTy4w1b_tNCUutHg/viewform?usp=pp_url&entry.1691490468=" + carrierName} target='_blank'>Something's wrong.</a><img src={Warning} style={{width: "16px", marginLeft: "7.5px"}}/></p>
     </section>
   );
 };
