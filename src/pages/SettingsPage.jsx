@@ -30,8 +30,11 @@ function Settings() {
             <button className="button-normal">Reset all</button>
             <button className="button-normal" onClick={() => clearNoteStorage()}>Reset notes</button>
             <button className="button-normal">Reset settings</button>
+            
         </>
     );
 }
+
+// TODO: add abbirution to settings page - <a target="_blank" href="https://icons8.com/icon/59782/error">Warning</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
 
 export default Settings

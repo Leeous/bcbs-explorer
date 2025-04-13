@@ -1,4 +1,6 @@
 import PropTypes from 'prop-types';
+import Warning from '../assets/warning.png';
+
 
 const CarrierCard = ({ carrierName, carrierPhoneNumbers, carrierURLs, carrierPayerID }) => {
   // TODO: Change this to a table to accommodate uncommon data
@@ -16,6 +18,7 @@ const CarrierCard = ({ carrierName, carrierPhoneNumbers, carrierURLs, carrierPay
           <a target='_blank' href={carrierURLs[keyName]}>{keyName}</a>
         </li>
       ))}
+      <p className="report-issue"><a href="#">Something's wrong.</a><img src={Warning} style={{width: "20px", marginLeft: "7.5px"}}/></p>
     </section>
   );
 };

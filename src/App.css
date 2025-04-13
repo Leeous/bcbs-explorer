@@ -197,9 +197,17 @@ a {
 }
 
 .report-issue {
-	position: fixed;
-	bottom: 70px;
-	left: 10px;
+  display: flex;
+  font-family: monospace;
+  margin-top: 3em;
+}
+
+.report-issue a {
+  text-decoration-line: none;
+}
+
+.report-issue a:hover {
+  text-decoration-line: underline;
 }
 
 /* Settings */
