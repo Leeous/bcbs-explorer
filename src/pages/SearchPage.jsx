@@ -32,7 +32,7 @@ const Search = () => {
   const searchTextBox = useRef();
 
   const handleSearchTypeChange = () => {
-    searchType === "prefix" ? (setSearchType("carrier"), setMaxLength(100), setSearchValue(""), setResults([]), searchTextBox.current.style.width = "400px", searchTextBox.current.focus()) : (setSearchType("prefix"), setMaxLength(3), setResults([]), setSearchValue(""), searchTextBox.current.style.width = "260px", searchTextBox.current.focus());
+    searchType === "prefix" ? (setSearchType("carrier"), setMaxLength(100), setSearchValue(""), setResults([]),  setCarrierClicked(false), searchTextBox.current.style.width = "400px", searchTextBox.current.focus()) : (setSearchType("prefix"), setMaxLength(3), setResults([]), setSearchValue(""),  setCarrierClicked(false), searchTextBox.current.style.width = "260px", searchTextBox.current.focus());
   }
 
   // Search Logic \\
@@ -42,6 +42,7 @@ const Search = () => {
       if (typeof carrierMatch !== "undefined") {
         setCurrentCarrier(carrierMatch["planName"]);
         setResults([carrierMatch]);
+        console.log(carrierMatch)
       } else {
         setResults([{ planName: "Prefix not found" }]);
       }
@@ -50,7 +51,6 @@ const Search = () => {
       setCurrentCarrier("");
       setResults([]);
     } else if (value && searchType === "carrier") {
-
       let carrierMatch = findCarrier(BCBSDB, value, searchType);
       setResults(carrierMatch);
     }
@@ -116,7 +116,7 @@ const Search = () => {
       </div>
       <div className={maxLength === 100 ? 'search-results carrier' : 'search-results prefix'}>
         {/* FIXME: Obviously, there is a better way to do this, might rework in the future */}
-        {results.length == 1 ? results.map((carrier) => ( <CarrierCard key={carrier} carrierName={carrier.planName} carrierPhoneNumbers={carrier.phone_numbers} carrierURLs={carrier.URLs} />)) : null }
+        {results.length == 1 || searchType == "carrier" && carrierClicked ? results.map((carrier) => ( <CarrierCard key={carrier.planName} carrierName={carrier.planName} carrierPhoneNumbers={carrier.phone_numbers} carrierURLs={carrier.URLs} />)) : null }
         <ul className='carrierSearch'>
         {searchType == "carrier" && !carrierClicked ? results.map((carrier) => <li className='carrier' onClick={handleCarrierSelection} key={carrier.planName}>{carrier.planName}</li>) : null } 
         </ul>
