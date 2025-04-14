@@ -44,6 +44,7 @@ const Search = () => {
         setResults([carrierMatch]);
       } else {
         setResults([{ planName: "Prefix not found" }]);
+        console.log(results)
       }
     } else if (value.length < 3 && searchType === "prefix" || value.length == 0 && searchType === "carrier") {
       // Empty results if value length is < 3 characters long
@@ -130,7 +131,7 @@ const Search = () => {
         <ul className='carrierSearch'>
         {searchType == "carrier" && !carrierClicked ? results.map((carrier) => <li className='carrier' onClick={handleCarrierSelection} onKeyDown={handleCarrierSelection} key={carrier.planName} tabIndex={0}>{carrier.planName}</li>) : null } 
         </ul>
-        {results.length !== 0 && searchType == "prefix" ? <Note carrierKey={currentCarrier} /> : null } 
+        {results.length !== 0 && results[0].planName != "Prefix not found" && searchType == "prefix" ? <Note carrierKey={currentCarrier} /> : null } 
       </div>
     </>
   );

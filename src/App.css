@@ -198,10 +198,10 @@ a {
 
 .carrier-card {
   list-style: none;
-  width: 80vw;
 }
 
 .carrier-card h3 {
+  text-align: center;
 }
 
 .carrier-card h4 {
