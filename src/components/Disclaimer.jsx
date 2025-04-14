@@ -43,11 +43,11 @@ function Disclaimer() {
                 <h5 style={{margin: "5px 0"}}>Contact Us</h5>
                 If you have any questions about this disclaimer, contact me at <span><a href="mailto:contact@leeous.com">contact@leeous.com</a>.</span>
             </div>
-            <center style={{margin: "50px"}}>
+            <div style={{paddingBottom: "50px", paddingTop: "50px", textAlign: "center"}}>
               <NavLink className={"button-normal"} style={{textDecoration: "none"}} to={"/search"} onClick={() => setDisclaimerAccepted()}>
                 I understand and agree to the terms above
               </NavLink>
-            </center>
+            </div>
         </>
     )
 }
