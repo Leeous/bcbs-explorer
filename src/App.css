@@ -8,14 +8,14 @@
 
 body, html {
   height: 100%;
+  width: 500px;  /* max: 800px */
+  height: 500px; /* max: 600px */
 }
 
 body {
 	background-color: var(--primary-color);
 	color: white;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	min-width: 750px;
-	min-height: 500px;
 	margin: 0;
 	padding: 0;
 	font-size: 1em;
@@ -82,7 +82,7 @@ a {
 .noteText {
 	border: solid 3px var(--third-color);
 	background-color: var(--secondary-color);
-	width: 35vw;
+	width: 50vw;
   margin-bottom: 5em;
 	padding: 5px;
   letter-spacing: 0px;
@@ -97,6 +97,7 @@ a {
 	padding: 5px;
 	font-size: 1.2em;
 	text-align: center;
+  text-overflow: ellipsis;
 	color: white;
 }
 
@@ -176,8 +177,8 @@ a {
   display: flex;
   flex-direction: column;
   list-style: none;
-  max-width: 45%;
-  margin: auto auto
+  max-width: 90%;
+  margin: auto auto;
 }
 
 .search-results .carrier {
@@ -190,9 +191,14 @@ a {
   background-color: var(--secondary-color); 
 }
 
+.search-results .carrier:focus {
+  background-color: var(--secondary-color); 
+  outline: none;
+}
+
 .carrier-card {
   list-style: none;
-  width: 50vw;
+  width: 80vw;
 }
 
 .carrier-card h3 {
