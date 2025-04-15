@@ -198,6 +198,7 @@ a {
 
 .carrier-card {
   list-style: none;
+  width: 75vw;
 }
 
 .carrier-card h3 {

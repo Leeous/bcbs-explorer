@@ -44,7 +44,6 @@ const Search = () => {
         setResults([carrierMatch]);
       } else {
         setResults([{ planName: "Prefix not found" }]);
-        console.log(results)
       }
     } else if (value.length < 3 && searchType === "prefix" || value.length == 0 && searchType === "carrier") {
       // Empty results if value length is < 3 characters long
@@ -69,7 +68,6 @@ const Search = () => {
   }
 
   const handleSearchTextChange = (event) => {
-    console.log(carrierClicked, event.target.value)
     if (carrierClicked) {
       setCarrierClicked(false);
       setSearchValue("");
@@ -128,7 +126,7 @@ const Search = () => {
       <div className={maxLength === 100 ? 'search-results carrier' : 'search-results prefix'}>
         {/* FIXME: Obviously, there is a better way to do this, might rework in the future */}
         {results.length == 1 || searchType == "carrier" && carrierClicked ? results.map((carrier) => ( <CarrierCard key={carrier.planName} carrierName={carrier.planName} carrierPhoneNumbers={carrier.phone_numbers} carrierURLs={carrier.URLs} />)) : null }
-        <ul className='carrierSearch'>
+        <ul className='carrierSearch' tabIndex={-1}>
         {searchType == "carrier" && !carrierClicked ? results.map((carrier) => <li className='carrier' onClick={handleCarrierSelection} onKeyDown={handleCarrierSelection} key={carrier.planName} tabIndex={0}>{carrier.planName}</li>) : null } 
         </ul>
         {results.length !== 0 && results[0].planName != "Prefix not found" && searchType == "prefix" ? <Note carrierKey={currentCarrier} /> : null } 
