@@ -32,7 +32,7 @@ const Search = () => {
   const searchTextBox = useRef();
 
   const handleSearchTypeChange = () => {
-    searchType === "prefix" ? (setSearchType("carrier"), setMaxLength(100), setSearchValue(""), setResults([]),  setCarrierClicked(false), searchTextBox.current.style.width = "400px", searchTextBox.current.focus()) : (setSearchType("prefix"), setMaxLength(3), setResults([]), setSearchValue(""),  setCarrierClicked(false), searchTextBox.current.style.width = "260px", searchTextBox.current.focus());
+    searchType === "prefix" ? (setSearchType("carrier"), setMaxLength(100), setSearchValue(""), setResults([]), setCarrierClicked(false), searchTextBox.current.style.width = "400px", searchTextBox.current.focus()) : (setSearchType("prefix"), setMaxLength(3), setResults([]), setSearchValue(""), setCarrierClicked(false), searchTextBox.current.style.width = "260px", searchTextBox.current.focus());
   }
 
   // Search Logic \\
@@ -59,20 +59,33 @@ const Search = () => {
     handleSearch(searchValue);
   }, [searchValue, handleSearch]);
 
-  const handleCarrierSelection = (event) => {
-    if (event.code == "Space") { event.preventDefault() }
-    if (event.type != "click" && (event.key != "Enter") && event.code != "Space") { return; }
+  const handleCarrierSelection = (e) => {
+    let target = e.target;
+    let key = e.key;
+
+    if (key == "ArrowUp") {
+      e.preventDefault();
+      target.previousSibling.focus();
+    }
+
+    if (key == "ArrowDown") {
+      e.preventDefault();
+      target.nextSibling.focus();
+    }
+    
+    if (e.code == "Space") { e.preventDefault() }
+    if (e.type != "click" && (e.key != "Enter") && e.code != "Space") { return; }
     // if (event.key === undefined || event.type !== "click") { return; }
-    setSearchValue(event.target.innerText);
+    setSearchValue(e.target.innerText);
     setCarrierClicked(true);
   }
 
   const handleSearchTextChange = (event) => {
     if (carrierClicked) {
-      setCarrierClicked(false);
       setSearchValue("");
       setCurrentCarrier("");
       setResults([]);
+      setCarrierClicked(false);
     } else {
       setSearchValue(event.target.value);
     }
@@ -80,8 +93,8 @@ const Search = () => {
 
   const handleSearchClick = (event) => {
     if (carrierClicked) {
-      setCarrierClicked(false);
       setSearchValue("");
+      setCarrierClicked(false);
     }
   }
 
@@ -91,7 +104,7 @@ const Search = () => {
       <div className='search-wrapper'>
         <section>
           <div>
-          <div>
+            <div>
               <input
                 onClick={handleSearchTypeChange}
                 data-length={3}
@@ -125,18 +138,14 @@ const Search = () => {
       </div>
       <div className={maxLength === 100 ? 'search-results carrier' : 'search-results prefix'}>
         {/* FIXME: Obviously, there is a better way to do this, might rework in the future */}
-        {results.length == 1 || searchType == "carrier" && carrierClicked ? results.map((carrier) => ( <CarrierCard key={carrier.planName} carrierName={carrier.planName} carrierPhoneNumbers={carrier.phone_numbers} carrierURLs={carrier.URLs} />)) : null }
+        {results.length == 1 || searchType == "carrier" && carrierClicked ? results.map((carrier) => (<CarrierCard key={carrier.planName} carrierName={carrier.planName} carrierPhoneNumbers={carrier.phone_numbers} carrierURLs={carrier.URLs} />)) : null}
         <ul className='carrierSearchResults' tabIndex={-1}>
-        {searchType == "carrier" && !carrierClicked ? results.map((carrier) => <li className='carrier' onClick={handleCarrierSelection} onKeyDown={handleCarrierSelection} key={carrier.planName} tabIndex={0}>{carrier.planName}</li>) : null } 
+          {searchType == "carrier" && !carrierClicked ? results.map((carrier) => <li className='carrier' onClick={handleCarrierSelection} onKeyDown={handleCarrierSelection} key={carrier.planName} tabIndex={0}>{carrier.planName}</li>) : null}
         </ul>
-        {results.length !== 0 && results[0].planName != "Prefix not found" && searchType == "prefix" ? <Note carrierKey={currentCarrier} /> : null } 
+        {results.length !== 0 && results[0].planName != "Prefix not found" && searchType == "prefix" ? <Note carrierKey={currentCarrier} /> : null}
       </div>
     </>
   );
 }
-
-Search.propTypes = {
-  maxLength: PropTypes.number,
-};
 
 export default Search;

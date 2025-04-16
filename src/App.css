@@ -112,7 +112,8 @@ a {
 }
 
 .searchText.carrier {
-
+  letter-spacing: .1px;
+  font-size: 1em;
 }
 
 .searchText::placeholder {
@@ -144,7 +145,7 @@ a {
 
 .search-type {
 	width: 50%;
-	padding: 5px;
+	padding: 7.5px;
 	border: none;
 	background-color: #0f5897;
 	color: white;
