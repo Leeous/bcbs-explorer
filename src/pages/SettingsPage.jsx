@@ -1,6 +1,5 @@
+import { useState } from "react";
 import Navigation from "../components/Navigation";
-
-let savedNotes = Object.keys(localStorage);
 
 function clearNoteStorage() {
   // Clear storage
@@ -10,6 +9,13 @@ function clearNoteStorage() {
 }
 
 function Settings() {
+
+  const [savedNotes, setSavedNotes] = useState([]);
+
+  const handleNotes = (e) => {
+    setSavedNotes(Object.keys(localStorage))
+  }
+
   return (
       <>
         <Navigation />
@@ -17,7 +23,7 @@ function Settings() {
               <summary>Appearance</summary>
               
           </details>
-          <details className="settings-cat">
+          <details className="settings-cat" onClick={handleNotes}>
               <summary>Saved Notes</summary>
               <div>
                 {savedNotes.map(key => (
