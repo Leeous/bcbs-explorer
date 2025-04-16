@@ -17,28 +17,33 @@ function Settings() {
   }
 
   return (
-      <>
-        <Navigation />
-          <details className="settings-cat">
-              <summary>Appearance</summary>
-              
-          </details>
-          <details className="settings-cat" onClick={handleNotes}>
-              <summary>Saved Notes</summary>
-              <div>
-                {savedNotes.map(key => (
-                  <>
-                    <h4 key={localStorage[key]}>{key}</h4>
-                    <p key={key} style={{fontSize: ".9rem"}} className="noteText">{localStorage[key]}</p>
-                  </>
-                ))}
-          </div>
-          </details>
+    <>
+      <Navigation />
+      <details className="settings-cat">
+        <summary>Appearance</summary>
 
-          <button className="button-normal">Reset all</button>
-          <button className="button-normal" onClick={clearNoteStorage}>Reset notes</button>
-          <button className="button-normal">Reset settings</button>
-      </>
+      </details>
+      <details className="settings-cat" onClick={handleNotes}>
+        <summary>Saved Notes</summary>
+        <div style={{maxHeight: "50vh", overflow: "auto"}}>
+          {savedNotes.map(key => (
+            <>
+              <div className="carrier-note">
+                <div>
+                  <h4 key={localStorage[key]}>{key}</h4>
+                  <p>X</p>
+                </div>
+                <p key={key} className="saved-note-text">{localStorage[key]}</p>
+              </div>
+            </>
+          ))}
+        </div>
+      </details>
+
+      <button className="button-normal">Reset all</button>
+      <button className="button-normal" onClick={clearNoteStorage}>Reset notes</button>
+      <button className="button-normal">Reset settings</button>
+    </>
   );
 }
 

@@ -256,6 +256,31 @@ a {
   list-style-type: "V";
 }
 
+.carrier-note {
+  margin: .5em 1em;
+  padding: 10px;
+  border: solid 1px white;
+}
+
+.carrier-note div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.carrier-note div p {
+  margin: 0;
+  cursor: pointer;
+}
+
+.carrier-note h4 {
+  margin: 0;
+}
+
+.carrier-note > p {
+  margin: 7.5px 0 0 0;
+}
+
 /*********/
 /*  Misc */
 /*********/
