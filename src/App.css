@@ -60,6 +60,7 @@ a {
 
 .navigation nav div h1 {
   margin-right: 10px;
+  user-select: none;
 }
 
 .navigation nav span {
@@ -175,6 +176,7 @@ a {
   list-style: none;
   padding-left: 0;
   max-height: 45vh;
+  user-select: none;
   overflow-y: auto;
 }
 
