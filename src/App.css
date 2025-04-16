@@ -1,3 +1,5 @@
+/* General */
+
 :root {
   --primary-color: #0F7BDC;
   --secondary-color: #3293EA;
@@ -25,13 +27,9 @@ a {
   color: white;
 }
 
-.button-normal {
-	border: solid 3px var(--secondary-color);
-	background-color: var(--third-color);
-	color: white;
-	padding: 5px 10px;
-	cursor: pointer;
-}
+/**************/
+/* Navigation */
+/**************/
 
 .navigation {
   background-color: var(--secondary-color);
@@ -68,12 +66,15 @@ a {
   margin-left: 10px;
 }
 
-.icon {
+.nav-icon {
   width: 32px;
   user-select: none;
   -moz-user-drag: none;
 }
 
+/*********/
+/* Notes */
+/*********/
 
 .notes h4 {
   margin-bottom: .5rem;
@@ -90,6 +91,10 @@ a {
 	color: white;
   field-sizing: content;
 }
+
+/**********/
+/* Search */
+/**********/
 
 .searchText {
 	border: solid 5px var(--third-color);
@@ -110,7 +115,6 @@ a {
 
 }
 
-
 .searchText::placeholder {
 	opacity: .8;
   font-size: 1rem;
@@ -119,12 +123,12 @@ a {
 	font-weight: 500;
 }
 
-#searchText:focus {
+.searchText:focus {
   outline: 1px solid white;
   outline-offset: -1px;
 }
 
-.search {
+.search-wrapper {
   height: 100%;
   width: 100%;
   display: flex;
@@ -134,7 +138,7 @@ a {
   margin-top: 3rem;
 }
 
-.search > div {
+.search-wrapper > div {
   width: 100%;
 }
 
@@ -145,6 +149,7 @@ a {
 	background-color: #0f5897;
 	color: white;
 	cursor: pointer;
+  text-decoration: underline;
   border-left: 1px solid #0f5897;
   border-bottom: 1px solid #0f5897;
   border-right: 1px solid #0f5897;
@@ -153,14 +158,19 @@ a {
 .search-type.active {
 	background-color: var(--third-color);
   font-weight: bold;
+  text-decoration: none;
   cursor: default;
-  text-decoration: underline;
   border-left: 1px solid var(--third-color);
   border-bottom: 1px solid var(--third-color);
   border-right: 1px solid var(--third-color);
 }
 
-.carrierSearch {
+.search-type:focus {
+  outline: 1px solid white;
+  outline-offset: -1px;
+}
+
+.carrierSearchResults {
   list-style: none;
   padding-left: 0;
   max-height: 45vh;
@@ -198,7 +208,6 @@ a {
 
 .carrier-card {
   list-style: none;
-  width: 75vw;
 }
 
 .carrier-card h3 {
@@ -224,7 +233,9 @@ a {
   text-decoration-line: underline;
 }
 
+/************/
 /* Settings */
+/************/
 
 .settings-cat {
 	text-align: left;
@@ -240,4 +251,16 @@ a {
 
 .settings-cat summary::marker {
   list-style-type: "V";
+}
+
+/*********/
+/*  Misc */
+/*********/
+
+.button-normal {
+	border: solid 3px var(--secondary-color);
+	background-color: var(--third-color);
+	color: white;
+	padding: 5px 10px;
+	cursor: pointer;
 }
