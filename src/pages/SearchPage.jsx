@@ -60,23 +60,21 @@ const Search = () => {
   }, [searchValue, handleSearch]);
 
   const handleCarrierSelection = (e) => {
-    let target = e.target;
-    let key = e.key;
+    let eTarget = e.target;
+    let eKey = e.key;
+    let eType = e.type;
 
-    if (key == "ArrowUp") {
-      e.preventDefault();
-      target.previousSibling.focus();
-    }
+    // Only accept Space and Enter as select keys
+    if (eType != "click" && (e.key != "Enter") && e.code != "Space") { return; }
 
-    if (key == "ArrowDown") {
-      e.preventDefault();
-      target.nextSibling.focus();
-    }
-    
+    // Arrow keys for list
+    if (eKey == "ArrowUp") { e.preventDefault(); eTarget.previousSibling.focus(); }
+    if (eKey == "ArrowDown") {e.preventDefault(); eTarget.nextSibling.focus(); }
+
+    // Prevent space from scrolling app
     if (e.code == "Space") { e.preventDefault() }
-    if (e.type != "click" && (e.key != "Enter") && e.code != "Space") { return; }
-    // if (event.key === undefined || event.type !== "click") { return; }
-    setSearchValue(e.target.innerText);
+
+    setSearchValue(eTarget.innerText);
     setCarrierClicked(true);
   }
 
@@ -142,7 +140,7 @@ const Search = () => {
         <ul className='carrierSearchResults' tabIndex={-1}>
           {searchType == "carrier" && !carrierClicked ? results.map((carrier) => <li className='carrier' onClick={handleCarrierSelection} onKeyDown={handleCarrierSelection} key={carrier.planName} tabIndex={0}>{carrier.planName}</li>) : null}
         </ul>
-        {results.length !== 0 && results[0].planName != "Prefix not found" && searchType == "prefix" ? <Note carrierKey={currentCarrier} /> : null}
+        {results.length !== 0 && results[0].planName != "Prefix not found" && searchType == "prefix" ? <Note carrierPrefix={searchValue} carrierName={currentCarrier} /> : null}
       </div>
     </>
   );

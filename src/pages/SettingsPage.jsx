@@ -30,10 +30,10 @@ function Settings() {
             <>
               <div className="carrier-note">
                 <div>
-                  <h4 key={localStorage[key]}>{key}</h4>
+                  <h4 key={localStorage[key]}>{JSON.parse(localStorage[key]).carrierName} - <span style={{fontWeight: "400"}}>{key.toUpperCase()}</span></h4>
                   <p>X</p>
                 </div>
-                <p key={key} className="saved-note-text">{localStorage[key]}</p>
+                <p key={key} className="saved-note-text">{JSON.parse(localStorage[key]).note}</p>
               </div>
             </>
           ))}
