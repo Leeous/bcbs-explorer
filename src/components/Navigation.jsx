@@ -9,14 +9,14 @@ const toggleSettings = () => {
   if (window.location.pathname == "/search" || window.location.pathname == "/index.html" || window.location.pathname == "/") {
     return (
       <NavLink to="/settings">
-        <img src={SettingsIcon} className="icon" />
+        <img src={SettingsIcon} className="nav-icon" />
         <span>Settings</span>
       </NavLink>
     );
   } else {
     return (
       <NavLink to="/search">
-        <img src={BackIcon} className="icon" />
+        <img src={BackIcon} className="nav-icon" />
         <span>Back</span>
       </NavLink>
     );
@@ -30,7 +30,7 @@ function Navigation() {
             {toggleSettings()}
             <div>
               <h1>BCBS Explorer</h1>
-              <img src={BCBSIcon} className="icon" />
+              <img src={BCBSIcon} className="nav-icon" />
             </div>
         </nav>
 			</header>

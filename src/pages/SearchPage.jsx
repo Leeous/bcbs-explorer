@@ -88,7 +88,7 @@ const Search = () => {
   return (
     <>
       <Navigation />
-      <div className='search'>
+      <div className='search-wrapper'>
         <section>
           <div>
           <div>
@@ -126,7 +126,7 @@ const Search = () => {
       <div className={maxLength === 100 ? 'search-results carrier' : 'search-results prefix'}>
         {/* FIXME: Obviously, there is a better way to do this, might rework in the future */}
         {results.length == 1 || searchType == "carrier" && carrierClicked ? results.map((carrier) => ( <CarrierCard key={carrier.planName} carrierName={carrier.planName} carrierPhoneNumbers={carrier.phone_numbers} carrierURLs={carrier.URLs} />)) : null }
-        <ul className='carrierSearch' tabIndex={-1}>
+        <ul className='carrierSearchResults' tabIndex={-1}>
         {searchType == "carrier" && !carrierClicked ? results.map((carrier) => <li className='carrier' onClick={handleCarrierSelection} onKeyDown={handleCarrierSelection} key={carrier.planName} tabIndex={0}>{carrier.planName}</li>) : null } 
         </ul>
         {results.length !== 0 && results[0].planName != "Prefix not found" && searchType == "prefix" ? <Note carrierKey={currentCarrier} /> : null } 
