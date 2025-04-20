@@ -16,12 +16,23 @@ function Settings() {
     setSavedNotes(Object.keys(localStorage))
   }
 
+  const handleDeleteNote = (key) => {
+    localStorage.removeItem(key);
+    console.log(`Note removed for prefix ${key}`);
+  }
+
   return (
     <>
       <Navigation />
       <details className="settings-cat">
         <summary>Appearance</summary>
-
+        <div className="appearance">
+          <p>Theme:</p>
+          <select name="theme" id="theme">
+            <option value="dark">Blue (default)</option>
+            <option value="dark">Dark</option>
+          </select>
+        </div>
       </details>
       <details className="settings-cat" onClick={handleNotes}>
         <summary>Saved Notes</summary>
@@ -31,7 +42,7 @@ function Settings() {
               <div className="carrier-note">
                 <div>
                   <h4 key={localStorage[key]}>{JSON.parse(localStorage[key]).carrierName} - <span style={{fontWeight: "400"}}>{key.toUpperCase()}</span></h4>
-                  <p>X</p>
+                  <p onClick={() => handleDeleteNote(key)}>X</p>
                 </div>
                 <p key={key} className="saved-note-text">{JSON.parse(localStorage[key]).note}</p>
               </div>
