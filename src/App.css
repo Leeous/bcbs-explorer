@@ -250,10 +250,16 @@ a {
   user-select: none;
 	padding: 15px;
 	cursor: pointer;
+  font-weight: bold;
 }
+
+.settings-cat[open=""] > summary {
+  border-bottom: solid 1px white;
+} 
 
 .settings-cat summary::marker {
   list-style-type: "V";
+  border-bottom: solid 1px white;
 }
 
 .carrier-note {
@@ -271,6 +277,7 @@ a {
 .carrier-note div p {
   margin: 0;
   cursor: pointer;
+  user-select: none;
 }
 
 .carrier-note h4 {
@@ -279,6 +286,16 @@ a {
 
 .carrier-note > p {
   margin: 7.5px 0 0 0;
+}
+
+.settings-cat div.appearance {
+  display: flex;
+  align-items: center;
+  margin: .5em 1em;
+}
+
+.settings-cat div p {
+  margin: 0;
 }
 
 /*********/
