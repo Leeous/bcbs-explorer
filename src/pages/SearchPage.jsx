@@ -1,9 +1,7 @@
 import { useEffect, useState, useRef, useCallback } from 'react';
-import PropTypes from 'prop-types';
 import BCBSDB from "../assets/bcbs_data.json";
 import CarrierCard from "../components/CarrierCard";
 import Note from "../components/Note"
-import "../App.css";
 import Navigation from '../components/Navigation';
 
 // TODO: need to rewrite to be a single function

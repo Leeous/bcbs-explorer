@@ -4,6 +4,8 @@ import NotFound404 from "./pages/404";
 import SearchPage from './pages/SearchPage';
 import SettingsPage from './pages/SettingsPage';
 import Cookies from 'universal-cookie';
+import './assets/css/blue-theme.css';
+import './assets/css/App.css';
 
 const cookies = new Cookies();
 

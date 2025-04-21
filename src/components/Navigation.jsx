@@ -1,5 +1,4 @@
 import { NavLink } from "react-router";
-import "../App.css";
 import BCBSIcon from '../assets/BCBSE-icon-1024.png'
 import SettingsIcon from '../assets/cog.png';
 import BackIcon from '../assets/back-button.png';

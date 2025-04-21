@@ -1,6 +1,5 @@
 import { NavLink } from 'react-router';
 import Cookies from 'universal-cookie';
-import '../App.css';
 
 const cookies = new Cookies();
 
