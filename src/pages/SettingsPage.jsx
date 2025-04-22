@@ -13,7 +13,19 @@ function Settings() {
   const [savedNotes, setSavedNotes] = useState([]);
 
   const handleNotes = (e) => {
-    setSavedNotes(Object.keys(localStorage))
+    let localStorageKeys = Object.keys(localStorage);
+    let notes = [];
+
+    localStorageKeys.forEach((key) => {
+      if (key.length == 3) {
+        notes.push(key)
+      }
+    })
+
+    console.log(notes.length);
+    
+    setSavedNotes(notes)
+    // setSavedNotes()
   }
 
   const handleDeleteNote = (key) => {
@@ -23,14 +35,12 @@ function Settings() {
 
   const handleThemeChange = (e) => {
     document.documentElement.setAttribute("data-theme", e.target.value);
+    localStorage.setItem("theme", e.target.value);
   }
 
   return (
     <>
-
       <Navigation />
-      <ThemeProvider>
-        
       <details className="settings-cat">
         <summary>Appearance</summary>
         <div className="appearance">
@@ -43,25 +53,24 @@ function Settings() {
       </details>
       <details className="settings-cat" onClick={handleNotes}>
         <summary>Saved Notes</summary>
-        <div style={{maxHeight: "50vh", overflow: "auto"}}>
-          {savedNotes.map(key => (
+        <div style={{ maxHeight: "50vh", overflow: "auto" }}>
+          {savedNotes.length != 0 ? savedNotes.map(key => (
             <>
               <div className="carrier-note">
                 <div>
-                  <h4 key={localStorage[key]}>{JSON.parse(localStorage[key]).carrierName} - <span style={{fontWeight: "400"}}>{key.toUpperCase()}</span></h4>
+                  <h4 key={localStorage[key]}>{JSON.parse(localStorage[key]).carrierName} - <span style={{ fontWeight: "400" }}>{key.toUpperCase()}</span></h4>
                   <p onClick={() => handleDeleteNote(key)}>X</p>
                 </div>
                 <p key={key} className="saved-note-text">{JSON.parse(localStorage[key]).note}</p>
               </div>
             </>
-          ))}
+          )) : <p className="no-notes">No notes saved yet.</p>}
         </div>
       </details>
 
-      <button className="button-normal">Reset all</button>
+      {/* <button className="button-normal">Reset all</button>
       <button className="button-normal" onClick={clearNoteStorage}>Reset notes</button>
-      <button className="button-normal">Reset settings</button>
-      </ThemeProvider>
+      <button className="button-normal">Reset settings</button> */}
     </>
   );
 }

@@ -1,7 +1,7 @@
 
 	{
 		"Blue Cross and Blue Shield of Alabama": {
-			"phone_numbers": { "benefits_phone_number": "(877) 231-7239" },
+			"phone_numbers": { "benefits_phone_number": ["(877) 231-7239"] },
 			"prefixes": [
 				"aaa",
 				"aam",
@@ -1302,7 +1302,9 @@
 		},
 		"Blue Cross and Blue Shield of Illinois": {
 			"phone_numbers":
-				{ "benefits_phone_number": "(800) 972-8088, (800) 851-7498" },
+				{ "benefits_phone_number": 
+				["(800) 972-8088, (800) 851-7498"] 
+			},
 			"prefixes": [
 				"aac",
 				"aba",
