@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import PropTypes from 'prop-types';
 
 const Note = ({ carrierName, carrierPrefix }) => {
 	const [note, setNote] = useState("");
@@ -28,5 +29,10 @@ const Note = ({ carrierName, carrierPrefix }) => {
     </>
 	);
 };
+
+Note.propTypes = {
+	carrierName: PropTypes.string,
+	carrierPrefix: PropTypes.string
+}
 
 export default Note;
