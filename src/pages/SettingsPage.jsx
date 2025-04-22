@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { ThemeContext, ThemeProvider } from "../context/ThemeProvider";
 import Navigation from "../components/Navigation";
 
 function clearNoteStorage() {
@@ -9,7 +10,6 @@ function clearNoteStorage() {
 }
 
 function Settings() {
-
   const [savedNotes, setSavedNotes] = useState([]);
 
   const handleNotes = (e) => {
@@ -21,15 +21,22 @@ function Settings() {
     console.log(`Note removed for prefix ${key}`);
   }
 
+  const handleThemeChange = (e) => {
+    document.documentElement.setAttribute("data-theme", e.target.value);
+  }
+
   return (
     <>
+
       <Navigation />
+      <ThemeProvider>
+        
       <details className="settings-cat">
         <summary>Appearance</summary>
         <div className="appearance">
           <p>Theme:</p>
-          <select name="theme" id="theme">
-            <option value="dark">Blue (default)</option>
+          <select name="theme" onChange={handleThemeChange} id="theme">
+            <option value="blue">Blue (default)</option>
             <option value="dark">Dark</option>
           </select>
         </div>
@@ -54,6 +61,7 @@ function Settings() {
       <button className="button-normal">Reset all</button>
       <button className="button-normal" onClick={clearNoteStorage}>Reset notes</button>
       <button className="button-normal">Reset settings</button>
+      </ThemeProvider>
     </>
   );
 }
