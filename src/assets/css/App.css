@@ -220,6 +220,7 @@ a {
 
 .carrier-card {
   list-style: none;
+  width: 90%;
 }
 
 .carrier-card h3 {
