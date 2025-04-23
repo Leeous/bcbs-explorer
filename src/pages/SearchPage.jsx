@@ -63,11 +63,11 @@ const Search = () => {
     let eType = e.type;
 
     // Only accept Space and Enter as select keys
-    if (eType != "click" && (e.key != "Enter") && e.code != "Space") { return; }
+    if (eType != "click" && eKey != "Enter" && e.code != "Space" && eKey != "ArrowUp" && eKey != "ArrowDown") { return; }
 
     // Arrow keys for list
-    if (eKey == "ArrowUp") { e.preventDefault(); eTarget.previousSibling.focus(); }
-    if (eKey == "ArrowDown") {e.preventDefault(); eTarget.nextSibling.focus(); }
+    if (eKey == "ArrowUp") { e.preventDefault(); eTarget.previousSibling.focus(); return; }
+    if (eKey == "ArrowDown") {e.preventDefault(); eTarget.nextSibling.focus(); return; }
 
     // Prevent space from scrolling app
     if (e.code == "Space") { e.preventDefault() }
