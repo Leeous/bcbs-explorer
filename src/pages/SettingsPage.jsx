@@ -1,5 +1,4 @@
-import { useState, useContext } from "react";
-import { ThemeContext, ThemeProvider } from "../context/ThemeProvider";
+import { useState } from "react";
 import Navigation from "../components/Navigation";
 
 let theme = localStorage.getItem('theme');
@@ -15,7 +14,7 @@ function clearNoteStorage() {
 function Settings() {
   const [savedNotes, setSavedNotes] = useState([]);
 
-  const handleNotes = (e) => {
+  const handleNotes = () => {
     let localStorageKeys = Object.keys(localStorage);
     let notes = [];
 
@@ -24,16 +23,13 @@ function Settings() {
         notes.push(key)
       }
     })
-
-    console.log(notes.length);
     
     setSavedNotes(notes)
-    // setSavedNotes()
   }
 
   const handleDeleteNote = (key) => {
     localStorage.removeItem(key);
-    console.log(`Note removed for prefix ${key}`);
+    console.info(`Note removed for ${key.toUpperCase()} prefix.`);
   }
 
   const handleThemeChange = (e) => {

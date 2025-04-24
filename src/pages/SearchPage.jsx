@@ -38,6 +38,7 @@ const Search = () => {
     if (value && value.length == maxLength && searchType === "prefix") {
       let carrierMatch = findCarrier(BCBSDB, value, searchType);
       if (typeof carrierMatch !== "undefined") {
+        console.info(`${carrierMatch["planName"]} matched to ${value.toUpperCase()} prefix.`)
         setCurrentCarrier(carrierMatch["planName"]);
         setResults([carrierMatch]);
       } else {
@@ -72,6 +73,7 @@ const Search = () => {
     // Prevent space from scrolling app
     if (e.code == "Space") { e.preventDefault() }
 
+    console.info(`Carrier ${eTarget.innerText} selected.`)
     setSearchValue(eTarget.innerText);
     setCarrierClicked(true);
   }

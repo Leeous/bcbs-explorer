@@ -7,7 +7,6 @@ const Note = ({ carrierName, carrierPrefix }) => {
 	useEffect(() => {
 		// Retrieve the saved note from localStorage
 		const savedNote = JSON.parse(localStorage.getItem(carrierPrefix));
-		console.log(savedNote)
 		if (savedNote) {
 			setNote(savedNote);
 		}
