@@ -48,9 +48,9 @@ function Settings() {
         <summary>Appearance</summary>
         <div className="appearance">
           <p>Theme:</p>
-          <select name="theme" onChange={handleThemeChange} id="theme">
-            <option value="blue" selected={theme == "blue" ? "selected" : null}>Blue (default)</option>
-            <option value="dark" selected={theme == "dark" ? "selected" : null}>Dark</option>
+          <select name="theme" defaultValue={theme} onChange={handleThemeChange} id="theme">
+            <option value="blue">Blue (default)</option>
+            <option value="dark">Dark</option>
           </select>
         </div>
       </details>
