@@ -19,6 +19,7 @@
 /* General */
 body, html {
   height: 100%;
+  min-height: 100%;
   width: 500px;  /* max: 800px */
   height: 500px; /* max: 600px */
 }
@@ -31,6 +32,7 @@ body {
 	padding: 0;
 	font-size: 1em;
 }
+
 
 a {
   color: white;
@@ -271,14 +273,9 @@ select#theme {
   color: white;
 }
 
-.settings-cat[open=""] > summary {
+.settings-cat {
   border-bottom: solid 1px white;
-} 
-
-.settings-cat summary::marker {
-  list-style-type: "V";
-  border-bottom: solid 1px white;
-}
+}  
 
 .carrier-note {
   margin: .5em 1em;
@@ -318,6 +315,14 @@ select#theme {
 
 .settings-cat div p {
   margin: 0;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  user-select: none;
 }
 
 /*********/

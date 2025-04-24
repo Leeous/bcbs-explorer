@@ -70,6 +70,7 @@ function Settings() {
       {/* <button className="button-normal">Reset all</button>
       <button className="button-normal" onClick={clearNoteStorage}>Reset notes</button>
       <button className="button-normal">Reset settings</button> */}
+      <p className="footer" style={{fontSize: ".8em"}}>Made with ❤️ by <a href="https://leeous.com" target="_blank">Leeous</a>.</p>
     </>
   );
 }
