@@ -68,7 +68,7 @@ const Search = () => {
 
     // Arrow keys for list
     if (eKey == "ArrowUp") { e.preventDefault(); eTarget.previousSibling.focus(); return; }
-    if (eKey == "ArrowDown") {e.preventDefault(); eTarget.nextSibling.focus(); return; }
+    if (eKey == "ArrowDown") { e.preventDefault(); eTarget.nextSibling.focus(); return; }
 
     // Prevent space from scrolling app
     if (e.code == "Space") { e.preventDefault() }

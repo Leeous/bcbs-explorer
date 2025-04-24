@@ -8,7 +8,8 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "update-all": "npx npm-check-updates -u && npm i"
+    "update-all": "npx npm-check-updates -u && npm i",
+    "pack": "cd dist && zip -r -FS ./bcbs-explorer-$npm_package_version.zip * --exclude '*.git*'"
   },
   "dependencies": {
     "react": "^19.1.0",
