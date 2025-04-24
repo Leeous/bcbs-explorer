@@ -110,6 +110,10 @@ a:hover {
   field-sizing: content;
 }
 
+.noteText:focus {
+  outline: 1px solid white;
+}
+
 /**********/
 /* Search */
 /**********/
