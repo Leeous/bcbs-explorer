@@ -87,7 +87,7 @@ const Search = () => {
     }
   }
 
-  const handleSearchClick = (event) => {
+  const handleSearchClick = () => {
     if (carrierClicked) {
       setSearchValue("");
       setCarrierClicked(false);

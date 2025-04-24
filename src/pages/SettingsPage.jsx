@@ -2,6 +2,9 @@ import { useState, useContext } from "react";
 import { ThemeContext, ThemeProvider } from "../context/ThemeProvider";
 import Navigation from "../components/Navigation";
 
+let theme = localStorage.getItem('theme');
+
+
 function clearNoteStorage() {
   // Clear storage
   localStorage.clear();
@@ -46,8 +49,8 @@ function Settings() {
         <div className="appearance">
           <p>Theme:</p>
           <select name="theme" onChange={handleThemeChange} id="theme">
-            <option value="blue">Blue (default)</option>
-            <option value="dark">Dark</option>
+            <option value="blue" selected={theme == "blue" ? "selected" : null}>Blue (default)</option>
+            <option value="dark" selected={theme == "dark" ? "selected" : null}>Dark</option>
           </select>
         </div>
       </details>
