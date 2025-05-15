@@ -19,12 +19,13 @@ function Settings() {
     let notes = [];
 
     localStorageKeys.forEach((key) => {
+      console.log(key)
       if (key.length == 3) {
         notes.push(key)
       }
     })
     
-    setSavedNotes(notes)
+    setSavedNotes(notes);
   }
 
   const handleDeleteNote = (key) => {

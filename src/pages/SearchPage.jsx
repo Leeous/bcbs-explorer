@@ -4,25 +4,8 @@ import CarrierCard from "../components/CarrierCard";
 import Note from "../components/Note"
 import Navigation from '../components/Navigation';
 
-// TODO: need to rewrite to be a single function
-
-const findCarrier = (data, value, searchType) => {
-  const carriers = Object.keys(data).map(key => ({
-    planName: key,
-    ...data[key]
-  }));
-
-
-  if (searchType == "prefix") {
-    return carriers.find(carrier => carrier.prefixes.includes(value.toLowerCase()));
-  } else {
-    return carriers.filter(carrier => (carrier.planName.toLowerCase().includes(value.toLowerCase())));
-  }
-};
-
 const Search = () => {
   const [searchValue, setSearchValue] = useState('');
-  const [currentCarrier, setCurrentCarrier] = useState('');
   const [carrierClicked, setCarrierClicked] = useState(false);
   const [searchType, setSearchType] = useState("prefix");
   const [results, setResults] = useState([]);
@@ -35,28 +18,25 @@ const Search = () => {
 
   // Search Logic \\
   const handleSearch = useCallback((value) => {
-    if (value && value.length == maxLength && searchType === "prefix") {
-      let carrierMatch = findCarrier(BCBSDB, value, searchType);
-      if (typeof carrierMatch !== "undefined") {
-        console.info(`${carrierMatch["planName"]} matched to ${value.toUpperCase()} prefix.`)
-        setCurrentCarrier(carrierMatch["planName"]);
-        setResults([carrierMatch]);
-      } else {
-        setResults([{ planName: "Prefix not found" }]);
-      }
-    } else if (value.length < 3 && searchType === "prefix" || value.length == 0 && searchType === "carrier") {
-      // Empty results if value length is < 3 characters long
-      setCurrentCarrier("");
-      setResults([]);
-    } else if (value && searchType === "carrier") {
-      let carrierMatch = findCarrier(BCBSDB, value, searchType);
+
+    // All carrier data
+    const carriers = Object.keys(BCBSDB).map(key => ({
+      planName: key,
+      ...BCBSDB[key]
+    })); 
+    
+    let prefixMatch = searchType == "prefix" ? carriers.find(carrier => carrier.prefixes.includes(value.toLowerCase())) : null;
+    let carrierMatch = searchType == "carrier" ? carriers.filter(carrier => (carrier.planName.toLowerCase().includes(value.toLowerCase()))) : null;
+
+    if (searchType == "prefix" && value.length == maxLength) {
+      setResults([prefixMatch]);
+    } else if (searchType == "carrier" && value) {
       setResults(carrierMatch);
     }
   }, [maxLength, searchType]);
 
-  useEffect(() => {
-    handleSearch(searchValue);
-  }, [searchValue, handleSearch]);
+  useEffect(() => { handleSearch(searchValue); }
+  , [searchValue, handleSearch]);
 
   const handleCarrierSelection = (e) => {
     let eTarget = e.target;
@@ -81,7 +61,6 @@ const Search = () => {
   const handleSearchTextChange = (event) => {
     if (carrierClicked) {
       setSearchValue("");
-      setCurrentCarrier("");
       setResults([]);
       setCarrierClicked(false);
     } else {
@@ -140,7 +119,7 @@ const Search = () => {
         <ul className='carrierSearchResults' tabIndex={-1}>
           {searchType == "carrier" && !carrierClicked ? results.map((carrier) => <li className='carrier' onClick={handleCarrierSelection} onKeyDown={handleCarrierSelection} key={carrier.planName} tabIndex={0}>{carrier.planName}</li>) : null}
         </ul>
-        {results.length !== 0 && results[0].planName != "Prefix not found" && searchType == "prefix" ? <Note carrierPrefix={searchValue} carrierName={currentCarrier} /> : null}
+        {results.length !== 0 && results[0].planName != "Prefix not found" && searchType == "prefix" ? <Note carrierPrefix={searchValue} carrierName={results[0].planName} /> : null}
       </div>
     </>
   );
