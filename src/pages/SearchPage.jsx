@@ -23,15 +23,23 @@ const Search = () => {
     const carriers = Object.keys(BCBSDB).map(key => ({
       planName: key,
       ...BCBSDB[key]
-    })); 
+    }));
     
     let prefixMatch = searchType == "prefix" ? carriers.find(carrier => carrier.prefixes.includes(value.toLowerCase())) : null;
     let carrierMatch = searchType == "carrier" ? carriers.filter(carrier => (carrier.planName.toLowerCase().includes(value.toLowerCase()))) : null;
 
-    if (searchType == "prefix" && value.length == maxLength) {
-      setResults([prefixMatch]);
+    if (value.length < 3 && searchType === "prefix" || value.length == 0 && searchType === "carrier") {
+      // Empty results if value length is < 3 characters long
+      setResults([]);
     } else if (searchType == "carrier" && value) {
       setResults(carrierMatch);
+    } else if (searchType == "prefix" && value.length == maxLength) {
+      console.log(prefixMatch)
+      if (prefixMatch == null) {
+        setResults([{ planName: "Prefix not found" }]);
+      } else {
+        setResults([prefixMatch]);
+      }
     }
   }, [maxLength, searchType]);
 
@@ -53,19 +61,19 @@ const Search = () => {
     // Prevent space from scrolling app
     if (e.code == "Space") { e.preventDefault() }
 
+    setCarrierClicked(true);
     console.info(`Carrier ${eTarget.innerText} selected.`)
     setSearchValue(eTarget.innerText);
-    setCarrierClicked(true);
   }
 
   const handleSearchTextChange = (event) => {
     if (carrierClicked) {
+      setCarrierClicked(false);
       setSearchValue("");
       setResults([]);
-      setCarrierClicked(false);
     } else {
       setSearchValue(event.target.value);
-    }
+    } 
   }
 
   const handleSearchClick = () => {
