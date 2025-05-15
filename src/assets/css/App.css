@@ -245,6 +245,10 @@ a:hover {
   margin-bottom: .5rem;
 }
 
+.carrier-urls a {
+  text-decoration: underline;
+}
+
 .report-issue {
   display: flex;
   font-family: monospace;
