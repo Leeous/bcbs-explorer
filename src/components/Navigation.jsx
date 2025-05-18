@@ -2,15 +2,23 @@ import { NavLink } from "react-router";
 import BCBSIcon from '../assets/BCBSE-icon-1024.png'
 import SettingsIcon from '../assets/cog.png';
 import BackIcon from '../assets/back-button.png';
+import AddIcon from '../assets/plus.png';
 
 // Toggle path
 const toggleSettings = () => {
   if (window.location.pathname == "/search" || window.location.pathname == "/index.html" || window.location.pathname == "/") {
     return (
-      <NavLink to="/settings">
-        <img src={SettingsIcon} className="nav-icon" />
-        <span>Settings</span>
-      </NavLink>
+      <>
+        <NavLink to="/settings">
+          <img src={SettingsIcon} className="nav-icon" />
+          <span>Settings</span>
+        </NavLink>
+        
+        <NavLink to="/AddCarrier">
+          <img src={AddIcon} className="nav-icon" />
+          <span>Add carrier</span>
+        </NavLink>
+      </>
     );
   } else {
     return (
@@ -23,17 +31,17 @@ const toggleSettings = () => {
 }
 
 function Navigation() {
-	return (
-			<header className="navigation">
-        <nav>
-            {toggleSettings()}
-            <div>
-              <h3>BCBS Explorer</h3>
-              <img src={BCBSIcon} className="nav-icon" />
-            </div>
-        </nav>
-			</header>
-	);
+  return (
+    <header className="navigation">
+      <nav>
+        {toggleSettings()}
+        <div>
+          <h3>BCBS Explorer</h3>
+          <img src={BCBSIcon} className="nav-icon" />
+        </div>
+      </nav>
+    </header>
+  );
 }
 
 export default Navigation;
