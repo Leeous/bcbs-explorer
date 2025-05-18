@@ -15,7 +15,7 @@ const toggleSettings = () => {
             <span>Settings</span>
           </NavLink>
           
-          <NavLink to="/AddCarrier">
+          <NavLink to="/add">
             <img src={AddIcon} className="nav-icon" />
             <span>Add carrier</span>
           </NavLink>
