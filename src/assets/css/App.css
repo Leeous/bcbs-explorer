@@ -2,7 +2,7 @@
   --primary-color: #0F7BDC;
   --secondary-color: #3293EA;
   --third-color: #57A9F2;
-  --fourth-color: #7FBEF7;
+  --fourth-color: #0065c4;
   --fifth-color: #B0D8FB;
   --sixth-color: #0f5897;
 }
@@ -352,11 +352,15 @@ select#theme {
 /*********/
 
 .button-normal {
-	border: solid 3px var(--secondary-color);
-	background-color: var(--third-color);
+	border: solid 1px var(--secondary-color);
+	background-color: var(--fourth-color);
 	color: white;
 	padding: 5px 10px;
 	cursor: pointer;
+}
+
+.button-normal:hover {
+  border: solid 1px #fff;
 }
 
 .wip-banner {
@@ -367,4 +371,23 @@ select#theme {
   left: -50px;
   background-color: var(--secondary-color);
   transform: rotateZ(45deg);
+}
+
+.modal {
+  background-color: var(--primary-color);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  padding: 10px 15px;
+  text-align: center;
+}
+
+.modal button {
+  margin-top: 10px;
+}
+
+.modal label, .modal input[type="checkbox"] {
+  cursor: pointer;
 }
