@@ -1,10 +1,9 @@
 # BCBS Explorer
-WIP
 
 ![](https://i.imgur.com/6dJIBJj.png)
 
+### Icon attribution
 
-Icon attribution
-<a target="_blank" href="https://icons8.com/icon/1501/plus">Plus</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-<a target="_blank" href="https://icons8.com/icon/26194/back-arrow">back button</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-<a target="_blank" href="https://icons8.com/icon/1501/plus">plus button</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+- [Plus](https://icons8.com/icon/1501/plus) icon by [Icons8](https://icons8.com)
+- [back button](https://icons8.com/icon/26194/back-arrow) icon by [Icons8](https://icons8.com)
+- [plus button](https://icons8.com/icon/1501/plus) icon by [Icons8](https://icons8.com)
