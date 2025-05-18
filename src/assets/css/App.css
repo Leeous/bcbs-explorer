@@ -24,7 +24,7 @@ body, html {
   overflow-y: scroll;
   scrollbar-width: 5px;
   width: 500px;  /* max: 800px */
-  height: 500px; /* max: 600px */
+  height: 700px; /* max: 600px */
 }
 
 body {
