@@ -9,15 +9,17 @@ const toggleSettings = () => {
   if (window.location.pathname == "/search" || window.location.pathname == "/index.html" || window.location.pathname == "/") {
     return (
       <>
-        <NavLink to="/settings">
-          <img src={SettingsIcon} className="nav-icon" />
-          <span>Settings</span>
-        </NavLink>
-        
-        <NavLink to="/AddCarrier">
-          <img src={AddIcon} className="nav-icon" />
-          <span>Add carrier</span>
-        </NavLink>
+        <div>
+          <NavLink to="/settings">
+            <img src={SettingsIcon} className="nav-icon" />
+            <span>Settings</span>
+          </NavLink>
+          
+          <NavLink to="/AddCarrier">
+            <img src={AddIcon} className="nav-icon" />
+            <span>Add carrier</span>
+          </NavLink>
+        </div>
       </>
     );
   } else {
