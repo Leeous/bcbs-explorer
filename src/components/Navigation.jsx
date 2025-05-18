@@ -28,7 +28,7 @@ function Navigation() {
         <nav>
             {toggleSettings()}
             <div>
-              <h1>BCBS Explorer</h1>
+              <h3>BCBS Explorer</h3>
               <img src={BCBSIcon} className="nav-icon" />
             </div>
         </nav>
