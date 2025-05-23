@@ -1,7 +1,7 @@
 
 	{
 		"Blue Cross and Blue Shield of Alabama": {
-			"phone_numbers": { "benefits_phone_number": ["8772317239"] },
+			"phone_numbers": ["8772317239"],
 			"prefixes": [
 				"aaa",
 				"aam",
@@ -351,8 +351,7 @@
 			}
 		},
 		"Blue Cross Blue Shield of Michigan": {
-			"phone_numbers": 
-				{ "benefits_phone_number": ["8885007898", "8003448525"] },
+			"phone_numbers": ["8885007898", "8003448525"],
 			"prefixes": [
 				"aab",
 				"aai",
@@ -1301,10 +1300,7 @@
 			}
 		},
 		"Blue Cross and Blue Shield of Illinois": {
-			"phone_numbers":
-				{ "benefits_phone_number": 
-					["8009728088", "8008517498"] 
-			},
+			"phone_numbers": ["8009728088", "8008517498"],
 			"prefixes": [
 				"aac",
 				"aba",
@@ -2727,7 +2723,7 @@
 			}
 		},
 		"Florida Blue": {
-			"phone_numbers": { "benefits_phone_number": ["8007272227"] },
+			"phone_numbers": ["8007272227"],
 			"prefixes": [
 				"aad",
 				"adu",
@@ -3031,7 +3027,7 @@
 			}
 		},
 		"Anthem Blue Cross and Blue Shield Nevada": {
-			"phone_numbers": { "benefits_phone_number": ["8443962330"] },
+			"phone_numbers": ["8443962330"],
 			"prefixes": [
 				"aae",
 				"abn",
@@ -4182,7 +4178,7 @@
 			}
 		},
 		"Blue Cross Blue Shield of Georgia": {
-			"phone_numbers": { "benefits_phone_number": ["8003311476"] },
+			"phone_numbers": ["8003311476"],
 			"prefixes": [
 				"aag",
 				"aco",
@@ -5021,7 +5017,7 @@
 			}
 		},
 		"Blue Shield of California": {
-			"phone_numbers": { "benefits_phone_number": ["8005416652"] },
+			"phone_numbers": ["8005416652"],
 			"prefixes": [
 				"aah",
 				"aao",
@@ -5523,7 +5519,7 @@
 			}
 		},
 		"Anthem Blue Cross and Blue Shield Indiana": {
-			"phone_numbers": { "benefits_phone_number": ["8884418674"] },
+			"phone_numbers": ["8884418674"],
 			"prefixes": [
 				"aak",
 				"aas",
@@ -6249,7 +6245,7 @@
 			}
 		},
 		"Anthem Blue Cross and Blue Shield": {
-			"phone_numbers": { "benefits_phone_number": ["8004508753"] },
+			"phone_numbers": ["8004508753"],
 			"prefixes": [
 				"aan",
 				"acd",
