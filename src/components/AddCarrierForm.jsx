@@ -4,7 +4,7 @@ import BCBSDB from "../assets/bcbs_data.json";
 const AddCarrierForm = () => {
   const [carrierName, setCarrierName] = useState('');
   const [carrierPrefix, setCarrierPrefix] = useState('');
-  const [carrierPhones, setCarrierPhones] = useState([]);
+  const [carrierPhones, setCarrierPhones] = useState([""]);
   const [carrierLinks, setCarrierLinks] = useState('');
   const [carrierMatch, setCarrierMatch] = useState(false);
 
@@ -24,11 +24,9 @@ const AddCarrierForm = () => {
   console.log(carrierPrefix.length, carrierMatch)
   if (carrierPrefix.length == 3 && !carrierMatch) {
     let prefixMatch = carriers.find(carrier => carrier.prefixes.includes(carrierPrefix.toLowerCase()));
-    console.log(prefixMatch);
-
 
     prefixMatch.planName != undefined ? setCarrierName(prefixMatch.planName) : null;
-    // prefixMatch.phone_numbers != undefined ? setCarrierName(prefixMatch.planName) : null;
+    prefixMatch.phone_numbers != undefined ? setCarrierPhones(prefixMatch.phone_numbers) : null;
     // setCarrierPhone(Object.keys(prefixMatch.phone_numbers));
     setCarrierMatch(true);
   }
@@ -49,13 +47,16 @@ const AddCarrierForm = () => {
     setCarrierName(target.value);
   }
 
-  const handleCarrierPhone = ({ target }) => {
+  const handleCarrierPhone = (target, index) => {
     const re = /^[0-9\b]+$/;
-    console.log(re.test(target.value));
+    console.log(re.test(target.value))
 
     if (target.value === '' || re.test(target.value)) {
-      setCarrierPhones(target.value)
+      const newPhoneNumber = [...carrierPhones];
+      newPhoneNumber[index] = target.value;
+      setCarrierPhones(newPhoneNumber);
     }
+    console.log(carrierPhones)
   }
 
   const handleCarrierLinks = ({ target }) => {
@@ -82,8 +83,14 @@ const AddCarrierForm = () => {
             </div>
             <div>
               <label htmlFor="carrierPhone">Carrier Phone number(s)</label>
-              <input type="text" value={carrierPhones} name="carrierPhone" onChange={handleCarrierPhone} maxLength={10} />
+              {carrierPhones ? carrierPhones.map((phoneNumber, index) => <input type="text" key={index} defaultValue={phoneNumber} name="carrierPhone" onChange={(event) => handleCarrierPhone(event.target, index)} maxLength={10} />) : null}
             </div>
+            <button onClick={() => {
+              setCarrierPhones([
+                ...carrierPhones,
+                ""
+              ]);
+            }}>add number</button>
             <div>
             <label htmlFor="carrierLinks">Carrier Links</label>
             <input type="text" value={carrierLinks} name="carrierLinks" onChange={handleCarrierLinks} />

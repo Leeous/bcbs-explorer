@@ -412,14 +412,29 @@ select#theme {
   right: 0;
   bottom: 0;
   position: absolute;
-  padding: 10px 15px;
-  text-align: center;
+  z-index: 1;
 }
 
+.modal div {
+  padding: 10px 10px;
+}
+
+.modal h1 { text-align: center ;}
+
 .modal button {
-  margin-top: 10px;
+  width: 100%;
+}
+
+.modal p {
+  padding: 10px 20px;
 }
 
 .modal label, .modal input[type="checkbox"] {
   cursor: pointer;
+}
+
+/* Disclaimer modal styling */
+
+.disclaimerModal h5 {
+  margin-bottom: 5px;
 }
