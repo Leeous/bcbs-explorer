@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import Cookies from 'universal-cookie';
 import parse from 'html-react-parser';
 
 /**
@@ -16,31 +15,30 @@ import parse from 'html-react-parser';
 function Modal({ 
 	title, 
 	description, 
-	showRememberCheckbox = "true", 
+	showRememberCheckbox = "true",
 	showDecline = false, 
 	showConfirmation = true, 
 	cookieName, 
 	confirmationText = "I understand",
 	rememberText = "Don't remind me again"
 }) {
-	const cookies = new Cookies();
 	const [showPopup, setShowPopup] = useState(true);
 	const [rememberDecision, setRememberDecision] = useState(false);
 
 	// useEffect to check and set the initial state based on cookies
 	useEffect(() => {
-		const decision = cookies.get(cookieName);
+		const decision = localStorage.getItem(cookieName);
 		if (decision) {
 			// If user previously accepted and chose to remember the decision, hide the popup
 			setShowPopup(false);
 		}
-	}, [cookies, cookieName]);
+	}, [cookieName]);
 
 	const handleAccept = () => {
 		setShowPopup(false);
-
-		if (rememberDecision) {
-			cookies.set(cookieName, true);
+		// Remember selection if checkbox ticked, or if checkbox is disabled
+		if (rememberDecision || !showRememberCheckbox) {
+			localStorage.setItem(cookieName, true);
 			setRememberDecision(true);
 		}
 	}
@@ -56,8 +54,8 @@ function Modal({
 	return (
 		showPopup && (
 			<div className='modal'>
-				<h2>{title}</h2>
-				<p>{parse(description)}</p>
+				<h1>{title}</h1>
+				<div>{parse(description)}</div>
 				<div>
 					{showRememberCheckbox ? <>
 						<input type="checkbox" checked={rememberDecision} onChange={handleRememberDecisionChange} name="rememberDecision" id="rememberDecision" />
