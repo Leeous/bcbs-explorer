@@ -25,8 +25,11 @@ const AddCarrierForm = () => {
   if (carrierPrefix.length == 3 && !carrierMatch) {
     let prefixMatch = carriers.find(carrier => carrier.prefixes.includes(carrierPrefix.toLowerCase()));
 
-    prefixMatch.planName != undefined ? setCarrierName(prefixMatch.planName) : null;
-    prefixMatch.phone_numbers != undefined ? setCarrierPhones(prefixMatch.phone_numbers) : null;
+    if (prefixMatch) {
+      prefixMatch.planName != undefined ? setCarrierName(prefixMatch.planName) : null;
+      prefixMatch.phone_numbers != undefined ? setCarrierPhones(prefixMatch.phone_numbers) : null;      
+    }
+
     // setCarrierPhone(Object.keys(prefixMatch.phone_numbers));
     setCarrierMatch(true);
   }
@@ -49,7 +52,8 @@ const AddCarrierForm = () => {
 
   const handleCarrierPhone = (target, index) => {
     const re = /^[0-9\b]+$/;
-    console.log(re.test(target.value))
+    console.log(re.test(target.value));
+    
 
     if (target.value === '' || re.test(target.value)) {
       const newPhoneNumber = [...carrierPhones];
