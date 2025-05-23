@@ -347,6 +347,38 @@ select#theme {
   font-size: .8rem;
 }
 
+/********************/
+/* Add carrier form */
+/********************/
+
+.form-title {
+  text-align: center;
+}
+
+.add-carrier-form {
+  margin: 0 auto;
+}
+
+.add-carrier-form div > div {
+}
+
+.add-carrier-form div {
+  padding: 5px;
+  text-align: center;
+}
+
+.add-carrier-form div input[type="text"] {
+  border: solid 1px var(--third-color);
+	background-color: var(--secondary-color);
+	color: white;
+  display: block;
+  margin: auto auto;
+  padding: 3px;
+  font-size: 1em;
+  width: 75%;
+}
+
+
 /*********/
 /*  Misc */
 /*********/
