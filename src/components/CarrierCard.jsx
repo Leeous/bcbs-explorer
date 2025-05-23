@@ -4,14 +4,15 @@ import Warning from '../assets/warning.png';
 
 const CarrierCard = ({ carrierName, carrierPhoneNumbers, carrierURLs, carrierPayerID }) => {
   // TODO: Change this to a table to accommodate uncommon data
+  console.log(carrierPhoneNumbers)
   return (
     <section className='carrier-card'>
       <h3>{carrierName}</h3>
       {carrierPhoneNumbers && 
       <div>
         <h4>Phone numbers</h4>
-        <li className='carrier-urls'>{carrierPhoneNumbers.benefits_phone_number.map((number, index) => {
-          return <span key={number}><a href={"tel:" + number} >({number.slice(0, 3)}) {number.slice(3, 6)}-{number.slice(6)}</a>{index < carrierPhoneNumbers.benefits_phone_number.length - 1 ? ", " : ""}</span>;
+        <li className='carrier-urls'>{carrierPhoneNumbers.map((number, index) => {
+          return <span key={number}><a href={"tel:" + number} >({number.slice(0, 3)}) {number.slice(3, 6)}-{number.slice(6)}</a>{index < carrierPhoneNumbers.length - 1 ? ", " : ""}</span>;
         })}</li>
       </div>}
       {carrierURLs && <h4>Links</h4>}
