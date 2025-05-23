@@ -13,7 +13,7 @@ import parse from 'html-react-parser';
  * @param {string} confirmationText - Text rendered in accept button (default: "I understand")
  * @param {string} rememberText - Text rendered next to checkbox button (default: "Don't remind me again")
  */
-function PopupDisclaimer({ 
+function Modal({ 
 	title, 
 	description, 
 	showRememberCheckbox = "true", 
@@ -71,7 +71,7 @@ function PopupDisclaimer({
 	)
 }
 
-PopupDisclaimer.propTypes = {
+Modal.propTypes = {
 	title: PropTypes.string,
 	description: PropTypes.string,
 	showDecline: PropTypes.boolean,
@@ -82,4 +82,4 @@ PopupDisclaimer.propTypes = {
 	rememberText: PropTypes.string
 };
 
-export default PopupDisclaimer;
+export default Modal;
