@@ -55,7 +55,10 @@ const AddCarrierForm = () => {
   }
 
   const handleCarrierName = ({ target }) => {
-    setCarrierName(target.value);
+    setCarrier(prevCarrier => ({
+      ...prevCarrier,
+      name: target.value
+    }));
   }
 
   const handleCarrierPhone = (e, index) => {
