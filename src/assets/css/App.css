@@ -353,18 +353,32 @@ select#theme {
 
 .form-title {
   text-align: center;
+  
 }
 
 .add-carrier-form {
   margin: 0 auto;
+  width: 75%;
 }
 
 .add-carrier-form div > div {
 }
 
 .add-carrier-form div {
-  padding: 5px;
-  text-align: center;
+  margin: auto auto;
+}
+
+.add-carrier-form label {
+  font-weight: bold;
+  user-select: none;
+}
+
+.add-carrier-form p {
+  user-select: none;
+  margin: 0;
+  font-size: .8em;
+  font-weight: light;
+  color: rgba(255, 255, 255, .7);
 }
 
 .add-carrier-form div input[type="text"] {
@@ -374,8 +388,9 @@ select#theme {
   display: block;
   margin: auto auto;
   padding: 3px;
+  margin: 5px 0;
   font-size: 1em;
-  width: 75%;
+  width: 100%;
 }
 
 
