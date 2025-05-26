@@ -107,13 +107,13 @@ const AddCarrierForm = () => {
               <label htmlFor="carrierPhone">Carrier phone number(s)</label>
               <p>All numeric. (ex. 1234567890)</p>
               {carrier.phones ? carrier.phones.map((phoneNumber, index) => <input type="text" key={index} value={carrier.phones[index]} name="carrierPhone" onChange={(event) => handleCarrierPhone(event, index)} maxLength={10} />) : null}
+              <input type='button' className='button-normal' defaultValue={"add number"} onClick={() => {
+                setCarrier(prev => ({
+                  ...prev,
+                  phones: [...prev.phones, ""] // replace with the actual number or variable
+                }));
+              }} />
             </div>
-            <input type='button' defaultValue={"add number"} onClick={() => {
-              setCarrier(prev => ({
-                ...prev,
-                phones: [...prev.phones, ""] // replace with the actual number or variable
-              }));
-            }} />
             <div>
             <label htmlFor="carrierLinks">Carrier Links</label>
             <input type="text" value={carrier.links} name="carrierLinks" onChange={handleCarrierLinks} />

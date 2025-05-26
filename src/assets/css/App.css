@@ -18,6 +18,7 @@
 
 /* General */
 body, html {
+  box-sizing: border-box;
   height: 100%;
   min-height: 100%;
   margin: 0;
@@ -358,24 +359,24 @@ select#theme {
 
 .add-carrier-form {
   margin: 0 auto;
-  width: 75%;
 }
 
 .add-carrier-form div > div {
-}
-
-.add-carrier-form div {
+  width: 85%;
   margin: auto auto;
 }
 
-.add-carrier-form label {
+
+.add-carrier-form div label {
   font-weight: bold;
+  display: inline-block;
+  margin: 10px 0 0 0;
   user-select: none;
 }
 
 .add-carrier-form p {
   user-select: none;
-  margin: 0;
+  margin: 0 0 10px 0; 
   font-size: .8em;
   font-weight: light;
   color: rgba(255, 255, 255, .7);
@@ -386,11 +387,16 @@ select#theme {
 	background-color: var(--secondary-color);
 	color: white;
   display: block;
-  margin: auto auto;
-  padding: 3px;
+  box-sizing: border-box;
   margin: 5px 0;
+  padding: 3px;
   font-size: 1em;
   width: 100%;
+}
+
+.add-carrier-form div div > input[type="button"] {
+  width: 100%;
+  margin: 5px 0;
 }
 
 
