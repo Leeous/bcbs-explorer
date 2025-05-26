@@ -92,6 +92,7 @@ const AddCarrierForm = () => {
       <div>
         <div>
           <label htmlFor="carrierPrefix">Carrier prefix</label>
+          <p>(ex. AAA, BBB, CCC, etc.)</p>
           <input type="text" value={carrier.prefix} name="carrierPrefix" onChange={handleCarrierPrefix} style={{textTransform: 'uppercase'}} maxLength={3} minLength={3} />
         </div>
 
@@ -99,6 +100,7 @@ const AddCarrierForm = () => {
           <>
             <div>
               <label htmlFor="carrierName">Carrier name</label>
+              <p>(ex. Blue Cross Blue Shield of Texas)</p>
               <input type="text" value={carrier.name} name="carrierName" onChange={handleCarrierName} maxLength={40} />
             </div>
             <div>
