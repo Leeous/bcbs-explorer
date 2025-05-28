@@ -153,11 +153,11 @@ const AddCarrierForm = () => {
             </div>
           </>
           : null}
+        {
+          formComplete ?
+            <input type="submit" className='button-normal' value="Submit" /> : null
+        }
       </div>
-      {
-        formComplete ?
-          <input type="submit" className='button-normal' value="Submit" /> : null
-      }
     </form >
   )
 }

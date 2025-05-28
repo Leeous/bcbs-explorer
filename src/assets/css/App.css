@@ -435,6 +435,11 @@ select#theme {
 .form-list-links .link-url {
 }
 
+.add-carrier-form input[type="submit"] {
+  width: 100%;
+  margin: 25px 0;
+}
+
 /*********/
 /*  Misc */
 /*********/
