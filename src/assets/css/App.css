@@ -406,7 +406,7 @@ select#theme {
 .add-carrier-form .carrier-phone-list > div {
   display: grid;
   grid-template-columns: 49% 49%;
-  gap: 10px;
+  column-gap: 10px;
   justify-content: center;
 }
 
@@ -416,7 +416,6 @@ select#theme {
 }
 
 .add-carrier-form .form-list-phone-numbers .list-item {
-  border-right: none;
 }
 
 .add-carrier-form .form-list-phone-numbers .list-item:focus {
