@@ -17,14 +17,13 @@ const AddCarrierForm = () => {
     ...BCBSDB[key]
   }));
 
-  if (carrier.length == 3 && carrier.name.length != 0) {
+  if (carrier.prefix.length != 0) {
     formComplete = true;
   } else {
     formComplete = false;
   }
 
   // If prefix exists, prefill data
-  console.log(carrier.prefix.length, carrierMatch)
   if (carrier.prefix.length == 3 && !carrierMatch) {
     let prefix = carrier.prefix;
     let prefixMatch = carriers.find(carrier => carrier.prefixes.includes(prefix.toLowerCase()));
@@ -97,7 +96,6 @@ const AddCarrierForm = () => {
           <p>(ex. AAA, BBB, CCC, etc.)</p>
           <input type="text" value={carrier.prefix} name="carrierPrefix" onChange={handleCarrierPrefix} style={{ textTransform: 'uppercase' }} maxLength={3} minLength={3} />
         </div>
-
         {carrier.prefix.length == 3 ?
           <>
             <div>
@@ -111,8 +109,8 @@ const AddCarrierForm = () => {
               <div>
                 {carrier.phones ? carrier.phones.map((phoneNumber, index) =>
                   <>
-                    <div className='form-list'>
-                      <input type="text" className="list-item" key={index} value={carrier.phones[index]} name="carrierPhone" onChange={(event) => handleCarrierPhone(event, index)} maxLength={10} />
+                    <div className='form-list-phone-numbers' key={index}>
+                      <input type="text" className="list-item" value={carrier.phones[index]} name="carrierPhone" onChange={(event) => handleCarrierPhone(event, index)} maxLength={10} />
                       <button type='button' className='delete-element button-normal' onClick={() => {
                         setCarrier(prev => ({
                           ...prev,
@@ -122,28 +120,44 @@ const AddCarrierForm = () => {
                       }>X</button>
                     </div >
                   </>
-              ) 
+                )
+                  : null}
+              </div>
+              <input type='button' className='button-normal' defaultValue={"add number"} onClick={() => {
+                setCarrier(prev => ({
+                  ...prev,
+                  phones: [...prev.phones, ""]
+                }));
+              }} />
+            </div>
+            <div>
+              <label htmlFor="carrierLinks">Carrier Links</label>
+              <p>(ex. Text: "Example", URL: "https://example.com")</p>
+              {carrier.phones ?
+                carrier.phones.map((phoneNumber, index) =>
+                  <>
+                    <div className='form-list-links' key={index}>
+                      <input type="text" placeholder='Link Text' className='link-text' name="carrierLink" />
+                      <input type="url" placeholder='URL' className='link-url' name="carrierLink" />
+                      <button type='button' className='delete-element button-normal' onClick={() => {
+                        // setCarrier(prev => ({
+                        //   ...prev,
+                        //   phones: prev.phones.filter((_, i) => i !== index)
+                        // }))
+                      }
+                      }>X</button>
+                    </div>
+                  </>)
+
                 : null}
             </div>
-            <input type='button' className='button-normal' defaultValue={"add number"} onClick={() => {
-              setCarrier(prev => ({
-                ...prev,
-                phones: [...prev.phones, ""] // replace with the actual number or variable
-              }));
-            }} />
-          </div>
-        <div>
-          <label htmlFor="carrierLinks">Carrier Links</label>
-          {/* // TODO: fix link mapping */}
-          {/**{carrier.phones ? carrier.phones.map((phoneNumber, index) => <input type="text" key={index} value={carrier.phones[index]} name="carrierLink" onChange={(event) => handleCarrierPhone(event, index)} maxLength={10} />) : null}**/}
-        </div>
-      </>
+          </>
           : null}
-    </div>
+      </div>
       {
-    formComplete ?
-      <input type="submit" className='button-normal' value="Submit" /> : null
-  }
+        formComplete ?
+          <input type="submit" className='button-normal' value="Submit" /> : null
+      }
     </form >
   )
 }

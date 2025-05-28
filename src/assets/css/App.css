@@ -382,7 +382,7 @@ select#theme {
   color: rgba(255, 255, 255, .7);
 }
 
-.add-carrier-form div input[type="text"] {
+.add-carrier-form div input[type="text"], .add-carrier-form div input[type="url"]  {
   border: solid 1px var(--third-color);
 	background-color: var(--secondary-color);
 	color: white;
@@ -394,6 +394,10 @@ select#theme {
   width: 100%;
 }
 
+.add-carrier-form div input[type="text"]:focus, .add-carrier-form div input[type="url"]:focus {
+  outline: solid 1px #fff;
+}
+
 .add-carrier-form div div > input[type="button"] {
   width: 100%;
   margin: 5px 0;
@@ -401,22 +405,35 @@ select#theme {
 
 .add-carrier-form .carrier-phone-list > div {
   display: grid;
-  gap: 5px;
-  grid-template-columns: 45% 45%;
+  grid-template-columns: 49% 49%;
+  gap: 10px;
   justify-content: center;
 }
 
-.form-list {
+.form-list-phone-numbers {
   display: flex;
   align-items: center;
 }
 
-.add-carrier-form .form-list .list-item {
+.add-carrier-form .form-list-phone-numbers .list-item {
   border-right: none;
 }
 
-.add-carrier-form .form-list .list-item:focus {
+.add-carrier-form .form-list-phone-numbers .list-item:focus {
   outline: solid 1px #fff;
+}
+
+.form-list-links {
+  display: flex;
+  align-items: center;
+}
+
+.form-list-links input.link-text[type="text"] {
+  width: 65%;
+  border-right: none;
+}
+
+.form-list-links .link-url {
 }
 
 /*********/
