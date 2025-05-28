@@ -31,9 +31,11 @@ const AddCarrierForm = () => {
 
     if (prefixMatch) {
       prefixMatch.planName != undefined ? setCarrier(prevCarrier => ({ ...prevCarrier, name: prefixMatch.planName })) : null;
-      prefixMatch.phone_numbers != undefined ? setCarrier(prevCarrier => ({ ...prevCarrier, phones: prefixMatch.phone_numbers }))  : null;
+      prefixMatch.phone_numbers != undefined ? setCarrier(prevCarrier => ({ ...prevCarrier, phones: prefixMatch.phone_numbers })) : null;
+      prefixMatch.links != undefined ? setCarrier(prevCarrier => ({ ...prevCarrier, links: prefixMatch.URLs })) : null;
     }
 
+    console.log(carrier)
     // setCarrierPhone(Object.keys(prefixMatch.phone_numbers));
     setCarrierMatch(true);
   }
@@ -42,13 +44,13 @@ const AddCarrierForm = () => {
   const handleCarrierPrefix = ({ target }) => {
     setCarrier(prevCarrier => ({
       ...prevCarrier,
-      prefix: target.value 
+      prefix: target.value
     }));
     if (carrier.prefix.length < 3) {
       console.info("Cleared form since prefix was edited.")
       setCarrier(prevCarrier => ({
         ...prevCarrier,
-        prefix: target.value 
+        prefix: target.value
       }));
       setCarrierMatch(false);
     }
@@ -64,7 +66,7 @@ const AddCarrierForm = () => {
   const handleCarrierPhone = (e, index) => {
     // Remove any non-numeric values from phone number input
     const result = e.target.value.replace(/\D/g, '');
-  
+
     const newPhones = [...carrier.phones];
     newPhones[index] = result;
 
@@ -75,7 +77,7 @@ const AddCarrierForm = () => {
   };
 
   const handleCarrierLinks = ({ target }) => {
-    setCarrier({...carrier, Links: [...carrier.Links, target.value]});
+    setCarrier({ ...carrier, Links: [...carrier.Links, target.value] });
   }
 
   // function AddCarrier(newCarrierData) {
@@ -93,7 +95,7 @@ const AddCarrierForm = () => {
         <div>
           <label htmlFor="carrierPrefix">Carrier prefix</label>
           <p>(ex. AAA, BBB, CCC, etc.)</p>
-          <input type="text" value={carrier.prefix} name="carrierPrefix" onChange={handleCarrierPrefix} style={{textTransform: 'uppercase'}} maxLength={3} minLength={3} />
+          <input type="text" value={carrier.prefix} name="carrierPrefix" onChange={handleCarrierPrefix} style={{ textTransform: 'uppercase' }} maxLength={3} minLength={3} />
         </div>
 
         {carrier.prefix.length == 3 ?
@@ -103,28 +105,46 @@ const AddCarrierForm = () => {
               <p>(ex. Blue Cross Blue Shield of Texas)</p>
               <input type="text" value={carrier.name} name="carrierName" onChange={handleCarrierName} maxLength={40} />
             </div>
-            <div>
+            <div className='carrier-phone-list'>
               <label htmlFor="carrierPhone">Carrier phone number(s)</label>
               <p>All numeric. (ex. 1234567890)</p>
-              {carrier.phones ? carrier.phones.map((phoneNumber, index) => <input type="text" key={index} value={carrier.phones[index]} name="carrierPhone" onChange={(event) => handleCarrierPhone(event, index)} maxLength={10} />) : null}
-              <input type='button' className='button-normal' defaultValue={"add number"} onClick={() => {
-                setCarrier(prev => ({
-                  ...prev,
-                  phones: [...prev.phones, ""] // replace with the actual number or variable
-                }));
-              }} />
+              <div>
+                {carrier.phones ? carrier.phones.map((phoneNumber, index) =>
+                  <>
+                    <div className='form-list'>
+                      <input type="text" className="list-item" key={index} value={carrier.phones[index]} name="carrierPhone" onChange={(event) => handleCarrierPhone(event, index)} maxLength={10} />
+                      <button type='button' className='delete-element button-normal' onClick={() => {
+                        setCarrier(prev => ({
+                          ...prev,
+                          phones: prev.phones.filter((_, i) => i !== index)
+                        }))
+                      }
+                      }>X</button>
+                    </div >
+                  </>
+              ) 
+                : null}
             </div>
-            <div>
-            <label htmlFor="carrierLinks">Carrier Links</label>
-            <input type="text" value={carrier.links} name="carrierLinks" onChange={handleCarrierLinks} />
-          </div> 
-          </>
+            <input type='button' className='button-normal' defaultValue={"add number"} onClick={() => {
+              setCarrier(prev => ({
+                ...prev,
+                phones: [...prev.phones, ""] // replace with the actual number or variable
+              }));
+            }} />
+          </div>
+        <div>
+          <label htmlFor="carrierLinks">Carrier Links</label>
+          {/* // TODO: fix link mapping */}
+          {/**{carrier.phones ? carrier.phones.map((phoneNumber, index) => <input type="text" key={index} value={carrier.phones[index]} name="carrierLink" onChange={(event) => handleCarrierPhone(event, index)} maxLength={10} />) : null}**/}
+        </div>
+      </>
           : null}
-      </div>
-      {formComplete ?
-        <input type="submit" className='button-normal' value="Submit" /> : null
-      }
-    </form>
+    </div>
+      {
+    formComplete ?
+      <input type="submit" className='button-normal' value="Submit" /> : null
+  }
+    </form >
   )
 }
 

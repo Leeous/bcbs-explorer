@@ -361,7 +361,7 @@ select#theme {
   margin: 0 auto;
 }
 
-.add-carrier-form div > div {
+.add-carrier-form > div {
   width: 85%;
   margin: auto auto;
 }
@@ -399,6 +399,25 @@ select#theme {
   margin: 5px 0;
 }
 
+.add-carrier-form .carrier-phone-list > div {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: 45% 45%;
+  justify-content: center;
+}
+
+.form-list {
+  display: flex;
+  align-items: center;
+}
+
+.add-carrier-form .form-list .list-item {
+  border-right: none;
+}
+
+.add-carrier-form .form-list .list-item:focus {
+  outline: solid 1px #fff;
+}
 
 /*********/
 /*  Misc */
