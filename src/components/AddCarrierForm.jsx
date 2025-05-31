@@ -7,7 +7,7 @@ const AddCarrierForm = () => {
     name: "",
     prefix: "",
     phones: [],
-    links: []
+    links: {}
   })
   const [carrierMatch, setCarrierMatch] = useState(false);
 
@@ -29,12 +29,15 @@ const AddCarrierForm = () => {
     let prefixMatch = carriers.find(carrier => carrier.prefixes.includes(prefix.toLowerCase()));
 
     if (prefixMatch) {
-      prefixMatch.planName != undefined ? setCarrier(prevCarrier => ({ ...prevCarrier, name: prefixMatch.planName })) : null;
-      prefixMatch.phone_numbers != undefined ? setCarrier(prevCarrier => ({ ...prevCarrier, phones: prefixMatch.phone_numbers })) : null;
-      prefixMatch.links != undefined ? setCarrier(prevCarrier => ({ ...prevCarrier, links: prefixMatch.URLs })) : null;
+      setCarrier(prevCarrier => ({
+        ...prevCarrier,
+        name: prefixMatch.planName ?? prevCarrier.name,
+        phones: prefixMatch.phone_numbers ?? prevCarrier.phones,
+        links: prefixMatch.URLs ?? prevCarrier.links
+      }));
     }
 
-    console.log(carrier)
+    console.log(prefixMatch.URLs, carrier)
     // setCarrierPhone(Object.keys(prefixMatch.phone_numbers));
     setCarrierMatch(true);
   }
@@ -133,23 +136,28 @@ const AddCarrierForm = () => {
             <div>
               <label htmlFor="carrierLinks">Carrier Links</label>
               <p>(ex. Text: "Example", URL: "https://example.com")</p>
-              {carrier.phones ?
+              {Object.entries(carrier.links).map(([key, value]) => (
+                <div className='form-list-links' key={key}>
+                  <input type="text" placeholder='Link Text' defaultValue={key} className='link-text' name="carrierLink" />
+                  <input type="url" placeholder='URL' defaultValue={value} className='link-url' name="carrierLink" />
+                  <button type='button' className='delete-element button-normal' onClick={() => {
+                    // setCarrier(prev => ({
+                    //   ...prev,
+                    //   phones: prev.phones.filter((_, i) => i !== index)
+                    // }))
+                  }
+                  }>X</button>
+                </div>
+              ))
+              }
+
+              {/* {Object.entries(carrier.links).map() ?
                 carrier.phones.map((phoneNumber, index) =>
                   <>
-                    <div className='form-list-links' key={index}>
-                      <input type="text" placeholder='Link Text' className='link-text' name="carrierLink" />
-                      <input type="url" placeholder='URL' className='link-url' name="carrierLink" />
-                      <button type='button' className='delete-element button-normal' onClick={() => {
-                        // setCarrier(prev => ({
-                        //   ...prev,
-                        //   phones: prev.phones.filter((_, i) => i !== index)
-                        // }))
-                      }
-                      }>X</button>
-                    </div>
+
                   </>)
 
-                : null}
+                : null} */}
             </div>
           </>
           : null}
