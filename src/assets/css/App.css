@@ -398,9 +398,15 @@ select#theme {
   outline: solid 1px #fff;
 }
 
-.add-carrier-form div div > input[type="button"] {
+.add-carrier-form div > input[type="button"] {
   width: 100%;
   margin: 5px 0;
+}
+
+.add-carrier-form input[type="submit"] {
+  width: 85%;
+  margin: 25px auto;
+  display: block;
 }
 
 .add-carrier-form .carrier-phone-list > div {
@@ -410,15 +416,15 @@ select#theme {
   justify-content: center;
 }
 
-.form-list-phone-numbers {
+.form-list-phone-number {
   display: flex;
   align-items: center;
 }
 
-.add-carrier-form .form-list-phone-numbers .list-item {
+.add-carrier-form .form-list-phone-number .list-item {
 }
 
-.add-carrier-form .form-list-phone-numbers .list-item:focus {
+.add-carrier-form .form-list-phone-number .list-item:focus {
   outline: solid 1px #fff;
 }
 
@@ -435,10 +441,7 @@ select#theme {
 .form-list-links .link-url {
 }
 
-.add-carrier-form input[type="submit"] {
-  width: 100%;
-  margin: 25px 0;
-}
+
 
 /*********/
 /*  Misc */
