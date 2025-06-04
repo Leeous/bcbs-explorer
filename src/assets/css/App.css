@@ -435,10 +435,11 @@ select#theme {
 
 .form-list-links input.link-text[type="text"] {
   width: 65%;
-  border-right: none;
+  text-overflow: ellipsis;
 }
 
 .form-list-links .link-url {
+  text-overflow: ellipsis;
 }
 
 
