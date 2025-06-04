@@ -8,6 +8,13 @@ const AddCarrierForm = () => {
     phones: [],
     links: {},
   });
+  const [formErrors, setFormErrors] = useState({
+    name: '',
+    phones: '',
+    prefix: '',
+    links: ''
+  });
+
   const [carrierMatch, setCarrierMatch] = useState(false);
 
   let formComplete = carrier.prefix.length !== 0;
@@ -32,6 +39,7 @@ const AddCarrierForm = () => {
         phones: prefixMatch.phone_numbers ?? prevCarrier.phones,
         links: prefixMatch.URLs ?? prevCarrier.links,
       }));
+      console.log(carrier);
     }
 
     console.log(prefixMatch?.URLs, carrier);
@@ -67,11 +75,12 @@ const AddCarrierForm = () => {
     }));
   };
 
-  const handleCarrierLinks = ({ target }) => {
-    setCarrier((prevCarrier) => ({
-      ...prevCarrier,
-      links: { ...prevCarrier.links, [target.value]: "" },
-    }));
+  const handleCarrierLinks = ({ e, key, value }) => {
+    console.log(e, key, value);
+    // setCarrier((prevCarrier) => ({
+    //   ...prevCarrier,
+    //   links: { ...prevCarrier.links, [target.value]: "" },
+    // }));
   };
 
   const handleCarrierLinkRemove = (keyToRemove) => {
@@ -88,23 +97,70 @@ const AddCarrierForm = () => {
 
   const handleAddLink = () => {
     let index = Object.keys(carrier.links).length + 1;
-  
+
     // Ensure the key is unique
     while (carrier.links[`New link ${index}`] !== undefined) {
       index++; // Increment until an unused key is found
     }
-  
-    setCarrier(prevCarrier => ({
+
+    setCarrier((prevCarrier) => ({
       ...prevCarrier,
       links: {
         ...prevCarrier.links,
-        [`New link ${index}`]: ""
-      }
+        [`New link ${index}`]: "",
+      },
     }));
   };
 
+  const submitForm = (event) => {
+    event.preventDefault();
+    console.log(carrier)
+
+    const errors = {};
+
+    // Validate carrier name
+    if (!carrier.name) {
+      errors.name = "Carrier name is required";
+    }
+
+    // Validate prefix
+    if (carrier.prefix.length !== 3) {
+      errors.prefix = "Prefix must be three characters long";
+    }
+
+    // Validate phone numbers \\
+
+    carrier.phones.forEach(element => {
+      if (element.length < 10) {
+        errors.phones = "Ensure all values are a full 10 digit number"
+      }
+    });
+
+    Object.keys(carrier.links).forEach(element => {
+      console.log(element.length)
+      if (element.length <= 1) {
+        errors.links = "Check your links' text (left side values)."
+      }
+    });    
+
+    Object.values(carrier.links).forEach(element => {
+      console.log(element.length)
+      if (element.length <= 1) {
+        errors.links = "Check your links' URLs (right side values)."
+      }
+    });
+    
+
+    if (Object.keys(errors).length > 0) {
+      setFormErrors(errors);
+      console.log(formErrors);
+      return;
+    }
+
+  };
+
   return (
-    <form autoComplete="off" className="add-carrier-form">
+    <form autoComplete="off" onSubmit={submitForm} className="add-carrier-form">
       <div>
         <div>
           <label htmlFor="carrierPrefix">Carrier prefix</label>
@@ -122,6 +178,7 @@ const AddCarrierForm = () => {
 
         {carrier.prefix.length === 3 && (
           <>
+            {/* Name */}
             <div>
               <label htmlFor="carrierName">Carrier name</label>
               <p>(ex. Blue Cross Blue Shield of Texas)</p>
@@ -133,7 +190,7 @@ const AddCarrierForm = () => {
                 maxLength={40}
               />
             </div>
-
+            {/* Phone numbers */}
             <div className="carrier-phone-list">
               <label htmlFor="carrierPhone">Carrier phone number(s)</label>
               <p>All numeric. (ex. 1234567890)</p>
@@ -163,6 +220,7 @@ const AddCarrierForm = () => {
                   </div>
                 ))}
               </div>
+              {/* Add Phone Number */}
               <input
                 type="button"
                 className="button-normal"
@@ -175,7 +233,7 @@ const AddCarrierForm = () => {
                 }
               />
             </div>
-
+            {/* Links */}
             <div>
               <label htmlFor="carrierLinks">Carrier Links</label>
               <p>(ex. Text: "Example", URL: "https://example.com")</p>
@@ -185,6 +243,7 @@ const AddCarrierForm = () => {
                     type="text"
                     placeholder="Link Text"
                     defaultValue={key}
+                    onChange={(e) => handleCarrierLinks()}
                     className="link-text"
                     name="carrierLink"
                   />
@@ -192,6 +251,7 @@ const AddCarrierForm = () => {
                     type="url"
                     placeholder="URL"
                     defaultValue={value}
+                    onChange={(e) => handleCarrierLinks()}
                     className="link-url"
                     name="carrierLink"
                   />
@@ -205,23 +265,20 @@ const AddCarrierForm = () => {
                 </div>
               ))}
             </div>
-
+            {/* Add Link */}
             <input
               type="button"
               className="button-normal"
               defaultValue="Add link"
-              onClick={() => handleAddLink()} />
-            <hr
-              style={{
-                border: "solid 1px white",
-                width: "100%",
-              }}
+              onClick={() => handleAddLink()}
             />
           </>
         )}
       </div>
 
-      {formComplete && <input type="submit" className="button-normal" value="Submit" />}
+      {formComplete && (
+        <input type="submit" className="button-normal" value="Submit" />
+      )}
     </form>
   );
 };
