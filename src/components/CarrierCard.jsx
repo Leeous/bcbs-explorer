@@ -4,7 +4,7 @@ import Warning from '../assets/warning.png';
 
 const CarrierCard = ({ carrierName, carrierPhoneNumbers, carrierURLs, carrierPayerID }) => {
   // TODO: Change this to a table to accommodate uncommon data
-  console.log(carrierPhoneNumbers)
+  console.log(carrierURLs)
   return (
     <section className='carrier-card'>
       <h3>{carrierName}</h3>
@@ -16,9 +16,9 @@ const CarrierCard = ({ carrierName, carrierPhoneNumbers, carrierURLs, carrierPay
         })}</li>
       </div>}
       {carrierURLs && <h4>Links</h4>}
-      {carrierURLs && Object.keys(carrierURLs).map((keyName, i) => (
+      {carrierURLs && carrierURLs.map((URL, i) => (
         <li className='carrier-urls' key={i}>
-          <a target='_blank' href={carrierURLs[keyName]}>{keyName}</a>
+          <a target='_blank' href={URL.link_url}>{URL.link_text}</a>
         </li>
       ))}
       <p className="report-issue"><a href={"https://docs.google.com/forms/d/e/1FAIpQLSeKcdJClLpMMFTVRQ6T7u2lJplLQigS-mHTy4w1b_tNCUutHg/viewform?usp=pp_url&entry.1691490468=" + carrierName} target='_blank'>Something&apos;s wrong.</a><img src={Warning} style={{width: "16px", marginLeft: "7.5px"}}/></p>
