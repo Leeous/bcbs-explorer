@@ -6,7 +6,7 @@ const AddCarrierForm = () => {
     name: "",
     prefix: "",
     phones: [],
-    links: {},
+    links: [],
   });
   const [formErrors, setFormErrors] = useState({
     name: '',
@@ -31,7 +31,9 @@ const AddCarrierForm = () => {
       carrier.prefixes.includes(prefix.toLowerCase())
     );
 
+    
     if (prefixMatch) {
+      console.log(prefixMatch.URLs)
       setCarrierMatch(true);
       setCarrier((prevCarrier) => ({
         ...prevCarrier,
@@ -39,12 +41,11 @@ const AddCarrierForm = () => {
         phones: prefixMatch.phone_numbers ?? prevCarrier.phones,
         links: prefixMatch.URLs ?? prevCarrier.links,
       }));
-      console.log(carrier);
     }
 
-    console.log(prefixMatch?.URLs, carrier);
+    console.log(carrier.links)
   }
-
+  
   const handleCarrierPrefix = ({ target }) => {
     setCarrier((prevCarrier) => ({
       ...prevCarrier,
@@ -75,46 +76,33 @@ const AddCarrierForm = () => {
     }));
   };
 
-  const handleCarrierLinks = ({ e, key, value }) => {
-    console.log(e, key, value);
-    // setCarrier((prevCarrier) => ({
-    //   ...prevCarrier,
-    //   links: { ...prevCarrier.links, [target.value]: "" },
-    // }));
+  const handleCarrierLinks = (e, index, field) => {
+    const updatedLinks = carrier.links.map((link, i) =>
+      i === index ? { ...link, [field]: e.target.value } : link
+    );
+
+    setCarrier({ ...carrier, links: updatedLinks });
   };
 
-  const handleCarrierLinkRemove = (keyToRemove) => {
-    setCarrier((prevCarrier) => {
-      const updatedLinks = { ...prevCarrier.links };
-      delete updatedLinks[keyToRemove];
-
-      return {
-        ...prevCarrier,
-        links: updatedLinks,
-      };
-    });
+  const handleCarrierLinkRemove = (i) => {
+    setCarrier((prevCarrier) => ({
+      ...prevCarrier,
+      links: prevCarrier.links.filter((_, index) => index !== i),
+    }));
   };
 
   const handleAddLink = () => {
-    let index = Object.keys(carrier.links).length + 1;
-
-    // Ensure the key is unique
-    while (carrier.links[`New link ${index}`] !== undefined) {
-      index++; // Increment until an unused key is found
-    }
-
     setCarrier((prevCarrier) => ({
       ...prevCarrier,
-      links: {
+      links: [
         ...prevCarrier.links,
-        [`New link ${index}`]: "",
-      },
+        { link_text: "", link_url: "" }, // New empty link object
+      ],
     }));
   };
 
   const submitForm = (event) => {
     event.preventDefault();
-    console.log(carrier)
 
     const errors = {};
 
@@ -136,20 +124,15 @@ const AddCarrierForm = () => {
       }
     });
 
-    Object.keys(carrier.links).forEach(element => {
-      console.log(element.length)
-      if (element.length <= 1) {
+    carrier.links.forEach(element => {
+      if (element.link_text.length <= 1) {
         errors.links = "Check your links' text (left side values)."
       }
-    });    
-
-    Object.values(carrier.links).forEach(element => {
-      console.log(element.length)
-      if (element.length <= 1) {
+      
+      if (element.link_url.length <= 1) {
         errors.links = "Check your links' URLs (right side values)."
       }
     });
-    
 
     if (Object.keys(errors).length > 0) {
       setFormErrors(errors);
@@ -233,32 +216,30 @@ const AddCarrierForm = () => {
                 }
               />
             </div>
-            {/* Links */}
+            Links
             <div>
               <label htmlFor="carrierLinks">Carrier Links</label>
-              <p>(ex. Text: "Example", URL: "https://example.com")</p>
-              {Object.entries(carrier.links).map(([key, value]) => (
-                <div className="form-list-links" key={key}>
+              <p>(ex. Text: &quot;Example&quot;, URL: &quot;https://example.com&quot;)</p>
+              {carrier.links.map((URL, i) => (
+                <div className="form-list-links" key={i}>
                   <input
                     type="text"
                     placeholder="Link Text"
-                    defaultValue={key}
-                    onChange={(e) => handleCarrierLinks()}
+                    value={URL.link_text}
+                    onChange={(e) => handleCarrierLinks(e, i, "link_text")}
                     className="link-text"
-                    name="carrierLink"
                   />
                   <input
                     type="url"
                     placeholder="URL"
-                    defaultValue={value}
-                    onChange={(e) => handleCarrierLinks()}
+                    value={URL.link_url}
+                    onChange={(e) => handleCarrierLinks(e, i, "link_url")}
                     className="link-url"
-                    name="carrierLink"
                   />
                   <button
                     type="button"
                     className="delete-element button-normal"
-                    onClick={() => handleCarrierLinkRemove(key)}
+                    onClick={() => handleCarrierLinkRemove(i)}
                   >
                     X
                   </button>
