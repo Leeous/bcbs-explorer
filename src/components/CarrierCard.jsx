@@ -1,10 +1,13 @@
 import PropTypes from 'prop-types';
 import Warning from '../assets/warning.png';
 
-
+/**
+ * @param {string} carrierName - The name of the carrier
+ * @param {number[]} [carrierPhoneNumbers] - Phone numbers for the carrier
+ * @param {Array<{link_text: string, link_url: string}>} [carrierURLs] - Links for the carrier
+ * @param {string} [carrierPayerID] - The payer ID for the carrier
+ */
 const CarrierCard = ({ carrierName, carrierPhoneNumbers, carrierURLs, carrierPayerID }) => {
-  // TODO: Change this to a table to accommodate uncommon data
-  console.log(carrierURLs)
   return (
     <section className='carrier-card'>
       <h3>{carrierName}</h3>
@@ -12,9 +15,15 @@ const CarrierCard = ({ carrierName, carrierPhoneNumbers, carrierURLs, carrierPay
       <div>
         <h4>Phone numbers</h4>
         <li className='carrier-urls'>{carrierPhoneNumbers.map((number, index) => {
-          return <span key={number}><a href={"tel:" + number} >({number.slice(0, 3)}) {number.slice(3, 6)}-{number.slice(6)}</a>{index < carrierPhoneNumbers.length - 1 ? ", " : ""}</span>;
+          return <span key={number}><a href={"tel:" + number} >({String(number).slice(0, 3)}) {String(number).slice(3, 6)}-{String(number).slice(6)}</a>{index < carrierPhoneNumbers.length - 1 ? ", " : ""}</span>;
         })}</li>
       </div>}
+      {carrierPayerID && 
+        <>
+          <h4>Carrier Payer ID</h4>
+          <p>{carrierPayerID}</p>
+        </>
+      }
       {carrierURLs && <h4>Links</h4>}
       {carrierURLs && carrierURLs.map((URL, i) => (
         <li className='carrier-urls' key={i}>
