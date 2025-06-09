@@ -416,6 +416,12 @@ select#theme {
   justify-content: center;
 }
 
+.add-carrier-form .error {
+  color: white;
+  font-weight: 700;
+  color: red;
+}
+
 .form-list-phone-number {
   display: flex;
   align-items: center;

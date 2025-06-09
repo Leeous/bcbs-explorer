@@ -54,6 +54,7 @@ const AddCarrierForm = () => {
 
     if (target.value.length < 3) {
       console.info("Cleared form since prefix was edited.");
+      setFormErrors({name: "", prefix: "", phones: [], links: [],});
       setCarrierMatch(false);
     }
   };
@@ -120,17 +121,17 @@ const AddCarrierForm = () => {
 
     carrier.phones.forEach(element => {
       if (element.length < 10) {
-        errors.phones = "Ensure all values are a full 10 digit number"
+        errors.phones = "Ensure all values are a full 10 digit number, and retry"
       }
     });
 
     carrier.links.forEach(element => {
       if (element.link_text.length <= 1) {
-        errors.links = "Check your links' text (left side values)."
+        errors.links = "Check your links' text (left side values), and retry"
       }
       
       if (element.link_url.length <= 1) {
-        errors.links = "Check your links' URLs (right side values)."
+        errors.links = "Check your links' URLs (right side values), and retry."
       }
     });
 
@@ -140,6 +141,8 @@ const AddCarrierForm = () => {
       return;
     }
 
+    // Add carrier to localStorage
+    localStorage.setItem(`${carrier.prefix}-override`, JSON.stringify(carrier));
   };
 
   return (
@@ -172,6 +175,8 @@ const AddCarrierForm = () => {
                 onChange={handleCarrierName}
                 maxLength={40}
               />
+              {formErrors.name && <p className="error">{formErrors.name}</p>}
+
             </div>
             {/* Phone numbers */}
             <div className="carrier-phone-list">
@@ -215,6 +220,7 @@ const AddCarrierForm = () => {
                   }))
                 }
               />
+              {formErrors.phones && <p className="error">{formErrors.phones}</p>}
             </div>
             Links
             <div>
@@ -255,6 +261,7 @@ const AddCarrierForm = () => {
             />
           </>
         )}
+        {formErrors.links && <p className="error">{formErrors.links}</p>}
       </div>
 
       {formComplete && (
