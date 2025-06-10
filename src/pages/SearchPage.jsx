@@ -29,17 +29,29 @@ const Search = () => {
     let prefixMatch = searchType == "prefix" ? carriers.find(carrier => carrier.prefixes.includes(value.toLowerCase())) : null;
     let carrierMatch = searchType == "carrier" ? carriers.filter(carrier => (carrier.planName.toLowerCase().includes(value.toLowerCase()))) : null;
 
+    const overrideData = JSON.parse(localStorage.getItem(`${value}-override`));
+
     if (value.length < 3 && searchType === "prefix" || value.length == 0 && searchType === "carrier") {
       // Empty results if value length is < 3 characters long
       setResults([]);
     } else if (searchType == "carrier" && value) {
       setResults(carrierMatch);
     } else if (searchType == "prefix" && value.length == maxLength) {
-      console.log(prefixMatch)
-      if (prefixMatch == null) {
+      if (prefixMatch == null && !overrideData) {
         setResults([{ planName: "Prefix not found" }]);
       } else {
-        setResults([prefixMatch]);
+        console.log(overrideData)
+        // results.map((carrier) => (<CarrierCard key={carrier.planName} carrierName={carrier.planName} carrierPhoneNumbers={carrier.phone_numbers} carrierURLs={carrier.URLs}
+        if (overrideData){
+          setResults(prevResults => ([{
+            ...prevResults,
+            planName: overrideData?.name || prefixMatch?.planName || prevResults.name,
+            phone_numbers: overrideData?.phones || prefixMatch?.phone_numbers || prevResults.phones,
+            URLs: overrideData?.links || prefixMatch?.URLs || prevResults.links,
+          }]));
+        } else {
+          setResults([prefixMatch]);
+        }
       }
     }
   }, [maxLength, searchType]);
