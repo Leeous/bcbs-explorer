@@ -23,7 +23,7 @@ const AddCarrierForm = () => {
   }));
 
   useEffect(() => {
-    if (carrier.prefix.length === 3 && !carrierMatch) {
+    if (carrier.prefix.length === 3) {
       const prefix = carrier.prefix;
       const prefixMatch = carriers.find((carrier) =>
         carrier.prefixes.includes(prefix.toLowerCase())
