@@ -30,7 +30,7 @@ const AddCarrierForm = () => {
       );
 
       const overrideData = JSON.parse(localStorage.getItem(`${prefix}-override`));
-      
+
       setCarrier(prevCarrier => ({
         ...prevCarrier,
         name: overrideData?.name || prefixMatch?.planName || prevCarrier.name,
@@ -39,7 +39,7 @@ const AddCarrierForm = () => {
       }));
     }
   }, [carrier.prefix]);
-  
+
   const handleCarrierPrefix = ({ target }) => {
     setCarrier((prevCarrier) => ({
       ...prevCarrier,
@@ -48,13 +48,13 @@ const AddCarrierForm = () => {
 
     if (target.value.length < 3) {
       console.info("Cleared form since prefix was edited.");
-    setCarrier((prevCarrier) => ({
-      ...prevCarrier,
-      name: "",
-      phones: [],
-      links: []
-    }));
-      setFormErrors({name: "", prefix: "", phones: "", links: ""});
+      setCarrier((prevCarrier) => ({
+        ...prevCarrier,
+        name: "",
+        phones: [],
+        links: []
+      }));
+      setFormErrors({ name: "", prefix: "", phones: "", links: "" });
     }
   };
 
@@ -104,7 +104,7 @@ const AddCarrierForm = () => {
   const submitForm = (event) => {
     event.preventDefault();
 
-    setFormErrors({name: "", prefix: "", phones: "", links: ""});
+    setFormErrors({ name: "", prefix: "", phones: "", links: "" });
 
     const errors = {};
 
@@ -131,7 +131,7 @@ const AddCarrierForm = () => {
       if (element.link_text.length <= 1) {
         errors.links = "Check your links' text (left side values), and retry"
       }
-      
+
       if (element.link_url.length <= 1) {
         errors.links = "Check your links' URLs (right side values), and retry."
       }
@@ -141,7 +141,7 @@ const AddCarrierForm = () => {
       setFormErrors(errors);
       return;
     }
-    let JSONReadyCarrier = {...carrier};
+    let JSONReadyCarrier = { ...carrier };
     // Remove keys if they're empty
     if (!JSONReadyCarrier.phones?.length) {
       delete JSONReadyCarrier.phones;

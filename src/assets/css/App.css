@@ -297,7 +297,7 @@ select#theme {
 
 .settings-cat {
   border-bottom: solid 1px white;
-}  
+}
 
 .carrier-note {
   margin: .5em 1em;
@@ -323,6 +323,21 @@ select#theme {
 
 .carrier-note > p {
   margin: 7.5px 0 0 0;
+}
+
+.carrier-override {
+  margin: .5em 1em;
+  padding: 10px;
+  border: solid 1px white;
+}
+
+.carrier-override h3 {
+  margin: 0;
+}
+
+.carrier-override > ul {
+  list-style: none;
+  padding-left: 0;
 }
 
 .no-notes {
