@@ -33,7 +33,6 @@ const AddCarrierForm = () => {
 
     
     if (prefixMatch) {
-      console.log(prefixMatch.URLs)
       setCarrierMatch(true);
       setCarrier((prevCarrier) => ({
         ...prevCarrier,
@@ -52,7 +51,13 @@ const AddCarrierForm = () => {
 
     if (target.value.length < 3) {
       console.info("Cleared form since prefix was edited.");
-      setFormErrors({name: "", prefix: "", phones: [], links: [],});
+    setCarrier((prevCarrier) => ({
+      ...prevCarrier,
+      name: "",
+      phones: [],
+      links: []
+    }));
+      setFormErrors({name: "", prefix: "", phones: "", links: ""});
       setCarrierMatch(false);
     }
   };
@@ -137,7 +142,6 @@ const AddCarrierForm = () => {
 
     if (Object.keys(errors).length > 0) {
       setFormErrors(errors);
-      console.log(formErrors);
       return;
     }
     let JSONReadyCarrier = carrier;
