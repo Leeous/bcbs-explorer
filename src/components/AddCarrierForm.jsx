@@ -15,8 +15,6 @@ const AddCarrierForm = () => {
     links: ''
   });
 
-  const [carrierMatch, setCarrierMatch] = useState(false);
-
   let formComplete = carrier.prefix.length == 3;
 
   const carriers = Object.keys(BCBSDB).map((key) => ({
@@ -32,7 +30,6 @@ const AddCarrierForm = () => {
       );
 
       const overrideData = JSON.parse(localStorage.getItem(`${prefix}-override`));
-      console.log("Override data:", overrideData);
       
       setCarrier(prevCarrier => ({
         ...prevCarrier,
@@ -40,12 +37,6 @@ const AddCarrierForm = () => {
         phones: overrideData?.phones || prefixMatch?.phone_numbers || prevCarrier.phones,
         links: overrideData?.links || prefixMatch?.URLs || prevCarrier.links,
       }));
-
-      if (overrideData) {
-        console.log("Override applied!");
-      } else if (prefixMatch) {
-        setCarrierMatch(true);
-      }
     }
   }, [carrier.prefix]);
   
@@ -64,7 +55,6 @@ const AddCarrierForm = () => {
       links: []
     }));
       setFormErrors({name: "", prefix: "", phones: "", links: ""});
-      setCarrierMatch(false);
     }
   };
 
