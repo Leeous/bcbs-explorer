@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import BCBSDB from "../assets/bcbs_data.json";
 
 const AddCarrierForm = () => {
@@ -17,31 +17,37 @@ const AddCarrierForm = () => {
 
   const [carrierMatch, setCarrierMatch] = useState(false);
 
-  let formComplete = carrier.prefix.length !== 0;
+  let formComplete = carrier.prefix.length == 3;
 
   const carriers = Object.keys(BCBSDB).map((key) => ({
     planName: key,
     ...BCBSDB[key],
   }));
 
-  // If prefix exists, prefill data
-  if (carrier.prefix.length === 3 && !carrierMatch) {
-    const prefix = carrier.prefix;
-    const prefixMatch = carriers.find((carrier) =>
-      carrier.prefixes.includes(prefix.toLowerCase())
-    );
+  useEffect(() => {
+    if (carrier.prefix.length === 3 && !carrierMatch) {
+      const prefix = carrier.prefix;
+      const prefixMatch = carriers.find((carrier) =>
+        carrier.prefixes.includes(prefix.toLowerCase())
+      );
 
-    
-    if (prefixMatch) {
-      setCarrierMatch(true);
-      setCarrier((prevCarrier) => ({
+      const overrideData = JSON.parse(localStorage.getItem(`${prefix}-override`));
+      console.log("Override data:", overrideData);
+      
+      setCarrier(prevCarrier => ({
         ...prevCarrier,
-        name: prefixMatch.planName ?? prevCarrier.name,
-        phones: prefixMatch.phone_numbers ?? prevCarrier.phones,
-        links: prefixMatch.URLs ?? prevCarrier.links,
+        name: overrideData?.name || prefixMatch?.planName || prevCarrier.name,
+        phones: overrideData?.phones || prefixMatch?.phone_numbers || prevCarrier.phones,
+        links: overrideData?.links || prefixMatch?.URLs || prevCarrier.links,
       }));
+
+      if (overrideData) {
+        console.log("Override applied!");
+      } else if (prefixMatch) {
+        setCarrierMatch(true);
+      }
     }
-  }
+  }, [carrier.prefix]);
   
   const handleCarrierPrefix = ({ target }) => {
     setCarrier((prevCarrier) => ({
@@ -123,12 +129,13 @@ const AddCarrierForm = () => {
     }
 
     // Validate phone numbers \\
-
-    carrier.phones.forEach(element => {
-      if (element.length < 10) {
-        errors.phones = "Ensure all values are a full 10 digit number, and retry"
-      }
-    });
+    if (carrier.phones) {
+      carrier.phones.forEach(element => {
+        if (element.length < 10) {
+          errors.phones = "Ensure all values are a full 10 digit number, and retry"
+        }
+      });
+    }
 
     carrier.links.forEach(element => {
       if (element.link_text.length <= 1) {
@@ -144,13 +151,13 @@ const AddCarrierForm = () => {
       setFormErrors(errors);
       return;
     }
-    let JSONReadyCarrier = carrier;
+    let JSONReadyCarrier = {...carrier};
     // Remove keys if they're empty
-    if (!JSONReadyCarrier.phones.length) {
+    if (!JSONReadyCarrier.phones?.length) {
       delete JSONReadyCarrier.phones;
     }
 
-    if (!JSONReadyCarrier.links.length) {
+    if (!JSONReadyCarrier.links?.length) {
       delete JSONReadyCarrier.links;
     }
 
