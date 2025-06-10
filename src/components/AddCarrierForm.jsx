@@ -42,8 +42,6 @@ const AddCarrierForm = () => {
         links: prefixMatch.URLs ?? prevCarrier.links,
       }));
     }
-
-    console.log(carrier.links)
   }
   
   const handleCarrierPrefix = ({ target }) => {
@@ -105,6 +103,8 @@ const AddCarrierForm = () => {
   const submitForm = (event) => {
     event.preventDefault();
 
+    setFormErrors({name: "", prefix: "", phones: "", links: ""});
+
     const errors = {};
 
     // Validate carrier name
@@ -140,9 +140,18 @@ const AddCarrierForm = () => {
       console.log(formErrors);
       return;
     }
+    let JSONReadyCarrier = carrier;
+    // Remove keys if they're empty
+    if (!JSONReadyCarrier.phones.length) {
+      delete JSONReadyCarrier.phones;
+    }
+
+    if (!JSONReadyCarrier.links.length) {
+      delete JSONReadyCarrier.links;
+    }
 
     // Add carrier to localStorage
-    localStorage.setItem(`${carrier.prefix}-override`, JSON.stringify(carrier));
+    localStorage.setItem(`${JSONReadyCarrier.prefix}-override`, JSON.stringify(JSONReadyCarrier));
   };
 
   return (
@@ -183,7 +192,7 @@ const AddCarrierForm = () => {
               <label htmlFor="carrierPhone">Carrier phone number(s)</label>
               <p>All numeric. (ex. 1234567890)</p>
               <div>
-                {carrier.phones.map((phoneNumber, index) => (
+                {carrier.phones && carrier.phones.map((phoneNumber, index) => (
                   <div className="form-list-phone-number" key={index}>
                     <input
                       type="text"
@@ -226,7 +235,7 @@ const AddCarrierForm = () => {
             <div>
               <label htmlFor="carrierLinks">Carrier Links</label>
               <p>(ex. Text: &quot;Example&quot;, URL: &quot;https://example.com&quot;)</p>
-              {carrier.links.map((URL, i) => (
+              {carrier.links && carrier.links.map((URL, i) => (
                 <div className="form-list-links" key={i}>
                   <input
                     type="text"
