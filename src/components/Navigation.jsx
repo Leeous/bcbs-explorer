@@ -9,7 +9,7 @@ import ResetIcon from '../assets/reset.png';
 const toggleSettings = () => {
   const handleReset = (e) => {
     e.preventDefault();
-    let decision = confirm("This will erase ALL user content, which includes notes, custom carriers, and overrides. It will be as if you installed BCBS Explorer for the first time.\n\nContinue?");
+    let decision = confirm("CAUTION!!!\nThis will erase ALL user content, which includes notes, custom carriers, and overrides. It will be as if you installed BCBS Explorer for the first time.\n\nContinue?");
   
     if (decision) {
       localStorage.clear()

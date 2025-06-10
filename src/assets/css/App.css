@@ -491,6 +491,25 @@ select#theme {
   transform: rotateZ(45deg);
 }
 
+.help-tooltip {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
+  border-radius: 50%;
+  background-color: var(--fourth-color);
+  color: #fff;
+  border: solid 1px var(--secondary-color);
+  width: 30px;
+  height: 30px;
+  margin-bottom: .5rem;
+  cursor: pointer;
+}
+
+.help-tooltip:hover {
+  border: solid 1px white;
+}
+
 .modal {
   background-color: var(--primary-color);
   top: 0;

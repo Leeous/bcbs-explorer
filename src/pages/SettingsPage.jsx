@@ -3,11 +3,15 @@ import Navigation from "../components/Navigation";
 
 let theme = localStorage.getItem("theme");
 
-function clearNoteStorage() {
-  // Clear storage
-  localStorage.clear();
-  // Reload page
-  window.location.reload();
+function saveJSON(data, filename) {
+  const jsonData = JSON.stringify(data, null, 2); // Pretty-print JSON
+  const blob = new Blob([jsonData], { type: "application/json" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
 }
 
 function Settings() {
@@ -55,10 +59,24 @@ function Settings() {
     setOverrides(overrides);
   };
 
-  const handleDeleteSetting = (key, type) => {
-    localStorage.removeItem(key);
-    console.info(`${type} removed for ${key.toUpperCase()} prefix.`);
-  };
+  const handleExport = () => {
+    const myData = localStorage;
+    saveJSON(myData, "bcbs_data.json");
+  }
+
+  const handleImport = () => {
+    const file = event.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      const jsonData = JSON.parse(e.target.result);
+      Object.entries(jsonData).forEach((key) => {
+        localStorage.setItem(key[0], key[1]);
+      })
+    };
+    reader.readAsText(file);
+  }
 
   return (
     <>
@@ -150,15 +168,17 @@ function Settings() {
               </>
             ))
           ) : (
-            <p className="no-notes">No notes saved yet.</p>
+            <p className="no-notes">No custom carriers or overrides saved yet.</p>
           )}
         </div>
       </details>
-
-      {/* <button className="button-normal">Reset all</button>
-      <button className="button-normal" onClick={clearNoteStorage}>Reset notes</button>
-      <button className="button-normal">Reset settings</button> */}
       <div className="footer">
+        <div>
+          <button className="help-tooltip">?</button><br/>
+          <button style={{marginRight: "5px"}} className="button-normal" onClick={handleExport}>Export Settings</button>
+          <label htmlFor="import-settings" className="button-normal">Import Settings</label>
+          <input style={{marginLeft: "5px"}} type="file" id="import-settings" accept=".json" onChange={handleImport} hidden/>
+        </div>
         <p>
           Suggestions? Issues? Compliments?
           <br />
