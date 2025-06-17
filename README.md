@@ -5,8 +5,8 @@
 
 ### Download
 
-[<img src="https://i.imgur.com/UNflMGS.png">](https://chromewebstore.google.com/detail/bcbs-explorer/nkbagfmekkclfbpkkiiiladadfkmehic)
-[<img src="https://i.imgur.com/NnMnwch.png">](https://addons.mozilla.org/en-US/firefox/addon/bcbs-explorer/)
+[<img width="256px" src="https://i.imgur.com/WzJEzAv.png">](https://chromewebstore.google.com/detail/bcbs-explorer/nkbagfmekkclfbpkkiiiladadfkmehic)
+[<img width="256px" src="https://i.imgur.com/NnMnwch.png">](https://addons.mozilla.org/en-US/firefox/addon/bcbs-explorer/)
 
 ### Icon attribution
 
