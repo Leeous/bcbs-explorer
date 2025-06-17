@@ -7,77 +7,53 @@ import parse from 'html-react-parser';
  * @param {string} description - The body text to display for the modal
  * @param {boolean} showDecline - Whether or not to render a decline/no button (default: false)
  * @param {boolean} showConfirmation - Whether or not to render a decline/no button (default: true)
- * @param {boolean} showRememberCheckbox - Whether or not to render a remember decision checkbox (default: true)
- * @param {string} cookieName - Name for cookie used if user wants to remember decision
+ * @param {Array<{type: string, text: string}>} options - array of objects for options
  * @param {string} confirmationText - Text rendered in accept button (default: "I understand")
  * @param {string} rememberText - Text rendered next to checkbox button (default: "Don't remind me again")
  */
-function Modal({ 
-	title, 
-	description, 
-	showRememberCheckbox = "true",
-	showDecline = false, 
-	showConfirmation = true, 
-	cookieName, 
-	confirmationText = "I understand",
-	rememberText = "Don't remind me again"
+function Modal({
+  title,
+  description,
+  onClose,
+  onChange,
+  onSubmit,
+  options,
+  showDecline = false,
+  showConfirmation = true,
+  confirmationText = "I understand",
 }) {
-	const [showPopup, setShowPopup] = useState(true);
-	const [rememberDecision, setRememberDecision] = useState(false);
-
-	// useEffect to check and set the initial state based on cookies
-	useEffect(() => {
-		const decision = localStorage.getItem(cookieName);
-		if (decision) {
-			// If user previously accepted and chose to remember the decision, hide the popup
-			setShowPopup(false);
-		}
-	}, [cookieName]);
-
-	const handleAccept = () => {
-		setShowPopup(false);
-		// Remember selection if checkbox ticked, or if checkbox is disabled
-		if (rememberDecision || !showRememberCheckbox) {
-			localStorage.setItem(cookieName, true);
-			setRememberDecision(true);
-		}
-	}
-
-	const handleDecline = () => {
-		setShowPopup(false);
-	}
-
-	const handleRememberDecisionChange = (event) => {
-		setRememberDecision(event.target.checked);
-	}
-
-	return (
-		showPopup && (
-			<div className='modal'>
-				<h1>{title}</h1>
-				<div>{parse(description)}</div>
-				<div>
-					{showRememberCheckbox ? <>
-						<input type="checkbox" checked={rememberDecision} onChange={handleRememberDecisionChange} name="rememberDecision" id="rememberDecision" />
-						<label htmlFor="rememberDecision">{rememberText}</label>
-					</> : ""}
-				</div>
-				{showDecline ? <button className='button-normal' onClick={handleDecline}>Decline</button> : ""}
-				{showConfirmation ? <button className='button-normal' onClick={handleAccept}>{confirmationText}</button> : ""}
-			</div>
-		)
-	)
+  return (
+    <div className='modal'>
+      <h1>{title}</h1>
+      <div>{parse(description)}</div>
+      <div className='modal-options'>
+      {options && options.map((option, index) => {
+        if (option.type === "checkbox") {
+          return (
+            <div className='modal-option' key={index}>
+              <input onChange={onChange} type={option.type} id={option.value} value={option.value} />
+              <label htmlFor={option.value}>{option.label}</label>
+            </div>
+          );
+        }
+      })}
+      </div>
+      {showDecline ? <button onClick={onClose} className='button-normal'>Decline</button> : ""}
+      {showConfirmation ? <button onClick={onSubmit} className='button-normal'>{confirmationText}</button> : ""}
+    </div>
+  )
 }
 
 Modal.propTypes = {
 	title: PropTypes.string,
-	description: PropTypes.string,
-	showDecline: PropTypes.boolean,
-	showConfirmation: PropTypes.boolean,
-	showRememberCheckbox: PropTypes.boolean,
-	cookieName: PropTypes.string,
-	confirmationText: PropTypes.string,
-	rememberText: PropTypes.string
+  description: PropTypes.string,
+  onClose: PropTypes.func,
+  onChange: PropTypes.func,
+  onSubmit: PropTypes.func,
+  options: PropTypes.array,
+  showDecline: PropTypes.bool,
+  showConfirmation: PropTypes.bool,
+  confirmationText: PropTypes.string
 };
 
 export default Modal;

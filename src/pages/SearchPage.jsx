@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef, useCallback } from 'react';
+import { useEffect, useState, useRef, useCallback, use } from 'react';
 import BCBSDB from "../assets/bcbs_data.json";
 import CarrierCard from "../components/CarrierCard";
 import Note from "../components/Note";
@@ -12,6 +12,8 @@ const Search = () => {
   const [results, setResults] = useState([]);
   const [maxLength, setMaxLength] = useState(3);
   const searchTextBox = useRef();
+  // Disclaimer modal
+  const [hasAcceptedDisclaimer, setHasAcceptedDisclaimer] = useState(localStorage.getItem("disclaimerAck") ? true : false);
 
   const handleSearchTypeChange = () => {
     searchType === "prefix" ? (setSearchType("carrier"), setMaxLength(100), setSearchValue(""), setResults([]), setCarrierClicked(false), searchTextBox.current.style.width = "400px", searchTextBox.current.focus()) : (setSearchType("prefix"), setMaxLength(3), setResults([]), setSearchValue(""), setCarrierClicked(false), searchTextBox.current.style.width = "260px", searchTextBox.current.focus());
@@ -98,7 +100,8 @@ const Search = () => {
 
   return (
     <>
-      <Modal title="DISCLAIMER" cookieName="disclaimerAck" showRememberCheckbox={false} confirmationText="I understand and agree" description={`
+      {!hasAcceptedDisclaimer &&
+        <Modal title="DISCLAIMER" confirmationText="I understand and agree" description={`
           <div className="disclaimerModal">
             This browser extension, BCBS Explorer, is designed to provide users with information about Blue Cross Blue Shield (BCBS) carriers. The information provided by this extension is for general informational purposes only and is not intended to be a substitute for official documentation.
             <br/>
@@ -129,7 +132,16 @@ const Search = () => {
             <br/>
             <h3>Contact Us</h3>
             If you have any questions about this disclaimer, contact me at <span><a href="mailto:contact@leeous.com">contact@leeous.com</a>.</span>
-          </div>`} />
+          </div>`
+        }
+        onSubmit={() => {
+          localStorage.setItem("disclaimerAck", true);
+          setHasAcceptedDisclaimer(true);
+        }}
+        onClose={() => {}}
+        />
+      }
+
     
       <Navigation />
       <div className='search-wrapper'>

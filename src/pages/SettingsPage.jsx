@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { use, useState } from "react";
 import Navigation from "../components/Navigation";
+import Modal from "../components/Modal";
 
 let theme = localStorage.getItem("theme");
 
@@ -17,13 +18,16 @@ function saveJSON(data, filename) {
 function Settings() {
   const [savedNotes, setSavedNotes] = useState([]);
   const [overrides, setOverrides] = useState([]);
+  const [exportOptions, setExportOptions] = useState([]);
+  const [importOptions, setImportOptions] = useState([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleNotes = () => {
     let localStorageKeys = Object.keys(localStorage);
     let notes = [];
 
     localStorageKeys.forEach((key) => {
-      console.log(key);
+      console.log(key);<Modal title="Hello world" description="description" />
       if (key.length == 3) {
         notes.push(key);
       }
@@ -60,8 +64,8 @@ function Settings() {
   };
 
   const handleExport = () => {
-    const myData = localStorage;
-    saveJSON(myData, "bcbs_data.json");
+    // const myData = localStorage;
+    // saveJSON(myData, "bcbs_data.json");
   }
 
   const handleImport = () => {
@@ -183,18 +187,28 @@ function Settings() {
           Suggestions? Issues? Compliments?
           <br />
           <span style={{ fontSize: ".8em" }}>
-            Reach me at{" "}
+            Reach me at
             <a href="mailto:contact@leeous.com">contact@leeous.com</a>.
           </span>
         </p>
         <p>
-          Made with ❤️ by{" "}
+          Made with ❤️ by
           <a href="https://leeous.com" target="_blank">
             Leeous
           </a>
           .
         </p>
       </div>
+      {isModalOpen && (
+        <Modal
+          title="Choose what to export"
+          options={exportOptions}
+          selectedOptions={exportOptions}
+          onChange={setExportOptions}
+          onSubmit={handleExport}
+          onClose={() => setIsModalOpen(false)}
+        />
+      )}
     </>
   );
 }

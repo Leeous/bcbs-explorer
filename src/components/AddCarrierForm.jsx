@@ -1,6 +1,20 @@
 import { useState, useEffect } from "react";
 import BCBSDB from "../assets/bcbs_data.json";
 
+function isValidHttpUrl(string) {
+  let url;
+  
+  try {
+    url = new URL(string);
+  } catch (_) {
+    return false;  
+  }
+
+  if (url.protocol === "http:" || url.protocol === "https:") {
+    return true;
+  }
+}
+
 const AddCarrierForm = () => {
   const [carrier, setCarrier] = useState({
     name: "",
@@ -12,7 +26,8 @@ const AddCarrierForm = () => {
     name: '',
     phones: '',
     prefix: '',
-    links: ''
+    linkLeft: '',
+    linkRight: ''
   });
 
   let formComplete = carrier.prefix.length == 3;
@@ -104,7 +119,7 @@ const AddCarrierForm = () => {
   const submitForm = (event) => {
     event.preventDefault();
 
-    setFormErrors({ name: "", prefix: "", phones: "", links: "" });
+    setFormErrors({ name: "", prefix: "", phones: "", linkLeft: "", linkRight: "" });
 
     const errors = {};
 
@@ -129,11 +144,11 @@ const AddCarrierForm = () => {
 
     carrier.links.forEach(element => {
       if (element.link_text.length <= 1) {
-        errors.links = "Check your links' text (left side values), and retry"
+        errors.linkLeft = "Check your links' text (left side values), and retry"
       }
 
-      if (element.link_url.length <= 1) {
-        errors.links = "Check your links' URLs (right side values), and retry."
+      if (!isValidHttpUrl(element.link_url) || element.link_url.length == 0) {
+        errors.linkRight = "Check your links' URLs (right side values), and retry.";
       }
     });
 
@@ -185,8 +200,6 @@ const AddCarrierForm = () => {
                 onChange={handleCarrierName}
                 maxLength={40}
               />
-              {formErrors.name && <p className="error">{formErrors.name}</p>}
-
             </div>
             {/* Phone numbers */}
             <div className="carrier-phone-list">
@@ -230,7 +243,6 @@ const AddCarrierForm = () => {
                   }))
                 }
               />
-              {formErrors.phones && <p className="error">{formErrors.phones}</p>}
             </div>
             Links
             <div>
@@ -271,9 +283,11 @@ const AddCarrierForm = () => {
             />
           </>
         )}
-        {formErrors.links && <p className="error">{formErrors.links}</p>}
       </div>
-
+      {formErrors.phones && <p className="error">{formErrors.phones}</p>}
+      {formErrors.linkLeft && <p className="error">{formErrors.linkLeft}</p>}
+      {formErrors.linkRight && <p className="error">{formErrors.linkRight}</p>}
+      {formErrors.name && <p className="error">{formErrors.name}</p>}
       {formComplete && (
         <input type="submit" className="button-normal" value="Submit" />
       )}

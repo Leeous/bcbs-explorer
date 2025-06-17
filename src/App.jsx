@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router';
 import NotFound404 from "./pages/404";
 import SearchPage from './pages/SearchPage';
 import SettingsPage from './pages/SettingsPage';
-import AddCarrier from './pages/AddCarrier';
+import AddCarrier from './pages/AddCarrierPage';
 import './assets/css/App.css';
 
 function App() {

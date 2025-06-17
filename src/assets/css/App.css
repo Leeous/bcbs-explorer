@@ -431,11 +431,7 @@ select#theme {
   justify-content: center;
 }
 
-.add-carrier-form .error {
-  color: white;
-  font-weight: 700;
-  color: red;
-}
+
 
 .form-list-phone-number {
   display: flex;
@@ -518,24 +514,43 @@ select#theme {
   bottom: 0;
   position: absolute;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal > .button-normal {
+  width: 50%;
+  align-self: center;
+  margin-bottom: 20px;
 }
 
 .modal div {
   padding: 10px 10px;
 }
 
-.modal h1 { text-align: center ;}
-
-.modal button {
-  width: 100%;
+.modal h1 { 
+  text-align: center;
+  font-size: 6vw;
+  margin-bottom: 0;
 }
 
 .modal p {
-  padding: 10px 20px;
+  padding: 10px 1rem;
 }
 
-.modal label, .modal input[type="checkbox"] {
+.modal-options {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  align-self: center;
+}
+
+.modal-option {
+}
+
+.modal-option input[type="checkbox"], .modal-option label {
   cursor: pointer;
+  user-select: none;
 }
 
 /* Disclaimer modal styling */
