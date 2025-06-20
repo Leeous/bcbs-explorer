@@ -50,12 +50,11 @@ function Settings() {
     let localStorageKeys = Object.keys(localStorage);
     let overrides = [];
 
+
+
     localStorageKeys.forEach((key) => {
       if (
-        key.length >= 3 &&
-        key != "customCarrierAck" &&
-        key != "theme" &&
-        key != "disclaimerAck"
+        key.slice(4) === "override"
       ) {
         overrides.push(key);
       }
@@ -106,7 +105,7 @@ function Settings() {
           {savedNotes.length != 0 ? (
             savedNotes.map((key) => (
               <>
-                <div className="carrier-note">
+                <div key={key} className="carrier-note">
                   <div>
                     <h4 key={localStorage[key]}>
                       {JSON.parse(localStorage[key]).carrierName} -{" "}
@@ -133,7 +132,7 @@ function Settings() {
           {overrides.length != 0 ? (
             overrides.map((key) => (
               <>
-                <div key={localStorage[key]} className="carrier-override">
+                <div key={key} className="carrier-override">
                   <div>
                     <h3>{key.slice(0, 3).toUpperCase()}</h3>
                     <ul>

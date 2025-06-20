@@ -20,7 +20,7 @@ export default function AddCarrier() {
             localStorage.setItem("customCarrierAck", false);
           }
         }}
-        onSubmit={(e) => 
+        onSubmit={() => 
           setShowDisclaimer(false)
         }
         description={`
