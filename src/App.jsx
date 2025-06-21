@@ -4,6 +4,7 @@ import SearchPage from './pages/SearchPage';
 import SettingsPage from './pages/SettingsPage';
 import AddCarrier from './pages/AddCarrierPage';
 import './assets/css/App.css';
+import Changelog from './pages/Changelog';
 
 function App() {
   return(
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={ <SearchPage /> } />
         <Route path="/settings" element={ <SettingsPage /> } />
         <Route path="/add" element={ <AddCarrier /> } />
+        <Route path="/changelog" element={ <Changelog /> } />
         <Route path="/404" element={ <NotFound404/>} />
         <Route path="*" element={<Navigate replace to="/search" />} />
       </Routes>
