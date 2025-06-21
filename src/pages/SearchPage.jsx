@@ -49,7 +49,7 @@ const Search = () => {
             ...prevResults,
             planName: overrideData?.name || prefixMatch?.planName || prevResults.name,
             phone_numbers: overrideData?.phones || prefixMatch?.phone_numbers || prevResults.phones,
-            URLs: overrideData?.links || prefixMatch?.URLs || prevResults.links,
+            URLs: overrideData?.links || prefixMatch?.URLs || prevResults.links, custom: true
           }]));
         } else {
           setResults([prefixMatch]);
@@ -181,7 +181,7 @@ const Search = () => {
       </div>
       <div className={maxLength === 100 ? 'search-results carrier' : 'search-results prefix'}>
         {/* FIXME: Obviously, there is a better way to do this, might rework in the future */}
-        {results.length == 1 || searchType == "carrier" && carrierClicked ? results.map((carrier) => (<CarrierCard key={carrier.planName} carrierName={carrier.planName} carrierPhoneNumbers={carrier.phone_numbers} carrierURLs={carrier.URLs} />)) : null}
+        {results.length == 1 || searchType == "carrier" && carrierClicked ? results.map((carrier) => (<CarrierCard key={carrier.planName} carrierName={carrier.planName} carrierPhoneNumbers={carrier.phone_numbers} carrierURLs={carrier.URLs} carrierCustom={carrier.custom} />)) : null}
         <ul className='carrierSearchResults' tabIndex={-1}>
           {searchType == "carrier" && !carrierClicked ? results.map((carrier) => <li className='carrier' onClick={handleCarrierSelection} onKeyDown={handleCarrierSelection} key={carrier.planName} tabIndex={0}>{carrier.planName}</li>) : null}
         </ul>

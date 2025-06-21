@@ -1,13 +1,15 @@
 import PropTypes from 'prop-types';
 import Warning from '../assets/warning.png';
+import { NavLink } from 'react-router';
 
 /**
  * @param {string} carrierName - The name of the carrier
  * @param {number[]} [carrierPhoneNumbers] - Phone numbers for the carrier
  * @param {Array<{link_text: string, link_url: string}>} [carrierURLs] - Links for the carrier
  * @param {string} [carrierPayerID] - The payer ID for the carrier
+ * @param {boolean} [carrierCustom] - Whether or not a carrier has been overridden
  */
-const CarrierCard = ({ carrierName, carrierPhoneNumbers, carrierURLs, carrierPayerID }) => {
+const CarrierCard = ({ carrierName, carrierPhoneNumbers, carrierURLs, carrierPayerID, carrierCustom }) => {
   return (
     <section className='carrier-card'>
       <h3>{carrierName}</h3>
@@ -31,6 +33,9 @@ const CarrierCard = ({ carrierName, carrierPhoneNumbers, carrierURLs, carrierPay
         </li>
       ))}
       <p className="report-issue"><a href={"https://docs.google.com/forms/d/e/1FAIpQLSeKcdJClLpMMFTVRQ6T7u2lJplLQigS-mHTy4w1b_tNCUutHg/viewform?usp=pp_url&entry.1691490468=" + carrierName} target='_blank'>Something&apos;s wrong.</a><img src={Warning} style={{width: "16px", marginLeft: "7.5px"}}/></p>
+      {carrierCustom &&
+        <p style={{display: "inline-block", margin: 0}} className='report-issue'>This prefix has been overridden.<br/>Visit <NavLink style={{textDecoration: "underline"}} to="/add">carrier overrides</NavLink> to edit this data.</p>
+      }
     </section>
   );
 };
@@ -40,7 +45,8 @@ CarrierCard.propTypes = {
   carrierPhoneNumbers: PropTypes.any,
   carrierNumberClaims: PropTypes.string,
   carrierURLs: PropTypes.any,
-  carrierPayerID: PropTypes.string
+  carrierPayerID: PropTypes.string,
+  carrierCustom: PropTypes.bool
 };
 
 export default CarrierCard;
