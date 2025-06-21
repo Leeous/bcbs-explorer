@@ -4,57 +4,60 @@ import SettingsIcon from '../assets/cog.png';
 import BackIcon from '../assets/back-button.png';
 import AddIcon from '../assets/plus.png';
 import ResetIcon from '../assets/reset.png';
+import UpdateIcon from '../assets/update.png';
 
 // Toggle path
 const toggleSettings = () => {
   const handleReset = (e) => {
     e.preventDefault();
     let decision = confirm("CAUTION!!!\nThis will erase ALL user content, which includes notes, custom carriers, and overrides. It will be as if you installed BCBS Explorer for the first time.\n\nContinue?");
-  
+
     if (decision) {
       localStorage.clear()
       window.location.pathname = "/search";
     }
   }
 
-  if (window.location.pathname == "/search" || window.location.pathname == "/index.html" || window.location.pathname == "/") {
-    return (
-      <>
-        <div>
+  return (
+    <>
+      <div>
+        {window.location.pathname === "/search" &&
           <NavLink to="/settings">
             <img src={SettingsIcon} className="nav-icon" />
             <span>Settings</span>
           </NavLink>
-          
+        }
+
+        {window.location.pathname === "/search" &&
           <NavLink to="/add">
             <img src={AddIcon} className="nav-icon" />
             <span>Add carrier</span>
           </NavLink>
-        </div>
-      </>
-    );
+        }
 
-  } else if (window.location.pathname == "/settings") {
-    return (
-      <div>
-        <NavLink to="/search">
-          <img src={BackIcon} className="nav-icon" />
-          <span>Back</span>
-        </NavLink>
-        <a href="/search" onClick={(e) => handleReset(e)}>
-          <img src={ResetIcon} className="nav-icon" />
-          <span>Reset</span>
-        </a>
+        {window.location.pathname !== "/search" &&
+          <NavLink to={window.location.pathname === "/changelog" ? "/settings" : "/search"}>
+            <img src={BackIcon} className="nav-icon" />
+            <span>Back</span>
+          </NavLink>
+        }
+
+        {window.location.pathname === "/settings" &&
+          <a href="/search" onClick={(e) => handleReset(e)}>
+            <img src={ResetIcon} className="nav-icon" />
+            <span>Reset</span>
+          </a>
+        }
+
+        {window.location.pathname === "/settings" &&
+          <NavLink to="/changelog">
+            <img src={UpdateIcon} className="nav-icon" />
+            <span>Changelog</span>
+          </NavLink>
+        }
       </div>
-    );
-  } else {
-    return (
-      <NavLink to="/search">
-        <img src={BackIcon} className="nav-icon" />
-        <span>Back</span>
-      </NavLink>
-    );
-  }
+    </>
+  );
 }
 
 function Navigation() {
@@ -63,7 +66,9 @@ function Navigation() {
       <nav>
         {toggleSettings()}
         <div>
-          <h3>BCBS Explorer</h3>
+          {window.location.pathname !== "/settings" &&
+            <h3>BCBS Explorer</h3>
+          }
           <img src={BCBSIcon} className="nav-icon" />
         </div>
       </nav>
