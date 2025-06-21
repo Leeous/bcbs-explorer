@@ -431,8 +431,6 @@ select#theme {
   justify-content: center;
 }
 
-
-
 .form-list-phone-number {
   display: flex;
   align-items: center;
@@ -459,7 +457,26 @@ select#theme {
   text-overflow: ellipsis;
 }
 
+.successful-carrier-add {
+  display: flex;
+  align-items: center;      /* optional: aligns items vertically */
+  justify-content: center;
+  flex-direction: column;   /* stacks children vertically */
+  text-align: center;       /* optional: centers text inside h4 and h5 */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background-color: var(--primary-color);
+}
 
+.successful-carrier-add .checkmark {
+  display: block;
+  margin: 0 auto;
+  width: 75px;
+}
 
 /*********/
 /*  Misc */

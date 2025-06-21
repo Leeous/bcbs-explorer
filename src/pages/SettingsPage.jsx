@@ -27,7 +27,6 @@ function Settings() {
     let notes = [];
 
     localStorageKeys.forEach((key) => {
-      console.log(key);<Modal title="Hello world" description="description" />
       if (key.length == 3) {
         notes.push(key);
       }
@@ -53,9 +52,7 @@ function Settings() {
 
 
     localStorageKeys.forEach((key) => {
-      if (
-        key.slice(4) === "override"
-      ) {
+      if (key.slice(4) === "override") {
         overrides.push(key);
       }
     });
@@ -63,11 +60,11 @@ function Settings() {
   };
 
   const handleExport = () => {
-    // const myData = localStorage;
-    // saveJSON(myData, "bcbs_data.json");
+    const myData = localStorage;
+    saveJSON(myData, "bcbs_data.json");
   }
 
-  const handleImport = () => {
+  const handleImport = (event) => {
     const file = event.target.files[0];
     if (!file) return;
 
@@ -128,7 +125,7 @@ function Settings() {
       </details>
       <details className="settings-cat" onClick={handleOverrides}>
         <summary>Custom carriers / overrides</summary>
-        <div style={{ maxHeight: "50vh", overflow: "auto" }}>
+        <div style={{ maxHeight: "45vh", overflow: "auto" }}>
           {overrides.length != 0 ? (
             overrides.map((key) => (
               <>
@@ -198,7 +195,8 @@ function Settings() {
           .
         </p>
       </div>
-      {isModalOpen && (
+      {/* TODO: Add modal to allow selection of desired exported/imported data */}
+      {/* {isModalOpen && (
         <Modal
           title="Choose what to export"
           options={exportOptions}
@@ -207,7 +205,7 @@ function Settings() {
           onSubmit={handleExport}
           onClose={() => setIsModalOpen(false)}
         />
-      )}
+      )} */}
     </>
   );
 }

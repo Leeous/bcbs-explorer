@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import BCBSDB from "../assets/bcbs_data.json";
+import checkmark from "../assets/checkmark.png";
+import { useNavigate } from "react-router";
 
 function isValidHttpUrl(string) {
   let url;
@@ -29,6 +31,8 @@ const AddCarrierForm = () => {
     linkLeft: '',
     linkRight: ''
   });
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const navigate = useNavigate();
 
   let formComplete = carrier.prefix.length == 3;
 
@@ -168,6 +172,12 @@ const AddCarrierForm = () => {
 
     // Add carrier to localStorage
     localStorage.setItem(`${JSONReadyCarrier.prefix}-override`, JSON.stringify(JSONReadyCarrier));
+    setIsSubmitted(true);
+
+    // Navigate to search after successful add
+    setTimeout(() => {
+      navigate("/search");  
+    }, 3000);
   };
 
   return (
@@ -290,6 +300,13 @@ const AddCarrierForm = () => {
       {formErrors.name && <p className="error">{formErrors.name}</p>}
       {formComplete && (
         <input type="submit" className="button-normal" value="Submit" />
+      )}
+      {isSubmitted && (
+        <div className="successful-carrier-add">
+          <img src={checkmark} className="checkmark" />
+          <h4>Successfully added override for {carrier.name}!</h4>
+          <h5>Returning to main menu...</h5>
+        </div>
       )}
     </form>
   );

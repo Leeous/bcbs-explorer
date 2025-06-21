@@ -15,3 +15,4 @@ BCBS Explorer makes it easy to identify Blue Cross Blue Shield entities by prefi
 - [back button](https://icons8.com/icon/26194/back-arrow) icon by [Icons8](https://icons8.com)
 - [plus button](https://icons8.com/icon/1501/plus) icon by [Icons8](https://icons8.com)
 - [Reset](https://icons8.com/icon/12491/reset) icon by [Icons8](https://icons8.com)
+- [Checkmark](https://icons8.com/icon/11695/checkmark) icon by [Icons8](https://icons8.com)
