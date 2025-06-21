@@ -9,7 +9,7 @@ export default function Changelog() {
         <h2 style={{textAlign: "center"}}>Changelog</h2>
         <section>
           
-          <h4>v1.0.2</h4>
+          <h4>v1.1.0</h4>
           <ul>
             <li><b>Added <NavLink to="/add">carrier overrides</NavLink></b></li>
             <li><b>Added import and export options to <NavLink to="/settings">Settings</NavLink></b></li>

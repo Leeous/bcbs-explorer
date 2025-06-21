@@ -9,6 +9,17 @@ BCBS Explorer makes it easy to identify Blue Cross Blue Shield entities by prefi
 [<img width="256px" target="_blank" src="https://i.imgur.com/WzJEzAv.png">](https://chromewebstore.google.com/detail/bcbs-explorer/nkbagfmekkclfbpkkiiiladadfkmehic)
 [<img width="256px" target="_blank" src="https://i.imgur.com/NnMnwch.png">](https://addons.mozilla.org/en-US/firefox/addon/bcbs-explorer/)
 
+
+## Build
+
+1. Ensure you have the latest versions of `npm` and `node`
+2. Clone repo with `git clone https://github.com/Leeous/bcbs-explorer.git`
+3. Open terminal inside of `bcbs-explorer` folder
+4. Run `npm install`
+
+Debug with `npm run dev`.
+Build with `npm run build`.
+
 #### Icon attribution
 
 - [Plus](https://icons8.com/icon/1501/plus) icon by [Icons8](https://icons8.com)
