@@ -305,7 +305,7 @@ const AddCarrierForm = () => {
         <div className="successful-carrier-add">
           <img src={checkmark} className="checkmark" />
           <h4>Successfully added override for {carrier.name}!</h4>
-          <h5>Returning to main menu...</h5>
+          <p>Returning to main menu...</p>
         </div>
       )}
     </form>

@@ -459,13 +459,15 @@ select#theme {
   text-overflow: ellipsis;
 }
 
-.successful-carrier-add {
+.add-carrier-form .successful-carrier-add {
   display: flex;
   align-items: center;      /* optional: aligns items vertically */
   justify-content: center;
   flex-direction: column;   /* stacks children vertically */
   text-align: center;       /* optional: centers text inside h4 and h5 */
   position: absolute;
+  width: 100%;
+  margin: 0;
   top: 0;
   right: 0;
   bottom: 0;
