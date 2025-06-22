@@ -34,7 +34,11 @@ function Settings() {
 
   const handleDeleteKey = (key, type) => {
     localStorage.removeItem(key);
-    console.info(`Note removed for ${key.toUpperCase()} prefix.`);
+    if (type === "note") {
+      console.info(`Note removed for ${key.toUpperCase()} prefix.`);
+    } else {
+      console.info(`Override removed for ${key.slice(0, 3).toUpperCase()} prefix.`);
+    }
   };
 
   const handleThemeChange = (e) => {
@@ -105,7 +109,7 @@ function Settings() {
                         {key.toUpperCase()}
                       </span>
                     </h4>
-                    <p onClick={() => handleDeleteKey(key, "Note")}>X</p>
+                    <button className="button-normal" onClick={() => handleDeleteKey(key, "note")}>X</button>
                   </div>
                   <p key={key} className="saved-note-text">
                     {JSON.parse(localStorage[key]).note}
@@ -120,47 +124,47 @@ function Settings() {
       </details>
       <details className="settings-cat" onClick={handleOverrides}>
         <summary>Custom carriers / overrides</summary>
-        <div style={{ maxHeight: "45vh", overflow: "auto" }}>
+        <div style={{ maxHeight: "60vh", overflow: "auto" }}>
           {overrides.length != 0 ? (
             overrides.map((key) => (
-              <>
-                <div key={key} className="carrier-override">
-                  <div>
+              <div key={key} className="carrier-override">
+                <div>
+                  <div style={{display: "flex", justifyContent: "space-between"}}>
                     <h3>{key.slice(0, 3).toUpperCase()}</h3>
-                    <ul>
-                      {JSON.parse(localStorage[key]).name && (
-                        <li>Name: {JSON.parse(localStorage[key]).name}</li>
-                      )}
-                      {JSON.parse(localStorage[key]).phones && (
-                        <>
-                          <li>Phone numbers:</li>
-                          <ul>
-                            {JSON.parse(localStorage[key]).phones.map(
-                              (phone) => (
-                                <li key={phone}><a href={"tel:" + phone} >({String(phone).slice(0, 3)}) {String(phone).slice(3, 6)}-{String(phone).slice(6)}</a></li>
-                              )
-                            )}
-                          </ul>
-                        </>
-                      )}
-                      {JSON.parse(localStorage[key]).links && (
-                        <>
-                          <li>Links:</li>
-                          <ul>
-                            {JSON.parse(localStorage[key]).links.map(
-                              (link, i) => (
-                                <li key={i}><a href={link.link_url} target="_link">{link.link_text}</a></li>
-                              )
-                            )}
-                          </ul>
-                        </>
-                      )}
-                    </ul>
-                    {/* <h4 key={localStorage[key]}>{JSON.parse(localStorage[key]).name} - <span style={{ fontWeight: "400" }}>{key.toUpperCase()}</span></h4>
-                  <p onClick={() => handleDeleteNote(key)}>X</p> */}
+                    <button className="button-normal" onClick={() => handleDeleteKey(key, "override")}>X</button>
                   </div>
+                  <ul>
+                    {JSON.parse(localStorage[key]).name && (
+                      <li>Name: {JSON.parse(localStorage[key]).name}</li>
+                    )}
+                    {JSON.parse(localStorage[key]).phones && (
+                      <>
+                        <li>Phone numbers:</li>
+                        <ul>
+                          {JSON.parse(localStorage[key]).phones.map((phone) => (
+                            <li key={phone}><a href={"tel:" + phone} >({String(phone).slice(0, 3)}) {String(phone).slice(3, 6)}-{String(phone).slice(6)}</a></li>
+                          )
+                          )}
+                        </ul>
+                      </>
+                    )}
+                    {JSON.parse(localStorage[key]).links && (
+                      <>
+                        <li>Links:</li>
+                        <ul>
+                          {JSON.parse(localStorage[key]).links.map(
+                            (link, i) => (
+                              <li key={link + i}><a href={link.link_url} target="_link">{link.link_text}</a></li>
+                            )
+                          )}
+                        </ul>
+                      </>
+                    )}
+                  </ul>
+                  {/* <h4 key={localStorage[key]}>{JSON.parse(localStorage[key]).name} - <span style={{ fontWeight: "400" }}>{key.toUpperCase()}</span></h4>
+                  <p onClick={() => handleDeleteNote(key)}>X</p> */}
                 </div>
-              </>
+              </div>
             ))
           ) : (
             <p className="no-notes">No custom carriers or overrides saved yet.</p>
@@ -169,10 +173,10 @@ function Settings() {
       </details>
       <div className="footer">
         <div>
-          <button className="help-tooltip">?</button><br/>
-          <button style={{marginRight: "5px"}} className="button-normal" onClick={handleExport}>Export Settings</button>
+          <button className="help-tooltip">?</button><br />
+          <button style={{ marginRight: "5px" }} className="button-normal" onClick={handleExport}>Export Settings</button>
           <label htmlFor="import-settings" className="button-normal">Import Settings</label>
-          <input style={{marginLeft: "5px"}} type="file" id="import-settings" accept=".json" onChange={handleImport} hidden/>
+          <input style={{ marginLeft: "5px" }} type="file" id="import-settings" accept=".json" onChange={handleImport} hidden />
         </div>
         <p>
           Suggestions? Issues? Compliments?
