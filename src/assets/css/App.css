@@ -361,6 +361,7 @@ select#theme {
   text-align: center;
   user-select: none;
   font-size: .8rem;
+  margin-top: 2rem;
 }
 
 /********************/
