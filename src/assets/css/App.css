@@ -24,8 +24,8 @@ body, html {
   margin: 0;
   overflow-y: scroll;
   scrollbar-width: 5px;
-  width: 500px;  /* max: 800px */
-  height: 700px; /* max: 600px */
+  width: 500px;
+  height: 700px;
 }
 
 body {
@@ -357,8 +357,6 @@ select#theme {
 }
 
 .footer {
-  position: absolute;
-  bottom: 0;
   width: 100%;
   text-align: center;
   user-select: none;
@@ -465,7 +463,7 @@ select#theme {
   justify-content: center;
   flex-direction: column;   /* stacks children vertically */
   text-align: center;       /* optional: centers text inside h4 and h5 */
-  position: absolute;
+  position: fixed;
   width: 100%;
   margin: 0;
   top: 0;
