@@ -18,9 +18,6 @@ function saveJSON(data, filename) {
 function Settings() {
   const [savedNotes, setSavedNotes] = useState([]);
   const [overrides, setOverrides] = useState([]);
-  const [exportOptions, setExportOptions] = useState([]);
-  const [importOptions, setImportOptions] = useState([]);
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleNotes = () => {
     let localStorageKeys = Object.keys(localStorage);
@@ -48,8 +45,6 @@ function Settings() {
   const handleOverrides = () => {
     let localStorageKeys = Object.keys(localStorage);
     let overrides = [];
-
-
 
     localStorageKeys.forEach((key) => {
       if (key.slice(4) === "override") {
