@@ -173,7 +173,7 @@ function Settings() {
       </details>
       <div className="footer">
         <div>
-          <button className="help-tooltip">?</button><br />
+          {/* <button className="help-tooltip">?</button><br /> */}
           <button style={{ marginRight: "5px" }} className="button-normal" onClick={handleExport}>Export Settings</button>
           <label htmlFor="import-settings" className="button-normal">Import Settings</label>
           <input style={{ marginLeft: "5px" }} type="file" id="import-settings" accept=".json" onChange={handleImport} hidden />
