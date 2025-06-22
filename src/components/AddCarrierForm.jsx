@@ -176,7 +176,7 @@ const AddCarrierForm = () => {
 
     // Navigate to search after successful add
     setTimeout(() => {
-      navigate("/search");  
+      navigate("/search");
     }, 3000);
   };
 

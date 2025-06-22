@@ -5,16 +5,19 @@ import BackIcon from '../assets/back-button.png';
 import AddIcon from '../assets/plus.png';
 import ResetIcon from '../assets/reset.png';
 import UpdateIcon from '../assets/update.png';
+import { useNavigate } from "react-router";
 
 // Toggle path
-const toggleSettings = () => {
+const ToggleSettings = () => {
+  const navigate = useNavigate();
+
   const handleReset = (e) => {
     e.preventDefault();
     let decision = confirm("CAUTION!!!\nThis will erase ALL user content, which includes notes, custom carriers, and overrides. It will be as if you installed BCBS Explorer for the first time.\n\nContinue?");
 
     if (decision) {
-      localStorage.clear()
-      window.location.pathname = "/search";
+      localStorage.clear();
+      navigate('/search');
     }
   }
 
@@ -64,7 +67,7 @@ function Navigation() {
   return (
     <header className="navigation">
       <nav>
-        {toggleSettings()}
+        {ToggleSettings()}
         <div>
           {window.location.pathname !== "/settings" &&
             <h3>BCBS Explorer</h3>
