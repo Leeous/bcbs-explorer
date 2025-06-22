@@ -24,21 +24,21 @@ const ToggleSettings = () => {
   return (
     <>
       <div>
-        {window.location.pathname === "/search" &&
+        {(window.location.pathname === "/search" || window.location.pathname === "/") &&
           <NavLink to="/settings">
             <img src={SettingsIcon} className="nav-icon" />
             <span>Settings</span>
           </NavLink>
         }
 
-        {window.location.pathname === "/search" &&
+        {(window.location.pathname === "/search" || window.location.pathname === "/") &&
           <NavLink to="/add">
             <img src={AddIcon} className="nav-icon" />
             <span>Add carrier</span>
           </NavLink>
         }
 
-        {window.location.pathname !== "/search" &&
+        {!(window.location.pathname === "/search" || window.location.pathname === "/") &&
           <NavLink to={window.location.pathname === "/changelog" ? "/settings" : "/search"}>
             <img src={BackIcon} className="nav-icon" />
             <span>Back</span>
